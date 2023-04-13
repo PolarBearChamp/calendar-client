@@ -1,10 +1,7 @@
-import Calendar from "@/Components/calendar/Calendar";
-import Layout from "@/Components/layout/Layout";
+import CalendarModule from "@/Modules/CalendarModule";
 
 export default function Home() {
   return (
-    <Layout>
-      <Calendar />
-    </Layout>
+    <CalendarModule />
   )
 }
