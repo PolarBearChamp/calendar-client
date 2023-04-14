@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-
+import next from '@/public/icons/next.svg'
 interface IProps {
   icon: string
   action: string
@@ -10,7 +10,7 @@ interface IProps {
 const NavigationButton = ({ icon, action, onClick }: IProps) => {
   return (
     <div
-      className='shadow-buttons w-16 h-16 flex items-center justify-center rounded-full'
+      className='shadow-buttons transition-all hover:bg-custom-blue w-16 h-16 flex items-center justify-center rounded-full'
       onClick={onClick}
     >
       <Image
@@ -18,6 +18,7 @@ const NavigationButton = ({ icon, action, onClick }: IProps) => {
         alt={`${action}`}
         width={35}
         height={30}
+        className='hover:fill-white'
       />
     </div>
   )

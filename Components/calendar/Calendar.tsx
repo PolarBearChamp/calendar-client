@@ -38,21 +38,18 @@ const Calendar = () => {
   ]
 
   return (
-    <div>
-      <CalendarHeader />
-      <div className='grid grid-cols-7 gap-4 justify-items-center'>
-        {
-          data.map((el, i) => {
-            return (
-              <Day
-                key={i}
-                day={el.day}
-                scene={el?.scene}
-              />
-            )
-          })
-        }
-      </div>
+    <div className='grid grid-cols-7 gap-4 justify-items-center'>
+      {
+        data.map((el, i) => {
+          return (
+            <Day
+              key={i}
+              day={el.day}
+              scene={el?.scene}
+            />
+          )
+        })
+      }
     </div>
   )
 }

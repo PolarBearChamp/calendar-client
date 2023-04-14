@@ -7,7 +7,7 @@ interface Props {
 const Header = ({ year, month }: Props) => {
 
   return (
-    <div className="font-bold text-6xl mb-12 mt-16">
+    <div className="font-bold text-6xl mt-16">
       <span className="mr-9">{year}</span><span>{month}</span>
     </div>
   )

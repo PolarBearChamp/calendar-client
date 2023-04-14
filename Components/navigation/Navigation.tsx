@@ -3,7 +3,7 @@ import Image from 'next/image'
 import NavigationButton from '../buttons/NavigationButton'
 const Navigation = () => {
   return (
-    <div>
+    <div className='flex flex-col gap-3'>
       <NavigationButton
         icon='next.svg'
         action='Next'
