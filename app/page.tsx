@@ -1,4 +1,4 @@
-import CalendarModule from "@/Modules/CalendarModule";
+import CalendarModule from "@/src/modules/CalendarModule";
 
 export default function Home() {
   return (

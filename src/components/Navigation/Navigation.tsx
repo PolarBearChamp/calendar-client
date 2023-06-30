@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import NavigationButton from '../buttons/NavigationButton'
+import NavigationButton from '../../ui/buttons/NavigationButton'
 const Navigation = () => {
   return (
     <div className='flex flex-col gap-3'>

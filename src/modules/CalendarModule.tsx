@@ -1,10 +1,11 @@
+"use client"
 import { useEffect, useState } from 'react'
 import { format } from 'date-fns'
-import Header from '@/Components/layout/Header'
-import Calendar from '@/Components/calendar/Calendar'
-import Navigation from '@/Components/navigation/Navigation'
-import UserControls from '@/Components/navigation/UserControls'
-import CalendarHeader from '@/Components/calendar/CalendarHeader'
+import Header from '@/src/components/Header/Header'
+import Calendar from '@/src/components/Calendar/Calendar'
+import Navigation from '@/src/components/Navigation/Navigation'
+import UserControls from '@/src/components/UserControls/UserControls'
+import CalendarHeader from '@/src/components/Calendar/CalendarHeader/CalendarHeader'
 
 const CalendarModule = () => {
   const today = new Date()

@@ -1,6 +1,5 @@
 import React from 'react'
-import CalendarHeader from './CalendarHeader'
-import Day from './Day'
+import Day from './Day/Day'
 
 const Calendar = () => {
 

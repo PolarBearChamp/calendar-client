@@ -1,4 +1,4 @@
-import UserControlButton from '../buttons/UserControlButton'
+import UserControlButton from '../../ui/buttons/UserControlButton'
 
 const UserControls = () => {
   return (
