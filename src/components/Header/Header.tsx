@@ -1,16 +1,17 @@
+import styles from "./Header.module.scss";
 
 interface Props {
-  year: string
-  month: string
+  year: string;
+  month: string;
 }
 
 const Header = ({ year, month }: Props) => {
-
   return (
-    <div className="font-bold text-6xl mt-16">
-      <span className="mr-9">{year}</span><span>{month}</span>
+    <div className={styles.container}>
+      <span className={styles.year}>{year}</span>
+      <span>{month}</span>
     </div>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
