@@ -1,6 +1,8 @@
-import React from "react";
-import Image from "next/image";
-import { useRouter } from "next/navigation";
+import React from "react"
+import Image from "next/image"
+import { useRouter } from "next/navigation"
+
+import styles from "./Button.module.scss"
 
 interface IProps {
   route: string;
@@ -12,6 +14,7 @@ const UserControlButton = ({ route, icon }: IProps) => {
 
   return (
     <Image
+      className={styles.cursor}
       src={`/icons/${icon}`}
       alt=""
       width={40}
@@ -19,7 +22,6 @@ const UserControlButton = ({ route, icon }: IProps) => {
       onClick={() => {
         router.push(`/${route}`);
       }}
-      className="cursor-pointer"
     />
   );
 };
