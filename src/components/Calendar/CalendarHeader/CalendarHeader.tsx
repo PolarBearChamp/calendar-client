@@ -1,20 +1,36 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
+
+import classNames from "classnames";
+import styles from "./CalendarHeader.module.scss";
 
 const CalendarHeader = () => {
-
-  const [isActive, setIsActive] = useState(false)
+  const [isActive, setIsActive] = useState(false);
 
   return (
-    <div className='grid grid-cols-7 gap-4 justify-items-center pb-1 text-xl  font-bold'>
-      <div className={`${isActive ? "text-custom-blue" : "text-gray-400"}`}>S</div>
-      <div className={`${isActive ? "text-custom-blue" : "text-gray-400"}`}>M</div>
-      <div className={`${isActive ? "text-custom-blue" : "text-gray-400"}`}>T</div>
-      <div className={`${!isActive ? "text-custom-blue" : "text-gray-400"}`}>W</div>
-      <div className={`${isActive ? "text-custom-blue" : "text-gray-400"}`}>T</div>
-      <div className={`${isActive ? "text-custom-blue" : "text-gray-400"}`}>F</div>
-      <div className={`${isActive ? "text-custom-blue" : "text-gray-400"}`}>S</div>
+    <div className={styles.container}>
+      <div className={classNames(isActive ? styles.selected : styles.default)}>
+        S
+      </div>
+      <div className={classNames(isActive ? styles.selected : styles.default)}>
+        M
+      </div>
+      <div className={classNames(isActive ? styles.selected : styles.default)}>
+        T
+      </div>
+      <div className={classNames(isActive ? styles.selected : styles.default)}>
+        W
+      </div>
+      <div className={classNames(!isActive ? styles.selected : styles.default)}>
+        T
+      </div>
+      <div className={classNames(isActive ? styles.selected : styles.default)}>
+        F
+      </div>
+      <div className={classNames(isActive ? styles.selected : styles.default)}>
+        S
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default CalendarHeader
+export default CalendarHeader;
