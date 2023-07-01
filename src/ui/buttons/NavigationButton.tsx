@@ -2,10 +2,11 @@ import React from "react";
 import Image from "next/image";
 
 import styles from "./Button.module.scss";
+import { NavigationAction } from "@/src/types";
 
 interface IProps {
   icon: string;
-  action: string;
+  action: NavigationAction;
   onClick: any;
 }
 

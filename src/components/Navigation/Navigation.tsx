@@ -1,21 +1,29 @@
-import React from 'react'
-import Image from 'next/image'
-import NavigationButton from '../../ui/buttons/NavigationButton'
+import React from "react";
+import Image from "next/image";
+import NavigationButton from "../../ui/buttons/NavigationButton";
+
+import styles from "./Navigation.module.scss";
+import { NavigationAction } from "@/src/types";
+
 const Navigation = () => {
   return (
-    <div className='flex flex-col gap-3'>
+    <div className={styles.container}>
       <NavigationButton
-        icon='next.svg'
-        action='Next'
-        onClick={() => { console.log('next') }}
+        icon="next.svg"
+        action={NavigationAction.Next}
+        onClick={() => {
+          console.log("next");
+        }}
       />
       <NavigationButton
-        icon='prev.svg'
-        action='Previous'
-        onClick={() => { console.log('prev') }}
+        icon="prev.svg"
+        action={NavigationAction.Previous}
+        onClick={() => {
+          console.log("prev");
+        }}
       />
     </div>
-  )
-}
+  );
+};
 
-export default Navigation
+export default Navigation;
