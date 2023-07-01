@@ -1,46 +1,48 @@
-"use client"
-import { useEffect, useState } from 'react'
-import { format } from 'date-fns'
-import Header from '@/src/components/Header/Header'
-import Calendar from '@/src/components/Calendar/Calendar'
-import Navigation from '@/src/components/Navigation/Navigation'
-import UserControls from '@/src/components/UserControls/UserControls'
-import CalendarHeader from '@/src/components/Calendar/CalendarHeader/CalendarHeader'
+"use client";
+import { useEffect, useState } from "react";
+import { format } from "date-fns";
+import Header from "@/src/components/Header/Header";
+import Calendar from "@/src/components/Calendar/Calendar";
+import Navigation from "@/src/components/Navigation/Navigation";
+import UserControls from "@/src/components/UserControls/UserControls";
+import CalendarHeader from "@/src/components/Calendar/CalendarHeader/CalendarHeader";
+
+import styles from "./CalendarModule.module.scss";
 
 const CalendarModule = () => {
-  const today = new Date()
-  const currentMonth = format(today, 'MMMM')
-  const currentYear = format(today, 'yyyy')
+  const today = new Date();
+  const currentMonth = format(today, "MMMM");
+  const currentYear = format(today, "yyyy");
 
-  const [month, setMonth] = useState(currentMonth)
-  const [year, setYear] = useState(currentYear)
+  const [month, setMonth] = useState(currentMonth);
+  const [year, setYear] = useState(currentYear);
 
   useEffect(() => {
-    setMonth(currentMonth)
-    setYear(currentYear)
-  }, [currentMonth, currentYear])
+    setMonth(currentMonth);
+    setYear(currentYear);
+  }, [currentMonth, currentYear]);
 
   return (
-    <div className='grid grid-cols-layout grid-rows-header mx-auto max-w-main gap-y-12 gap-x-16'>
-      <div className="col-start-2 col-end-3 row-start-1 row-end-2">
+    <div className={styles.container}>
+      <div className={styles.header}>
         <Header year={year} month={month} />
       </div>
-      <div className='grid grid-cols-layout grid-rows-layout col-start-1 col-end-4 row-start-2 row-end-3 gap-x-16 max-w-main w-full'>
-        <div className="col-start-1 col-end-2 row-start-2 row-end-3">
+      <div className={styles.content}>
+        <div className={styles.controls}>
           <UserControls />
         </div>
-        <div className='col-start-2 col-end-3 row-start-1 row-end-2'>
+        <div className={styles.calendarHeader}>
           <CalendarHeader />
         </div>
-        <div className="col-start-2 col-end-3 row-start-2 row-end-3">
+        <div className={styles.calendar}>
           <Calendar />
         </div>
-        <div className="col-start-3 col-end-4 row-start-2 row-end-3">
+        <div className={styles.navigation}>
           <Navigation />
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default CalendarModule
+export default CalendarModule;
