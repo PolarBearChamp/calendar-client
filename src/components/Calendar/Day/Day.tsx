@@ -34,7 +34,7 @@ const Day = ({ day, back }: Props) => {
   if (!!back) {
     return (
       <>
-        <div className={styles.container} onContextMenu={openPopup}>
+        <div className={styles.container} onClick={openPopup}>
           <span className={classNames(styles.number, styles.withBack)}>
             {day}
           </span>
@@ -56,7 +56,7 @@ const Day = ({ day, back }: Props) => {
   } else {
     return (
       <>
-        <div className={classNames(styles.container)} onContextMenu={openPopup}>
+        <div className={classNames(styles.container)} onClick={openPopup}>
           <span className={styles.number}>{day}</span>
           {isPopupVisible &&
             ReactDOM.createPortal(
