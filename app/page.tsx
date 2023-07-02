@@ -1,7 +1,7 @@
 import CalendarModule from "@/src/modules/CalendarModule";
 
-export default function Home() {
-  return (
-    <CalendarModule />
-  )
-}
+const page = () => {
+  return <CalendarModule />;
+};
+
+export default page;

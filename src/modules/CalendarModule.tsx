@@ -24,26 +24,30 @@ const CalendarModule = () => {
   }, [currentMonth, currentYear]);
 
   return (
-    <div className={styles.container}>
-      <div className={styles.header}>
-        <Header year={year} month={month} />
+    <>
+      <div className={styles.container}>
+        <div className={styles.header}>
+          <Header year={year} month={month} />
+        </div>
+        <div className={styles.content}>
+          <div className={styles.controls}>
+            <UserControls />
+          </div>
+          <div className={styles.calendarHeader}>
+            <CalendarHeader />
+          </div>
+          <div className={styles.calendar}>
+            <Calendar />
+          </div>
+          <div className={styles.navigation}>
+            <Navigation />
+          </div>
+        </div>
+        <div id="popup-root"></div>
       </div>
-      <div className={styles.content}>
-        <div className={styles.controls}>
-          <UserControls />
-        </div>
-        <div className={styles.calendarHeader}>
-          <CalendarHeader />
-        </div>
-        <div className={styles.calendar}>
-          <Calendar />
-        </div>
-        <div className={styles.navigation}>
-          <Navigation />
-        </div>
-      </div>
-      <div id="popup-root"></div>
-    </div>
+      {/*       // Прикол с картинкой на фоне
+      <div className={styles.back}></div> */}
+    </>
   );
 };
 
