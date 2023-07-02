@@ -12,7 +12,7 @@ interface IProps {
 
 const NavigationButton = ({ icon, action, onClick }: IProps) => {
   return (
-    <div className={styles.button} onClick={onClick}>
+    <div className={styles.navigateButton} onClick={onClick}>
       <Image
         src={`/icons/${icon}`}
         alt={`${action}`}

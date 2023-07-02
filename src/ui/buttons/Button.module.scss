@@ -1,14 +1,25 @@
-@import './../../../styles/mixins.scss';
+@import "./../../../styles/mixins.scss";
 
 .cursor {
   cursor: pointer;
 }
 
-.button {
+.primary {
+  font-size: 24px;
+  font-weight: 600;
+  width: 100%;
+  padding: 18px;
+  color: white;
+  background: var(--primary-blue);
+  border-radius: 5px;
+  border: none;
+}
+
+.navigateButton {
   @include flex-center;
-  
+
   border-radius: 100%;
-  box-shadow:  1px 5px 5px 0px rgba(0, 0, 0, 0.09), 2px 12px 7px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: 1px 5px 5px 0px rgba(0, 0, 0, 0.09), 2px 12px 7px 0px rgba(0, 0, 0, 0.05);
   width: 64px;
   height: 64px;
   transition: all 0.3s;
