@@ -18,3 +18,4 @@ export interface ModalPosition {
   x: number;
   y: number;
 }
+export type InputType = "text" | "number" | "email" | "password";
