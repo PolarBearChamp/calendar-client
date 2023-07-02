@@ -4,6 +4,12 @@ export enum DayStatus {
 }
 
 export enum NavigationAction {
-  'Next',
-  'Previous'
+  "Next",
+  "Previous",
+}
+
+export enum DayControlAction {
+  "EDIT",
+  "SHARE",
+  "DELETE",
 }
