@@ -1,7 +1,8 @@
-import CalendarModule from "@/src/modules/CalendarModule";
+"use client";
 
+import LoginModule from "@/src/modules/LoginModule/LoginModule";
 const page = () => {
-  return <CalendarModule />;
+  return <LoginModule />;
 };
 
 export default page;

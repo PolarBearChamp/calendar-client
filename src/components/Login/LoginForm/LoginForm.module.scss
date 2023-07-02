@@ -1,0 +1,25 @@
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  max-width: 450px;
+  gap: 64px;
+  
+
+  label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+    font-size: 20px;
+    gap: 4px;
+  }
+  .link {
+    margin-top: -48px;
+    color: var(--primary-blue);
+    font-weight: 600;
+    text-decoration: none;
+  }
+  span{
+    margin-top: -44px;
+
+  }
+}

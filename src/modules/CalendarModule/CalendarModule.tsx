@@ -8,7 +8,6 @@ import UserControls from "@/src/components/UserControls/UserControls";
 import CalendarHeader from "@/src/components/Calendar/CalendarHeader/CalendarHeader";
 
 import styles from "./CalendarModule.module.scss";
-import DayControlPopUp from "../ui/popup/DayControlPopUp";
 
 const CalendarModule = () => {
   const today = new Date();
