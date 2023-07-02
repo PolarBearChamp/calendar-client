@@ -1,13 +1,9 @@
-import React from 'react'
+import React from "react";
 
-import styles from './DayControlElements.module.scss'
+import styles from "./DayControlElements.module.scss";
 
 const DayControlLine = () => {
-  return (
-    <div className={styles.line}>
-      
-    </div>
-  )
-}
+  return <div className={styles.line}></div>;
+};
 
-export default DayControlLine
+export default DayControlLine;

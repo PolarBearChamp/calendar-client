@@ -42,6 +42,7 @@ const CalendarModule = () => {
           <Navigation />
         </div>
       </div>
+      <div id="popup-root"></div>
     </div>
   );
 };

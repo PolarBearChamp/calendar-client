@@ -13,3 +13,8 @@ export enum DayControlAction {
   "SHARE",
   "DELETE",
 }
+
+export interface ModalPosition {
+  x: number;
+  y: number;
+}

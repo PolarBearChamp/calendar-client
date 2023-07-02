@@ -17,7 +17,7 @@
   .content {
     display: grid;
     grid-template-columns: 80px 1100px 60px;
-    grid-template-rows: 130px 1fr;
+    grid-template-rows: auto 1fr;
     grid-column-start: 1;
     grid-column-end: 4;
     grid-row-start: 2;

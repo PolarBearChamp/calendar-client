@@ -40,7 +40,7 @@ const Calendar = () => {
   return (
     <div className={styles.container}>
       {data.map((el, i) => {
-        return <Day key={i} day={el.day} scene={el?.scene} />;
+        return <Day key={i} day={el.day} back={el?.scene} />;
       })}
     </div>
   );
