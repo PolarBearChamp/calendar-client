@@ -3,7 +3,11 @@
   flex-direction: column;
   max-width: 450px;
   gap: 64px;
-  
+
+
+  .header{
+    font-size: 48px;
+  }
 
   label {
     display: flex;
@@ -20,6 +24,5 @@
   }
   span{
     margin-top: -44px;
-
   }
 }
