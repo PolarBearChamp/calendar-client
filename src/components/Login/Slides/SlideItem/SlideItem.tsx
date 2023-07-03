@@ -13,7 +13,13 @@ const SlideItem: React.FC<ISlideItemData> = ({ text, type, image }) => {
       })}
     >
       {text}
-      <Image src={image} alt="slideItem" width={200} height={200} />
+      <Image
+        src={image}
+        alt="slideItem"
+        width={200}
+        height={200}
+        className={styles.image}
+      />
     </div>
   );
 };
