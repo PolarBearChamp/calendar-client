@@ -1,0 +1,27 @@
+
+.up {
+  animation: upAnimation 3s forwards;
+  animation-fill-mode: both;
+}
+
+.down {
+  animation: downAnimation 4s forwards;
+  animation-fill-mode: both;
+}
+
+@keyframes upAnimation {
+  0% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(-70%);
+  }
+}
+@keyframes downAnimation {
+  0% {
+    transform: translateY(-200%);
+  }
+  100% {
+    transform: translateY(-130%);
+  }
+}
