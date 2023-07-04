@@ -7,7 +7,7 @@ import { NavigationAction } from "@/src/types";
 interface IProps {
   icon: string;
   action: NavigationAction;
-  onClick: any;
+  onClick: () => void;
 }
 
 const NavigationButton = ({ icon, action, onClick }: IProps) => {

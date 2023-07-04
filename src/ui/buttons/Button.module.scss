@@ -3,6 +3,17 @@
 .cursor {
   cursor: pointer;
 }
+.controls {
+  border-radius: 50%;
+  transition: all 0.3s;
+
+  &Hover {
+    &:hover {
+      filter: brightness(0.9);
+      scale: 1.1;
+    }
+  }
+}
 
 .primary {
   font-size: 24px;
