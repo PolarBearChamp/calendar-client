@@ -18,7 +18,6 @@ export interface ModalPosition {
   x: number;
   y: number;
 }
-export type SlideItemType = "date" | "text";
 
 export interface ISlideItemData {
   text: string;
@@ -26,4 +25,15 @@ export interface ISlideItemData {
   image: string;
 }
 
+export interface IDateContext {
+  month: string;
+  year: string;
+}
+
+export interface ILoginData {
+  email: string
+  password: string
+}
+
+export type SlideItemType = "date" | "text";
 export type InputType = "text" | "number" | "email" | "password";

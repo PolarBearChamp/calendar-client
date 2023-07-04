@@ -8,7 +8,9 @@ interface IProps {
   name: string;
   type: InputType;
   placeholder: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  register: any;
+  options?: {};
 }
 
 const PrimaryInput: React.FC<IProps> = ({
@@ -17,6 +19,9 @@ const PrimaryInput: React.FC<IProps> = ({
   type,
   placeholder,
   onChange,
+  register,
+  options,
+  ...rest
 }) => {
   return (
     <input
@@ -26,6 +31,8 @@ const PrimaryInput: React.FC<IProps> = ({
       placeholder={placeholder}
       onChange={onChange}
       className={styles.primary}
+      {...register(name, options)}
+      {...rest}
     />
   );
 };
