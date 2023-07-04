@@ -67,9 +67,9 @@ const Slides = () => {
 
   return (
     <div className={styles.container}>
-      <SlideColumn data={data[0]} direction="UP" />
-      <SlideColumn data={data[1]} direction="DOWN" />
-      <SlideColumn data={data[2]} direction="UP" />
+      <SlideColumn data={data[0]} direction="UP1" />
+      <SlideColumn data={data[1]} direction="UP2" />
+      <SlideColumn data={data[2]} direction="UP3" />
     </div>
   );
 };

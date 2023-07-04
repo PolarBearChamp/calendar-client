@@ -7,11 +7,16 @@ import classNames from "classnames";
 
 interface IProps {
   data: ISlideItemData[];
-  direction: "UP" | "DOWN";
+  direction: "UP1" | "UP2" | "UP3";
 }
 
 const SlideColumn: React.FC<IProps> = ({ data, direction }) => {
-  const styleByDirection = direction === "UP" ? styles.up : styles.down;
+  const styleByDirection =
+    direction === "UP1"
+      ? styles.upFirst
+      : direction === "UP2"
+      ? styles.upSecond
+      : styles.upThird;
 
   return (
     <div className={classNames(styles.container, styleByDirection)}>
