@@ -7,7 +7,7 @@ import styles from "./Button.module.scss"
 
 interface IProps {
     image: string
-    imageOnHover?: any
+    imageOnHover?: string
     route: string
     icon?: string
 }

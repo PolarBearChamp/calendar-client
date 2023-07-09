@@ -1,7 +1,6 @@
 import React, { InputHTMLAttributes } from "react"
 
 import styles from "./Input.module.scss"
-import { InputType } from "@/src/types"
 
 interface IProps extends InputHTMLAttributes<HTMLInputElement> {
     register: any
