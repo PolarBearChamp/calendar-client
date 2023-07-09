@@ -1,30 +1,19 @@
-import React from "react";
-import Image from "next/image";
-import NavigationButton from "../../ui/buttons/NavigationButton";
+import React from "react"
 
-import styles from "./Navigation.module.scss";
-import { NavigationAction } from "@/src/types";
+import NavigationButton from "../../ui/buttons/NavigationButton"
+import { NAVIGATION_ACTION } from "@/src/types"
+import styles from "./Navigation.module.scss"
 
 interface IProps {
-  nextMonth: () => void;
-  prevMonth: () => void;
+    nextMonth: () => void
+    prevMonth: () => void
 }
 
-const Navigation: React.FC<IProps> = ({ nextMonth, prevMonth }) => {
-  return (
+const Navigation: React.FC<IProps> = ({ nextMonth, prevMonth }) => (
     <div className={styles.container}>
-      <NavigationButton
-        icon="next.svg"
-        action={NavigationAction.Next}
-        onClick={nextMonth}
-      />
-      <NavigationButton
-        icon="prev.svg"
-        action={NavigationAction.Previous}
-        onClick={prevMonth}
-      />
+        <NavigationButton icon="next.svg" action={NAVIGATION_ACTION.NEXT} onClick={nextMonth} />
+        <NavigationButton icon="prev.svg" action={NAVIGATION_ACTION.PREV} onClick={prevMonth} />
     </div>
-  );
-};
+)
 
-export default Navigation;
+export default Navigation

@@ -1,16 +1,16 @@
-import React from "react";
+import React from "react"
 
-import styles from "./LoginModule.module.scss";
-import Slides from "@/src/components/Login/Slides/Slides";
-import LoginForm from "@/src/components/Login/LoginForm/LoginForm";
+import LoginForm from "@/src/components/Login/LoginForm/LoginForm"
+import Slides from "@/src/components/Login/Slides/Slides"
+import styles from "./LoginModule.module.scss"
 
-const LoginModule = () => {
-  return (
-    <div className={styles.container}>
-      <LoginForm />
-      <Slides />
-    </div>
-  );
-};
+const LoginModule: React.FC = () => {
+    return (
+        <div className={styles.container}>
+            <LoginForm />
+            <Slides />
+        </div>
+    )
+}
 
-export default LoginModule;
+export default LoginModule

@@ -1,41 +1,38 @@
-import React from "react";
-import Image from "next/image";
-import classNames from "classnames";
-import { DayControlAction } from "@/src/types";
+import React from "react"
+import Image from "next/image"
+import classNames from "classnames"
 
-import styles from "./DayControlElements.module.scss";
+import styles from "./DayControlElements.module.scss"
+import { DAY_CONTROL_ACTION } from "@/src/types"
 
 interface IProps {
-  text: string;
-  action: DayControlAction;
-  onClick: () => void;
+    text: string
+    action: DAY_CONTROL_ACTION
+    onClick: () => void
 }
 
 const DayControlButton: React.FC<IProps> = ({ text, action }) => {
-  const colorStyle =
-    action === DayControlAction.DELETE ? styles.red : styles.blue;
+    const colorStyle = action === DAY_CONTROL_ACTION.DELETE ? styles.red : styles.blue
 
-  let icon = "";
+    const getActionIcon = () => {
+        switch (action) {
+            case DAY_CONTROL_ACTION.EDIT:
+                return "edit.svg"
+            case DAY_CONTROL_ACTION.SHARE:
+                return "share.svg"
+            case DAY_CONTROL_ACTION.DELETE:
+                return "delete.svg"
+        }
+    }
 
-  switch (action) {
-    case DayControlAction.EDIT:
-      icon = "edit.svg";
-      break;
-    case DayControlAction.SHARE:
-      icon = "share.svg";
-      break;
-    case DayControlAction.DELETE:
-      icon = "delete.svg";
-      break;
-    default:
-      break;
-  }
-  return (
-    <button className={classNames(styles.button, colorStyle)}>
-      <Image src={`/icons/${icon}`} alt="icon" width={17} height={17} />
-      {text}
-    </button>
-  );
-};
+    const icon = getActionIcon()
 
-export default DayControlButton;
+    return (
+        <button className={classNames(styles.button, colorStyle)}>
+            <Image src={`/icons/${icon}`} alt="icon" width={17} height={17} />
+            {text}
+        </button>
+    )
+}
+
+export default DayControlButton

@@ -1,17 +1,21 @@
-import styles from "./Header.module.scss";
+import { useContext } from "react"
 
-interface Props {
-  year: string;
-  month: string;
+import DateContext from "@/src/modules/CalendarModule/CalendarModule"
+import styles from "./Header.module.scss"
+
+interface IProps {
+    year: string
+    month: string
 }
 
-const Header = ({ year, month }: Props) => {
-  return (
-    <div className={styles.container}>
-      <span className={styles.year}>{year}</span>
-      <span>{month}</span>
-    </div>
-  );
-};
+const Header: React.FC<IProps> = ({ year, month }) => {
+    const date = useContext(DateContext)
+    return (
+        <div className={styles.container}>
+            <span className={styles.year}>{year}</span>
+            <span>{month}</span>
+        </div>
+    )
+}
 
-export default Header;
+export default Header

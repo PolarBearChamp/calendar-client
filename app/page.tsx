@@ -1,8 +1,8 @@
-"use client";
+"use client"
 
-import LoginModule from "@/src/modules/LoginModule/LoginModule";
+import LoginModule from "@/src/modules/LoginModule/LoginModule"
 const page = () => {
-  return <LoginModule />;
-};
+    return <LoginModule />
+}
 
-export default page;
+export default page

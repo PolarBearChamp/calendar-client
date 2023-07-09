@@ -1,35 +1,35 @@
 .container {
-  width: 144px;
-  height: 144px;
-  border-radius: 12px;
-  position: relative;
-  overflow: hidden;
-  box-shadow:  1px 5px 5px 0px rgba(0, 0, 0, 0.09), 2px 12px 7px 0px rgba(0, 0, 0, 0.05);
-  background: white;
+    width: 144px;
+    height: 144px;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 1px 5px 5px 0px rgba(0, 0, 0, 0.09), 2px 12px 7px 0px rgba(0, 0, 0, 0.05);
+    background: white;
 
-  transition: transform .3s ease;
-  &:hover {
-    transform: scale(1.1);
-  }
+    transition: transform 0.3s ease;
+    &:hover {
+        transform: scale(1.1);
+    }
 }
 
 .number {
-  position: absolute;
-  margin-top: 12px;
-  margin-left: 20px;
-  font-size: 24px;
-  font-weight: 700;
+    position: absolute;
+    margin-top: 12px;
+    margin-left: 20px;
+    font-size: 24px;
+    font-weight: 700;
 }
 
 .withBack {
-  z-index: 10;
-  color: white;
+    z-index: 10;
+    color: white;
 }
 
 .back {
-  height: 100%;
-  width: 100%;
-  filter: brightness(0.4);
-  object-position: center;
-  object-fit: cover;
+    height: 100%;
+    width: 100%;
+    filter: brightness(0.4);
+    object-position: center;
+    object-fit: cover;
 }

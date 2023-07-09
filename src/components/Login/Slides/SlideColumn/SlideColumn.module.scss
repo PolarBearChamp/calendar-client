@@ -1,38 +1,38 @@
 .upFirst {
-  animation: upFirstAnimation 2.5s forwards;
+    animation: upFirstAnimation 2.5s forwards;
 }
 
 .upSecond {
-  animation: upSecondAnimation 4.5s forwards;
+    animation: upSecondAnimation 4.5s forwards;
 }
 
 .upThird {
-  animation: upThirdAnimation 3.5s forwards;
+    animation: upThirdAnimation 3.5s forwards;
 }
 
 @keyframes upFirstAnimation {
-  0% {
-    transform: translateY(100vh);
-  }
-  100% {
-    transform: translateY(-55vh);
-  }
+    0% {
+        transform: translateY(100vh);
+    }
+    100% {
+        transform: translateY(-55vh);
+    }
 }
 
 @keyframes upSecondAnimation {
-  0% {
-    transform: translateY(100vh);
-  }
-  100% {
-    transform: translateY(-110vh);
-  }
+    0% {
+        transform: translateY(100vh);
+    }
+    100% {
+        transform: translateY(-110vh);
+    }
 }
 
 @keyframes upThirdAnimation {
-  0% {
-    transform: translateY(150vh);
-  }
-  100% {
-    transform: translateY(-55vh);
-  }
+    0% {
+        transform: translateY(150vh);
+    }
+    100% {
+        transform: translateY(-55vh);
+    }
 }
