@@ -17,7 +17,7 @@ const LoginForm: React.FC = () => {
     console.log(errors)
 
     return (
-        <form onSubmit={onSubmit} className={styles.loginForm}>
+        <form onSubmit={onSubmit} className={styles.form}>
             <h1 className={styles.header}>Login</h1>
             <label htmlFor="email">
                 Email

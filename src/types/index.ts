@@ -38,15 +38,21 @@ export interface IDateContext {
     year: string
 }
 
+export interface ICalendarItem {
+    day: number
+    cover?: string
+    link?: string
+}
+
 export interface ILoginData {
     email: string
     password: string
 }
 
-export interface ICalendarItem {
-    day: number
-    cover?: string
-    link?: string
+export interface ISignupData {
+    userName: string
+    email: string
+    password: string
 }
 
 export type SlideItemType = "date" | "text"
