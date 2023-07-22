@@ -1,47 +1,19 @@
-@import "./../../../styles/mixins.scss";
-
-.cursor {
-    cursor: pointer;
-}
-.controls {
-    border-radius: 50%;
-    transition: all 0.3s;
-
-    &Hover {
-        &:hover {
-            filter: brightness(0.9);
-            scale: 1.1;
-        }
-    }
-}
-
 .primary {
+    box-sizing: content-box;
     font-size: 24px;
-    font-weight: 600;
+    font-weight: 500;
     width: 100%;
-    padding: 18px;
+    padding: 18px 0;
     color: white;
     background: var(--primary-blue);
     border-radius: 5px;
-    border: none;
-}
-
-.navigateButton {
-    @include flex-center;
-
-    border-radius: 100%;
-    box-shadow:
-        1px 5px 5px 0px rgba(0, 0, 0, 0.09),
-        2px 12px 7px 0px rgba(0, 0, 0, 0.05);
-    width: 64px;
-    height: 64px;
-    transition: all 0.3s;
+    border: 2px solid var(--primary-blue);
     cursor: pointer;
+    transition: all 0.3s;
 
     &:hover {
-        background-color: var(--primary-blue);
-        img {
-            filter: brightness(0) invert(1);
-        }
+        border: 2px solid var(--primary-blue);
+        color: var(--primary-blue);
+        background: white;
     }
 }
