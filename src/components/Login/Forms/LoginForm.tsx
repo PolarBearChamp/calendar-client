@@ -2,7 +2,7 @@ import React from "react"
 import Link from "next/link"
 import { useForm } from "react-hook-form"
 
-import PrimaryButton from "@/src/ui/buttons/PrimaryButton"
+import { Button, ButtonTheme } from "@/src/ui/Buttons/Button"
 import PrimaryInput from "@/src/ui/inputs/PrimaryInput"
 import styles from "./LoginForm.module.scss"
 import { ILoginData } from "@/src/types"
@@ -51,7 +51,7 @@ const LoginForm: React.FC = () => {
             <Link href={"/forget"} className={styles.link}>
                 bro, did you really forget the password?
             </Link>
-            <PrimaryButton text="Sign in" onClick={() => {}} />
+            <Button theme={ButtonTheme.PRIMARY}>Sign in</Button>
             <span>
                 bro, you really don&apos;t have an account?
                 <Link href={"/signup"} className={styles.link}>

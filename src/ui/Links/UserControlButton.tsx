@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import Image from "next/image"
 import { useRouter } from "next/navigation"
-import classNames from "classnames"
+import { clsx } from "clsx"
 
 import styles from "./Button.module.scss"
 
@@ -31,7 +31,7 @@ const UserControlButton: React.FC<IProps> = ({ route, icon, image, imageOnHover 
         <Image
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
-            className={classNames(styles.cursor, styles.controls, totalStyles)}
+            className={clsx(styles.cursor, styles.controls, totalStyles)}
             src={totalImage}
             alt=""
             onClick={() => {

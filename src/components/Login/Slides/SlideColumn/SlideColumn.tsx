@@ -1,5 +1,5 @@
 import React from "react"
-import classNames from "classnames"
+import { clsx } from "clsx"
 
 import SlideItem from "../SlideItem/SlideItem"
 import styles from "./SlideColumn.module.scss"
@@ -26,7 +26,7 @@ const SlideColumn: React.FC<IProps> = ({ data, direction }) => {
     }
 
     return (
-        <div className={classNames(styles.container, setStyleAnimation())}>
+        <div className={clsx(styles.container, setStyleAnimation())}>
             {data &&
                 data.map((item, i) => {
                     return (

@@ -1,6 +1,6 @@
 import React from "react"
 
-import UserControlButton from "../../ui/buttons/UserControlButton"
+import UserControlButton from "../../ui/Buttons/UserControlButton"
 import FriendsHover from "@/public/icons/friends2.svg"
 import CompassHover from "@/public/icons/compass2.svg"
 import Compass from "@/public/icons/compass.svg"

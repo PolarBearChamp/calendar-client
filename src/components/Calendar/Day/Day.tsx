@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import ReactDOM from "react-dom"
 import Image from "next/image"
-import classNames from "classnames"
+import { clsx } from "clsx"
 
 import DayControlPopUp from "@/src/ui/popup/DayControlPopUp"
 import { ModalPosition } from "@/src/types"
@@ -28,7 +28,7 @@ const Day: React.FC<IProps> = ({
         return (
             <>
                 <div className={styles.container} onClick={openPopup}>
-                    <span className={classNames(styles.number, styles.withBack)}>{day}</span>
+                    <span className={clsx(styles.number, styles.withBack)}>{day}</span>
                     <Image
                         src={`${back}`}
                         alt=""
@@ -48,7 +48,7 @@ const Day: React.FC<IProps> = ({
 
     return (
         <>
-            <div className={classNames(styles.container)} onClick={openPopup}>
+            <div className={clsx(styles.container)} onClick={openPopup}>
                 <span className={styles.number}>{day}</span>
                 {isPopupVisible &&
                     ReactDOM.createPortal(

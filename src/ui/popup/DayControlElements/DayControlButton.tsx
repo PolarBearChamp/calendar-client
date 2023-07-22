@@ -1,6 +1,6 @@
 import React from "react"
 import Image from "next/image"
-import classNames from "classnames"
+import { clsx } from "clsx"
 
 import styles from "./DayControlElements.module.scss"
 import { DAY_CONTROL_ACTION } from "@/src/types"
@@ -28,7 +28,7 @@ const DayControlButton: React.FC<IProps> = ({ text, action }) => {
     const icon = getActionIcon()
 
     return (
-        <button className={classNames(styles.button, colorStyle)}>
+        <button className={clsx(styles.button, colorStyle)}>
             <Image src={`/icons/${icon}`} alt="icon" width={17} height={17} />
             {text}
         </button>

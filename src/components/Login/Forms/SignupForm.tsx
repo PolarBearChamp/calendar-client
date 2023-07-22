@@ -4,10 +4,10 @@ import React from "react"
 import styles from "./LoginForm.module.scss"
 import { useForm } from "react-hook-form"
 import Link from "next/link"
-import PrimaryButton from "@/src/ui/buttons/PrimaryButton"
 import { ISignupData } from "@/src/types"
-import classNames from "classnames"
 import PrimaryCheckbox from "@/src/ui/checkbox/PrimaryCheckbox"
+import { clsx } from "clsx"
+import { Button, ButtonTheme } from "@/src/ui/Buttons/Button"
 
 const SignupForm: React.FC = () => {
     const {
@@ -20,7 +20,7 @@ const SignupForm: React.FC = () => {
     console.log(errors)
 
     return (
-        <form onSubmit={onSubmit} className={classNames(styles.form__signup)}>
+        <form onSubmit={onSubmit} className={clsx(styles.form__signup)}>
             <h1 className={styles.header}>Create your account</h1>
             <label htmlFor="name">
                 Name
@@ -86,7 +86,7 @@ const SignupForm: React.FC = () => {
                     .
                 </span>
             </div>
-            <PrimaryButton text="Sign up" onClick={() => {}} />
+            <Button theme={ButtonTheme.PRIMARY}>Sign up</Button>
             <div className={styles.footer}>
                 bro, you really have an account?
                 <Link href={"/"} className={styles.link}>

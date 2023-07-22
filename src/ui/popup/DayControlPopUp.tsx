@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react"
-import classNames from "classnames"
+import { clsx } from "clsx"
 
 import DayControlButton from "./DayControlElements/DayControlButton"
 import Devider from "./DayControlElements/Devider"
@@ -35,7 +35,7 @@ const DayControlPopUp: React.FC<IProps> = ({ onClose, position: { x, y } }) => {
 
     return (
         <div
-            className={classNames(styles.container)}
+            className={clsx(styles.container)}
             style={{ top: y, left: x }}
             onClick={handlePopupClick}
             ref={popupRef}

@@ -1,13 +1,13 @@
 import React from "react"
 import Image from "next/image"
-import classNames from "classnames"
+import { clsx } from "clsx"
 
 import { ISlideItemData, SlideItemType } from "@/src/types"
 import styles from "./SlideItem.module.scss"
 
 const SlideItem: React.FC<ISlideItemData> = ({ text, type, image }) => (
     <div
-        className={classNames(styles.container, {
+        className={clsx(styles.container, {
             [styles.text]: type === "text",
         })}
     >

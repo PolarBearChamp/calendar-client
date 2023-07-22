@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import classNames from "classnames"
+import { clsx } from "clsx"
 
 import styles from "./CalendarHeader.module.scss"
 
@@ -8,13 +8,13 @@ const CalendarHeader: React.FC = () => {
 
     return (
         <div className={styles.container}>
-            <div className={classNames(isActive ? styles.selected : styles.default)}>S</div>
-            <div className={classNames(isActive ? styles.selected : styles.default)}>M</div>
-            <div className={classNames(isActive ? styles.selected : styles.default)}>T</div>
-            <div className={classNames(isActive ? styles.selected : styles.default)}>W</div>
-            <div className={classNames(!isActive ? styles.selected : styles.default)}>T</div>
-            <div className={classNames(isActive ? styles.selected : styles.default)}>F</div>
-            <div className={classNames(isActive ? styles.selected : styles.default)}>S</div>
+            <div className={clsx(isActive ? styles.selected : styles.default)}>S</div>
+            <div className={clsx(isActive ? styles.selected : styles.default)}>M</div>
+            <div className={clsx(isActive ? styles.selected : styles.default)}>T</div>
+            <div className={clsx(isActive ? styles.selected : styles.default)}>W</div>
+            <div className={clsx(!isActive ? styles.selected : styles.default)}>T</div>
+            <div className={clsx(isActive ? styles.selected : styles.default)}>F</div>
+            <div className={clsx(isActive ? styles.selected : styles.default)}>S</div>
         </div>
     )
 }
