@@ -6,6 +6,7 @@ import { Button, ButtonTheme } from "@/src/ui/Buttons/Button"
 import PrimaryInput from "@/src/ui/inputs/PrimaryInput"
 import styles from "./LoginForm.module.scss"
 import { ILoginData } from "@/src/types"
+import { CustomLink, LinkTheme } from "@/src/ui/Links/CustomLink"
 
 const LoginForm: React.FC = () => {
     const {
@@ -48,15 +49,15 @@ const LoginForm: React.FC = () => {
             {errors.password && errors.password.type === "minLength" && (
                 <span>Минимальная длина 6 символов</span>
             )}
-            <Link href={"/forget"} className={styles.link}>
+            <CustomLink href="/forget" theme={LinkTheme.DEFAULT}>
                 bro, did you really forget the password?
-            </Link>
+            </CustomLink>
             <Button theme={ButtonTheme.PRIMARY}>Sign in</Button>
             <span>
                 bro, you really don&apos;t have an account?
-                <Link href={"/signup"} className={styles.link}>
+                <CustomLink href="/" theme={LinkTheme.DEFAULT}>
                     &nbsp;Sign up for free
-                </Link>
+                </CustomLink>
             </span>
         </form>
     )

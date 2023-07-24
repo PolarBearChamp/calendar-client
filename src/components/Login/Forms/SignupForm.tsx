@@ -8,6 +8,7 @@ import { ISignupData } from "@/src/types"
 import PrimaryCheckbox from "@/src/ui/checkbox/PrimaryCheckbox"
 import { clsx } from "clsx"
 import { Button, ButtonTheme } from "@/src/ui/Buttons/Button"
+import { CustomLink, LinkTheme } from "@/src/ui/Links/CustomLink"
 
 const SignupForm: React.FC = () => {
     const {
@@ -89,9 +90,9 @@ const SignupForm: React.FC = () => {
             <Button theme={ButtonTheme.PRIMARY}>Sign up</Button>
             <div className={styles.footer}>
                 bro, you really have an account?
-                <Link href={"/"} className={styles.link}>
+                <CustomLink href="/" theme={LinkTheme.DEFAULT}>
                     &nbsp;Log in
-                </Link>
+                </CustomLink>
             </div>
         </form>
     )

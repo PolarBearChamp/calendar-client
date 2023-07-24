@@ -2,7 +2,7 @@ import React from "react"
 import Image from "next/image"
 
 import { NAVIGATION_ACTION } from "@/src/types"
-import styles from "./Button.module.scss"
+import styles from "./CustomLink.module.scss"
 
 interface IProps {
     icon: string

@@ -4,6 +4,7 @@ import cls from "./Button.module.scss"
 
 export const enum ButtonTheme {
     PRIMARY = "primary",
+    NAVIGATION = "navigation",
 }
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {

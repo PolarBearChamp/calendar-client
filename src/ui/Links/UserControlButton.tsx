@@ -3,7 +3,7 @@ import Image from "next/image"
 import { useRouter } from "next/navigation"
 import { clsx } from "clsx"
 
-import styles from "./Button.module.scss"
+import styles from "./CustomLink.module.scss"
 
 interface IProps {
     image: string
@@ -38,16 +38,6 @@ const UserControlButton: React.FC<IProps> = ({ route, icon, image, imageOnHover 
                 router.push(`/${route}`)
             }}
         />
-        // <Image
-        //   className={styles.cursor}
-        //   src={`/icons/${icon}`}
-        //   alt=""
-        //   width={40}
-        //   height={40}
-        //   onClick={() => {
-        //     router.push(`/${route}`);
-        //   }}
-        // />
     )
 }
 
