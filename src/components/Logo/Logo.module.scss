@@ -1,0 +1,16 @@
+.Logo {
+    display: grid;
+    grid-template-columns: 64px 1100px 60px;
+    margin: 0 auto;
+    max-width: 1354px;
+    row-gap: 48px;
+    -moz-column-gap: 64px;
+    column-gap: 64px;
+    background: rgba(0, 0, 0, 0);
+    a {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        margin-top: 48px;
+        margin-left: auto;
+    }
+}

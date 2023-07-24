@@ -1,6 +1,7 @@
 import { Metadata } from "next"
 
 import "@/styles/globals.scss"
+import { Logo } from "@/src/components/Logo/Logo"
 
 export const metadata: Metadata = {
     title: "Home",
@@ -9,7 +10,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="en">
-            <body>{children}</body>
+            <body>
+                <Logo />
+                {children}
+            </body>
         </html>
     )
 }

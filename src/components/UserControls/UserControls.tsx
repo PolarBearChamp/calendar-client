@@ -11,9 +11,17 @@ import Image from "next/image"
 
 const UserControls: React.FC = () => (
     <div className={styles.container}>
-        <CustomLink href="/friends" theme={LinkTheme.FRIENDS} status={LinkStatus.ACTIVE} />
+        <CustomLink href="/friends" theme={LinkTheme.FRIENDS} status={LinkStatus.DEFAULT} />
         <CustomLink href="/discovery" theme={LinkTheme.DISCOVERY} status={LinkStatus.DEFAULT} />
-        <CustomLink href="/profile" theme={LinkTheme.PROFILE} status={LinkStatus.DEFAULT} />
+        <CustomLink href="/profile" theme={LinkTheme.PROFILE} status={LinkStatus.DEFAULT}>
+            <Image
+                src="/icons/legasov.png"
+                alt="profile image"
+                height={40}
+                width={40}
+                quality={100}
+            />
+        </CustomLink>
     </div>
 )
 
