@@ -1,6 +1,3 @@
-import { useContext } from "react"
-
-import DateContext from "@/src/modules/CalendarModule/CalendarModule"
 import styles from "./Header.module.scss"
 
 interface IProps {
@@ -9,7 +6,6 @@ interface IProps {
 }
 
 const Header: React.FC<IProps> = ({ year, month }) => {
-    const date = useContext(DateContext)
     return (
         <div className={styles.container}>
             <span className={styles.year}>{year}</span>

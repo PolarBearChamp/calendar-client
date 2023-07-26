@@ -8,6 +8,7 @@ import Legasov from "@/public/icons/legasov.png"
 import styles from "./UserControls.module.scss"
 import { CustomLink, LinkStatus, LinkTheme } from "@/src/ui/Links/CustomLink"
 import Image from "next/image"
+import { ThemeSwitcher } from "@/src/ui/ThemeSwitcher/ThemeSwitcher"
 
 const UserControls: React.FC = () => (
     <div className={styles.container}>
@@ -22,6 +23,7 @@ const UserControls: React.FC = () => (
                 quality={100}
             />
         </CustomLink>
+        <ThemeSwitcher />
     </div>
 )
 

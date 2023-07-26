@@ -1,8 +1,8 @@
+"use client"
 import { Metadata } from "next"
 
-import "@/styles/globals.scss"
-import { Logo } from "@/src/components/Logo/Logo"
-
+import "@/styles/index.scss"
+import { clsx } from "clsx"
 export const metadata: Metadata = {
     title: "Home",
     description: "Welcome to Next.js",
@@ -10,8 +10,8 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="en">
-            <body>
-                <Logo />
+            <body className={clsx("app")}>
+                {/* <Logo /> */}
                 {children}
             </body>
         </html>

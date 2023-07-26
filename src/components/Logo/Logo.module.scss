@@ -1,6 +1,7 @@
 .Logo {
     display: grid;
-    grid-template-columns: 64px 1100px 60px;
+    // из-за грида не сжимается
+    grid-template-columns: 64px 1fr 60px;
     margin: 0 auto;
     max-width: 1354px;
     row-gap: 48px;
