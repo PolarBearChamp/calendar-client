@@ -33,13 +33,17 @@ export const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
     const srcThemeIcon = currentTheme === Theme.LIGHT ? "/icons/Moon.svg" : "/icons/Sun.svg"
 
     return (
-        <Button theme={ButtonTheme.DEFAULT} className={clsx(className)} onClick={toggleTheme}>
+        <Button
+            theme={ButtonTheme.DEFAULT}
+            className={clsx(className, cls.ThemeSwitcher)}
+            onClick={toggleTheme}
+        >
             <Image
                 src={srcThemeIcon}
                 alt="theme"
                 width={40}
                 height={40}
-                className={cls.ThemeSwitcher}
+                className={cls.ThemeSwitcherImage}
             />
         </Button>
     )

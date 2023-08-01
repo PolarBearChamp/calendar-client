@@ -1,3 +1,11 @@
 .ThemeSwitcher {
     display: flex;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    transition: 0.2s all;
+
+    &:hover {
+        transform: rotateZ(180deg);
+    }
 }
