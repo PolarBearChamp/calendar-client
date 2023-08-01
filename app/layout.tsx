@@ -8,9 +8,11 @@ export const metadata: Metadata = {
     description: "Welcome to Next.js",
 }
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+    const theme = localStorage.getItem("theme") || "light"
+
     return (
         <html lang="en">
-            <body className={clsx("app light")}>
+            <body className={clsx(`app ${theme}`)}>
                 {/* <Logo /> */}
                 {children}
             </body>

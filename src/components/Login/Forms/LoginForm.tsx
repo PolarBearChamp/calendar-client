@@ -66,7 +66,7 @@ const LoginForm: React.FC = () => {
                 <Button theme={ButtonTheme.PRIMARY}>Sign in</Button>
                 <span>
                     bro, you really don&apos;t have an account?
-                    <CustomLink href="/" theme={LinkTheme.DEFAULT}>
+                    <CustomLink href="/signup" theme={LinkTheme.DEFAULT}>
                         &nbsp;Sign up for free
                     </CustomLink>
                 </span>
