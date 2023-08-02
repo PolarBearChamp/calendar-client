@@ -2,19 +2,21 @@ import React, { useState } from "react"
 import { clsx } from "clsx"
 
 import styles from "./CalendarHeader.module.scss"
-
-const CalendarHeader: React.FC = () => {
+interface IProps {
+    active: number
+}
+const CalendarHeader: React.FC<IProps> = ({ active }) => {
     const [isActive, setIsActive] = useState(false)
-
+    const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
     return (
         <div className={styles.container}>
-            <div className={clsx(isActive ? styles.selected : styles.default)}>S</div>
-            <div className={clsx(isActive ? styles.selected : styles.default)}>M</div>
-            <div className={clsx(isActive ? styles.selected : styles.default)}>T</div>
-            <div className={clsx(isActive ? styles.selected : styles.default)}>W</div>
-            <div className={clsx(!isActive ? styles.selected : styles.default)}>T</div>
-            <div className={clsx(isActive ? styles.selected : styles.default)}>F</div>
-            <div className={clsx(isActive ? styles.selected : styles.default)}>S</div>
+            {days.map((day, i) => {
+                return (
+                    <div key={i} className={clsx(active === i ? styles.selected : styles.default)}>
+                        {day[0]}
+                    </div>
+                )
+            })}
         </div>
     )
 }

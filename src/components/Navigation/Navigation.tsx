@@ -14,10 +14,10 @@ interface IProps {
 
 const Navigation: React.FC<IProps> = ({ nextMonth, prevMonth }) => (
     <div className={styles.container}>
-        <Button theme={ButtonTheme.NAVIGATION}>
+        <Button theme={ButtonTheme.NAVIGATION} onClick={nextMonth}>
             <Image src="/icons/ArrowRight.svg" alt="next" width={35} height={35} />
         </Button>
-        <Button theme={ButtonTheme.NAVIGATION}>
+        <Button theme={ButtonTheme.NAVIGATION} onClick={prevMonth}>
             <Image src="/icons/ArrowLeft.svg" alt="prev" width={35} height={35} />
         </Button>
     </div>

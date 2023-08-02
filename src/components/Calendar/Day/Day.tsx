@@ -8,12 +8,13 @@ import { ModalPosition } from "@/src/types"
 import styles from "./Day.module.scss"
 
 interface IProps {
-    day: number
+    day?: number
     back?: string
-    openPopup: (e: React.MouseEvent<HTMLDivElement>) => void
-    closePopup: (e: React.MouseEvent<HTMLDivElement>) => void
-    clickPosition: ModalPosition
-    isPopupVisible: boolean
+    openPopup?: (e: React.MouseEvent<HTMLDivElement>) => void
+    closePopup?: (e: React.MouseEvent<HTMLDivElement>) => void
+    clickPosition?: ModalPosition
+    isPopupVisible?: boolean
+    mock?: boolean
 }
 
 const Day: React.FC<IProps> = ({
@@ -23,11 +24,12 @@ const Day: React.FC<IProps> = ({
     closePopup,
     clickPosition,
     isPopupVisible,
+    mock,
 }) => {
     if (!!back) {
         return (
             <>
-                <div className={styles.container} onClick={openPopup}>
+                <div className={clsx(styles.container, { mock })} onClick={openPopup}>
                     <span className={clsx(styles.number, styles.withBack)}>{day}</span>
                     <Image
                         src={`${back}`}
@@ -48,7 +50,7 @@ const Day: React.FC<IProps> = ({
 
     return (
         <>
-            <div className={clsx(styles.container)} onClick={openPopup}>
+            <div className={clsx(styles.container, styles.mock)} onClick={openPopup}>
                 <span className={styles.number}>{day}</span>
                 {isPopupVisible &&
                     ReactDOM.createPortal(

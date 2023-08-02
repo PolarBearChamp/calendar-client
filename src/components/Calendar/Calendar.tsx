@@ -6,10 +6,11 @@ import styles from "./Calendar.module.scss"
 
 interface IProps {
     items: ICalendarItem[]
+    offset: number
     //children: RenderCalendarItem
 }
 
-const Calendar: React.FC<IProps> = ({ items }) => {
+const Calendar: React.FC<IProps> = ({ items, offset }) => {
     const [isPopupVisible, setPopupVisible] = useState<boolean>(false)
     const [clickPosition, setClickPosition] = useState<ModalPosition>({
         x: 0,
@@ -28,6 +29,12 @@ const Calendar: React.FC<IProps> = ({ items }) => {
 
     return (
         <div className={styles.container}>
+            {offset > 0 &&
+                Array(offset)
+                    .fill(undefined)
+                    .map((_, i) => {
+                        return <Day key={i} mock={true} />
+                    })}
             {items.map((el, i) => {
                 return (
                     <Day
