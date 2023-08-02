@@ -43,37 +43,33 @@ const CalendarModule: React.FC<IProps> = ({ params }) => {
     let offset = getDay(startOfMonth(selectedDate))
 
     useEffect(() => {
-        console.log(REG.test(params.date), parseInt(paramsMonth) < 13)
-
         if (REG.test(params.date) && parseInt(paramsMonth) < 13) {
             setMonth(paramsMonthString)
             setYear(paramsYear)
-        } else {
-            // router.push(`/home/${format(now, "yyyy")}-${format(now, "MM")}`)
         }
+        // ломает всё
+        //  else {
+        //     router.push(`/home/${format(now, "yyyy")}-${format(now, "MM")}`)
+        // }
     }, [])
 
     const nextMonthHandle = useCallback(() => {
         const newMonth = format(new Date(parseInt(paramsYear), parseInt(paramsMonth)), "MM")
-        console.log(newMonth)
         if (newMonth === "01") {
             router.push(`/home/${(parseInt(paramsYear) + 1).toString()}-${newMonth}`)
         } else {
             router.push(`/home/${paramsYear.toString()}-${newMonth}`)
         }
-    }, [paramsYear, paramsMonth])
+    }, [paramsYear, paramsMonth, router])
 
     const prevMonthHandle = useCallback(() => {
         const newMonth = format(new Date(parseInt(paramsYear), parseInt(paramsMonth) - 2), "MM")
-
         if (newMonth === "12") {
             router.push(`/home/${(parseInt(paramsYear) - 1).toString()}-${newMonth}`)
         } else {
             router.push(`/home/${paramsYear.toString()}-${newMonth}`)
         }
-    }, [paramsYear, paramsMonth])
-
-    console.log(month, year)
+    }, [paramsYear, paramsMonth, router])
 
     const generateDataForCalendar = () => {
         const result: ICalendarItem[] = []
@@ -92,6 +88,9 @@ const CalendarModule: React.FC<IProps> = ({ params }) => {
     }
 
     const getOffset = () => {}
+
+    console.log(REG.test(params.date), parseInt(paramsMonth) < 13)
+    console.log(month, year)
 
     return (
         <div className={styles.container}>

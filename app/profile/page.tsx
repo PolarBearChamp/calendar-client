@@ -1,7 +1,9 @@
+"use client"
+import { ProfileModule } from "@/src/modules/ProfileModule/ProfileModule"
 import React from "react"
 
-const page = () => {
-    return <div>profile</div>
+const ProfilePage = () => {
+    return <ProfileModule />
 }
 
-export default page
+export default ProfilePage
