@@ -111,7 +111,6 @@ const CalendarModule: React.FC<IProps> = ({ params }) => {
                     <Navigation nextMonth={nextMonthHandle} prevMonth={prevMonthHandle} />
                 </div>
             </div>
-            <div id="popup-root"></div>
         </div>
     )
 }
