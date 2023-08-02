@@ -1,4 +1,4 @@
-import PrimaryInput from "@/src/ui/inputs/PrimaryInput"
+import Input from "@/src/ui/inputs/Input"
 import React from "react"
 
 import styles from "./LoginForm.module.scss"
@@ -25,7 +25,7 @@ const SignupForm: React.FC = () => {
             <h1 className={styles.header}>Create your account</h1>
             <label htmlFor="name">
                 Name
-                <PrimaryInput
+                <Input
                     id="name"
                     name="name"
                     type="name"
@@ -37,7 +37,7 @@ const SignupForm: React.FC = () => {
             {errors.name && errors.name.type === "required" && <span>Поле обязательно</span>}
             <label htmlFor="email">
                 Email
-                <PrimaryInput
+                <Input
                     id="email"
                     name="email"
                     type="email"
@@ -49,7 +49,7 @@ const SignupForm: React.FC = () => {
             {errors.email && errors.email.type === "required" && <span>Поле обязательно</span>}
             <label htmlFor="password">
                 Password
-                <PrimaryInput
+                <Input
                     id="password"
                     name="password"
                     type="password"

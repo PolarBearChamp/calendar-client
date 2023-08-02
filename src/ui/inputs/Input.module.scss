@@ -3,7 +3,20 @@
     background: var(--bg-color);
     color: var(--border-color);
     border-radius: 5px;
-    padding: 16px 25px;
-    font: var(--font-m);
     font-weight: 600;
+    font: var(--font-m);
+    padding: 16px 25px;
+}
+
+.s {
+    font: var(--font-s);
+    padding: 11px 25px;
+}
+.m {
+    font: var(--font-m);
+    padding: 16px 25px;
+}
+.l {
+    font: var(--font-l);
+    padding: 20px 25px;
 }

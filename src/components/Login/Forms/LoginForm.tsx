@@ -3,7 +3,7 @@ import Link from "next/link"
 import { useForm } from "react-hook-form"
 
 import { Button, ButtonTheme } from "@/src/ui/Buttons/Button"
-import PrimaryInput from "@/src/ui/inputs/PrimaryInput"
+import Input from "@/src/ui/inputs/Input"
 import styles from "./LoginForm.module.scss"
 import { ILoginData } from "@/src/types"
 import { CustomLink, LinkTheme } from "@/src/ui/Links/CustomLink"
@@ -29,7 +29,7 @@ const LoginForm: React.FC = () => {
             <div className={styles.fields}>
                 <label htmlFor="email">
                     Email
-                    <PrimaryInput
+                    <Input
                         id="email"
                         name="email"
                         type="email"
@@ -43,7 +43,7 @@ const LoginForm: React.FC = () => {
                 )}
                 <label htmlFor="password">
                     Password
-                    <PrimaryInput
+                    <Input
                         id="password"
                         name="password"
                         type="password"
