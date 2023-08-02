@@ -63,7 +63,6 @@
     font-size: 24px;
     font-weight: 500;
     width: 100%;
-    padding: 18px 0;
     color: white;
     background: transparent;
     border-radius: 5px;
@@ -75,4 +74,20 @@
         color: var(--primary-blue);
         border: 2px solid var(--primary-blue);
     }
+}
+
+.s {
+    font: var(--font-s);
+    padding: 10px 0;
+    font-weight: 600;
+}
+.m {
+    font: var(--font-m);
+    padding: 18px 0;
+    font-weight: 600;
+}
+.l {
+    font: var(--font-l);
+    padding: 26px 0;
+    font-weight: 600;
 }
