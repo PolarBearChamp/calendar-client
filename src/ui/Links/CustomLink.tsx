@@ -1,7 +1,8 @@
-import { FC, HTMLAttributes, LinkHTMLAttributes } from "react"
-import { clsx } from "clsx"
-import cls from "./CustomLink.module.scss"
+import { FC, HTMLAttributes } from "react"
 import Link from "next/link"
+import { clsx } from "clsx"
+
+import cls from "./CustomLink.module.scss"
 
 export const enum LinkTheme {
     NAVIGATION = "navigation",

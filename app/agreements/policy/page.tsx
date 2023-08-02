@@ -1,7 +1,5 @@
-import React from "react"
-
-const page = () => {
+const PolicyPage = () => {
     return <div>policy</div>
 }
 
-export default page
+export default PolicyPage

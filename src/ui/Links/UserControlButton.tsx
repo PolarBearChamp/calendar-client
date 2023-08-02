@@ -3,7 +3,7 @@ import Image from "next/image"
 import { useRouter } from "next/navigation"
 import { clsx } from "clsx"
 
-import styles from "./CustomLink.module.scss"
+import cls from "./CustomLink.module.scss"
 
 interface IProps {
     image: string
@@ -25,13 +25,13 @@ const UserControlButton: React.FC<IProps> = ({ route, icon, image, imageOnHover 
         setHovered(false)
     }
 
-    let totalImage = hovered && imageOnHover ? imageOnHover : image
-    let totalStyles = hovered && !imageOnHover ? styles.controlsHover : ""
+    const totalImage = hovered && imageOnHover ? imageOnHover : image
+    const totalStyles = hovered && !imageOnHover ? cls.controlsHover : ""
     return (
         <Image
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
-            className={clsx(styles.cursor, styles.controls, totalStyles)}
+            className={clsx(cls.cursor, cls.controls, totalStyles)}
             src={totalImage}
             alt=""
             onClick={() => {

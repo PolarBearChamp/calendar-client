@@ -1,9 +1,8 @@
-import React from "react"
 import { clsx } from "clsx"
 
 import SlideItem from "../SlideItem/SlideItem"
-import styles from "./SlideColumn.module.scss"
 import { ISlideItemData, SLIDE_MOVE_DIRECTION } from "@/src/types"
+import cls from "./SlideColumn.module.scss"
 
 interface IProps {
     data: ISlideItemData[]
@@ -14,19 +13,18 @@ const SlideColumn: React.FC<IProps> = ({ data, direction }) => {
     const setStyleAnimation = () => {
         switch (direction) {
             case SLIDE_MOVE_DIRECTION.UP1:
-                return styles.upFirst
-                break
+                return cls.upFirst
+
             case SLIDE_MOVE_DIRECTION.UP2:
-                return styles.upSecond
-                break
+                return cls.upSecond
+
             case SLIDE_MOVE_DIRECTION.UP3:
-                return styles.upThird
-                break
+                return cls.upThird
         }
     }
 
     return (
-        <div className={clsx(styles.container, setStyleAnimation())}>
+        <div className={clsx(cls.container, setStyleAnimation())}>
             {data &&
                 data.map((item, i) => {
                     return (

@@ -22,11 +22,6 @@ export const enum SLIDE_MOVE_DIRECTION {
     UP3 = "up3",
 }
 
-export interface ModalPosition {
-    x: number
-    y: number
-}
-
 export interface ISlideItemData {
     text: string
     type: SlideItemType

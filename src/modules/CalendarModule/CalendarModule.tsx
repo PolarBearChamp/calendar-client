@@ -1,5 +1,5 @@
-"use client"
-import React, { createContext, useCallback, useEffect, useState } from "react"
+import { useCallback, useEffect, useState } from "react"
+import { useRouter } from "next/navigation"
 import {
     addMonths,
     format,
@@ -15,9 +15,8 @@ import UserControls from "@/src/components/UserControls/UserControls"
 import Navigation from "@/src/components/Navigation/Navigation"
 import Calendar from "@/src/components/Calendar/Calendar"
 import Header from "@/src/components/Header/Header"
-import styles from "./CalendarModule.module.scss"
-import { ICalendarItem, IDateContext } from "@/src/types"
-import { useRouter } from "next/navigation"
+import { ICalendarItem } from "@/src/types"
+import cls from "./CalendarModule.module.scss"
 
 interface IProps {
     params: { date: string }
@@ -28,9 +27,9 @@ const REG = /^\d{4}-\d{2}$/gm
 const CalendarModule: React.FC<IProps> = ({ params }) => {
     const router = useRouter()
 
-    let paramsMonth = params.date.split("-")[1]
-    let paramsYear = params.date.split("-")[0]
-    let paramsMonthString = format(
+    const paramsMonth = params.date.split("-")[1]
+    const paramsYear = params.date.split("-")[0]
+    const paramsMonthString = format(
         new Date(parseInt(paramsYear), parseInt(paramsMonth) - 1),
         "MMMM",
     )
@@ -40,7 +39,7 @@ const CalendarModule: React.FC<IProps> = ({ params }) => {
     const selectedDate = new Date(parseInt(paramsYear), parseInt(paramsMonth) - 1)
     const now = new Date()
 
-    let offset = getDay(startOfMonth(selectedDate))
+    const offset = getDay(startOfMonth(selectedDate))
 
     useEffect(() => {
         if (REG.test(params.date) && parseInt(paramsMonth) < 13) {
@@ -93,21 +92,21 @@ const CalendarModule: React.FC<IProps> = ({ params }) => {
     console.log(month, year)
 
     return (
-        <div className={styles.container}>
-            <div className={styles.header}>
+        <div className={cls.container}>
+            <div className={cls.header}>
                 <Header year={year} month={month} />
             </div>
-            <div className={styles.content}>
-                <div className={styles.controls}>
+            <div className={cls.content}>
+                <div className={cls.controls}>
                     <UserControls />
                 </div>
-                <div className={styles.calendarHeader}>
+                <div className={cls.calendarHeader}>
                     <CalendarHeader active={2} />
                 </div>
-                <div className={styles.calendar}>
+                <div className={cls.calendar}>
                     <Calendar offset={offset} items={generateDataForCalendar()} />
                 </div>
-                <div className={styles.navigation}>
+                <div className={cls.navigation}>
                     <Navigation nextMonth={nextMonthHandle} prevMonth={prevMonthHandle} />
                 </div>
             </div>

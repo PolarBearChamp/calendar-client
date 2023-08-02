@@ -1,13 +1,10 @@
-import React from "react"
-import Link from "next/link"
+import { useRouter } from "next/navigation"
 import { useForm } from "react-hook-form"
 
 import { Button, ButtonTheme } from "@/src/ui/Buttons/Button"
-import Input from "@/src/ui/inputs/Input"
-import styles from "./LoginForm.module.scss"
-import { ILoginData } from "@/src/types"
 import { CustomLink, LinkTheme } from "@/src/ui/Links/CustomLink"
-import { useRouter } from "next/navigation"
+import Input from "@/src/ui/inputs/Input"
+import cls from "./LoginForm.module.scss"
 
 const LoginForm: React.FC = () => {
     const router = useRouter()
@@ -24,9 +21,9 @@ const LoginForm: React.FC = () => {
     console.log(errors)
 
     return (
-        <form onSubmit={onSubmit} className={styles.form}>
-            <h1 className={styles.header}>Login</h1>
-            <div className={styles.fields}>
+        <form onSubmit={onSubmit} className={cls.form}>
+            <h1 className={cls.header}>Login</h1>
+            <div className={cls.fields}>
                 <label htmlFor="email">
                     Email
                     <Input
@@ -39,7 +36,7 @@ const LoginForm: React.FC = () => {
                     />
                 </label>
                 {errors.email && errors.email.type === "required" && (
-                    <div className={styles.warning}>Поле обязательно</div>
+                    <div className={cls.warning}>Поле обязательно</div>
                 )}
                 <label htmlFor="password">
                     Password
@@ -53,16 +50,16 @@ const LoginForm: React.FC = () => {
                     />
                 </label>
                 {errors.password && errors.password.type === "required" && (
-                    <div className={styles.warning}>Поле обязательно</div>
+                    <div className={cls.warning}>Поле обязательно</div>
                 )}
                 {errors.password && errors.password.type === "minLength" && (
-                    <div className={styles.warning}>Минимальная длина 6 символов</div>
+                    <div className={cls.warning}>Минимальная длина 6 символов</div>
                 )}
                 <CustomLink href="/forget" theme={LinkTheme.DEFAULT}>
                     bro, did you really forget the password?
                 </CustomLink>
             </div>
-            <div className={styles.submit}>
+            <div className={cls.submit}>
                 <Button theme={ButtonTheme.PRIMARY}>Sign in</Button>
                 <span>
                     bro, you really don&apos;t have an account?

@@ -1,13 +1,13 @@
-import React from "react"
-import styles from "./SignUpModule.module.scss"
-import SignupForm from "@/src/components/Login/Forms/SignupForm"
 import Image from "next/image"
+
+import SignupForm from "@/src/components/Login/Forms/SignupForm"
+import cls from "./SignUpModule.module.scss"
 
 const SignUpModule = () => {
     return (
-        <div className={styles.container}>
-            <div className={styles.bg}>
-                <Image src="/bg/auth.jpg" alt="bg" fill style={{ objectFit: "contain" }} />
+        <div className={cls.container}>
+            <div className={cls.bg}>
+                <Image src="/bg/auth.jpg" alt="bg" fill className={cls.image} />
             </div>
             <SignupForm />
         </div>

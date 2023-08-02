@@ -1,14 +1,13 @@
-import Input from "@/src/ui/inputs/Input"
-import React from "react"
-
-import styles from "./LoginForm.module.scss"
-import { useForm } from "react-hook-form"
 import Link from "next/link"
-import { ISignupData } from "@/src/types"
-import PrimaryCheckbox from "@/src/ui/checkbox/PrimaryCheckbox"
+import { useForm } from "react-hook-form"
 import { clsx } from "clsx"
-import { Button, ButtonTheme } from "@/src/ui/Buttons/Button"
+
 import { CustomLink, LinkTheme } from "@/src/ui/Links/CustomLink"
+import PrimaryCheckbox from "@/src/ui/checkbox/PrimaryCheckbox"
+import { Button, ButtonTheme } from "@/src/ui/Buttons/Button"
+import Input from "@/src/ui/inputs/Input"
+
+import cls from "./LoginForm.module.scss"
 
 const SignupForm: React.FC = () => {
     const {
@@ -21,8 +20,8 @@ const SignupForm: React.FC = () => {
     console.log(errors)
 
     return (
-        <form onSubmit={onSubmit} className={clsx(styles.form__signup)}>
-            <h1 className={styles.header}>Create your account</h1>
+        <form onSubmit={onSubmit} className={clsx(cls.form__signup)}>
+            <h1 className={cls.header}>Create your account</h1>
             <label htmlFor="name">
                 Name
                 <Input
@@ -64,7 +63,7 @@ const SignupForm: React.FC = () => {
             {errors.password && errors.password.type === "minLength" && (
                 <span>Минимальная длина 6 символов</span>
             )}
-            <div className={styles.policy}>
+            <div className={cls.policy}>
                 <PrimaryCheckbox
                     id="policy"
                     name="policy"
@@ -73,22 +72,22 @@ const SignupForm: React.FC = () => {
                 />
                 <span>
                     I’m bro and i agree to all{" "}
-                    <Link href={"/agreements/term"} className={styles.link}>
+                    <Link href={"/agreements/term"} className={cls.link}>
                         Term
                     </Link>
                     ,{" "}
-                    <Link href={"/agreements/policy"} className={styles.link}>
+                    <Link href={"/agreements/policy"} className={cls.link}>
                         Privacy Policy
                     </Link>{" "}
                     and{" "}
-                    <Link href={"/agreements/fees"} className={styles.link}>
+                    <Link href={"/agreements/fees"} className={cls.link}>
                         Fees
                     </Link>
                     .
                 </span>
             </div>
             <Button theme={ButtonTheme.PRIMARY}>Sign up</Button>
-            <div className={styles.footer}>
+            <div className={cls.footer}>
                 bro, you really have an account?
                 <CustomLink href="/" theme={LinkTheme.DEFAULT}>
                     &nbsp;Log in

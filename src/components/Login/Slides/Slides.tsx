@@ -1,8 +1,6 @@
-import React from "react"
-
 import SlideColumn from "./SlideColumn/SlideColumn"
 import { ISlideItemData, SLIDE_MOVE_DIRECTION } from "@/src/types"
-import styles from "./Slides.module.scss"
+import cls from "./Slides.module.scss"
 
 const Slides: React.FC = () => {
     const data: ISlideItemData[][] = [
@@ -66,7 +64,7 @@ const Slides: React.FC = () => {
     ]
 
     return (
-        <div className={styles.container}>
+        <div className={cls.container}>
             <SlideColumn data={data[0]} direction={SLIDE_MOVE_DIRECTION.UP1} />
             <SlideColumn data={data[1]} direction={SLIDE_MOVE_DIRECTION.UP2} />
             <SlideColumn data={data[2]} direction={SLIDE_MOVE_DIRECTION.UP3} />

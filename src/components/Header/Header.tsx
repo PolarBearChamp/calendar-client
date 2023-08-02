@@ -1,4 +1,4 @@
-import styles from "./Header.module.scss"
+import cls from "./Header.module.scss"
 
 interface IProps {
     year: string
@@ -7,8 +7,8 @@ interface IProps {
 
 const Header: React.FC<IProps> = ({ year, month }) => {
     return (
-        <div className={styles.container}>
-            <span className={styles.year}>{year}</span>
+        <div className={cls.container}>
+            <span className={cls.year}>{year}</span>
             <span>{month}</span>
         </div>
     )

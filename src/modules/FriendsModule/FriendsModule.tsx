@@ -1,5 +1,6 @@
 import { FC } from "react"
 import { clsx } from "clsx"
+
 import cls from "./FriendsModule.module.scss"
 
 interface FriendsModuleProps {

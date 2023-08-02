@@ -1,7 +1,5 @@
-import React from "react"
-
-const page = () => {
+const DiscoveryPage = () => {
     return <div>discovery</div>
 }
 
-export default page
+export default DiscoveryPage

@@ -1,10 +1,11 @@
 import { FC } from "react"
-import { clsx } from "clsx"
-import cls from "./Profile.module.scss"
 import { useRouter } from "next/navigation"
 import { useForm } from "react-hook-form"
+import { clsx } from "clsx"
+
 import { Button, ButtonSize, ButtonTheme } from "@/src/ui/Buttons/Button"
 import Input, { InputSize } from "@/src/ui/inputs/Input"
+import cls from "./Profile.module.scss"
 
 interface ProfileFormProps {
     className?: string

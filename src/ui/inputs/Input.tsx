@@ -1,6 +1,7 @@
-import React, { InputHTMLAttributes } from "react"
+import { InputHTMLAttributes } from "react"
+import { FieldValues, RegisterOptions, UseFormRegister } from "react-hook-form"
 import { clsx } from "clsx"
-import styles from "./Input.module.scss"
+import cls from "./Input.module.scss"
 
 export const enum InputSize {
     S = "s",
@@ -9,15 +10,15 @@ export const enum InputSize {
 }
 
 interface IProps extends InputHTMLAttributes<HTMLInputElement> {
-    register: any
+    register: UseFormRegister<FieldValues>
     textSize?: InputSize
-    options?: {}
+    options?: RegisterOptions
 }
 
 const Input: React.FC<IProps> = ({ register, options, textSize, ...rest }) => (
     <input
-        className={clsx(styles.primary, textSize && styles[textSize])}
-        {...register(rest.name, options)}
+        className={clsx(cls.primary, textSize && cls[textSize])}
+        {...register(rest.name!, options)}
         {...rest}
     />
 )
