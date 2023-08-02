@@ -1,16 +1,19 @@
-.primary {
-    box-sizing: content-box;
+.Button {
     font-size: 24px;
     font-weight: 500;
     width: 100%;
-    padding: 18px 0;
-    color: white;
-    background: var(--primary-blue);
-    border-radius: 5px;
-    border: 2px solid var(--primary-blue);
+    box-sizing: content-box;
     cursor: pointer;
     transition: all 0.3s;
+}
 
+.primary {
+    padding: 18px 0;
+    border-radius: 5px;
+
+    color: white;
+    background: var(--primary-blue);
+    border: 2px solid var(--primary-blue);
     &:hover {
         border: 2px solid var(--primary-blue);
         color: var(--primary-blue);
@@ -18,8 +21,48 @@
     }
 }
 
+.cancel {
+    padding: 18px 0;
+    border-radius: 5px;
+
+    color: white;
+    background: var(--primary-red);
+    border: 2px solid var(--primary-red);
+
+    &:hover {
+        border: 2px solid var(--primary-red);
+        color: var(--primary-red);
+        background: var(--bg-color);
+    }
+}
+
+.stroked {
+    padding: 18px 0;
+    border-radius: 5px;
+
+    color: white;
+    background: transparent;
+    border: 2px solid var(--primary-blue);
+
+    &:hover {
+        color: var(--primary-blue);
+    }
+}
+.empty {
+    padding: 18px 0;
+    border-radius: 5px;
+
+    color: white;
+    background: transparent;
+    border: 2px solid transparent;
+
+    &:hover {
+        color: var(--primary-blue);
+        border: 2px solid var(--primary-blue);
+    }
+}
+
 .navigation {
-    cursor: pointer;
     border-radius: 100%;
     border: none;
     background: var(--secondary-bg);
@@ -31,48 +74,11 @@
         drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.09)) drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.05))
         drop-shadow(0px 7px 3px rgba(0, 0, 0, 0.01)) drop-shadow(0px 11px 3px rgba(0, 0, 0, 0));
 
-    transition: all 0.3s;
-
     &:hover {
         background-color: var(--primary-blue);
         img {
             filter: brightness(0) invert(1);
         }
-    }
-}
-
-.stroked {
-    box-sizing: content-box;
-    font-size: 24px;
-    font-weight: 500;
-    width: 100%;
-    padding: 18px 0;
-    color: white;
-    background: transparent;
-    border-radius: 5px;
-    border: 2px solid var(--primary-blue);
-    cursor: pointer;
-    transition: all 0.3s;
-
-    &:hover {
-        color: var(--primary-blue);
-    }
-}
-.empty {
-    box-sizing: content-box;
-    font-size: 24px;
-    font-weight: 500;
-    width: 100%;
-    color: white;
-    background: transparent;
-    border-radius: 5px;
-    border: 2px solid transparent;
-    cursor: pointer;
-    transition: all 0.3s;
-
-    &:hover {
-        color: var(--primary-blue);
-        border: 2px solid var(--primary-blue);
     }
 }
 

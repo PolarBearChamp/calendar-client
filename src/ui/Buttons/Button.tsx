@@ -8,6 +8,7 @@ export const enum ButtonTheme {
     DEFAULT = "default",
     STROKED = "stroked",
     EMPTY = "empty",
+    CANCEL = "cancel",
 }
 export const enum ButtonSize {
     S = "s",
