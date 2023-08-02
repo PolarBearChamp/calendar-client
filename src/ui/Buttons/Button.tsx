@@ -6,6 +6,8 @@ export const enum ButtonTheme {
     PRIMARY = "primary",
     NAVIGATION = "navigation",
     DEFAULT = "default",
+    STROKED = "stroked",
+    EMPTY = "empty",
 }
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {

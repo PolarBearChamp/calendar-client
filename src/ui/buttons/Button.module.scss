@@ -14,7 +14,7 @@
     &:hover {
         border: 2px solid var(--primary-blue);
         color: var(--primary-blue);
-        background: white;
+        background: var(--bg-color);
     }
 }
 
@@ -38,5 +38,41 @@
         img {
             filter: brightness(0) invert(1);
         }
+    }
+}
+
+.stroked {
+    box-sizing: content-box;
+    font-size: 24px;
+    font-weight: 500;
+    width: 100%;
+    padding: 18px 0;
+    color: white;
+    background: transparent;
+    border-radius: 5px;
+    border: 2px solid var(--primary-blue);
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+        color: var(--primary-blue);
+    }
+}
+.empty {
+    box-sizing: content-box;
+    font-size: 24px;
+    font-weight: 500;
+    width: 100%;
+    padding: 18px 0;
+    color: white;
+    background: transparent;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+        color: var(--primary-blue);
+        border: 2px solid var(--primary-blue);
     }
 }
