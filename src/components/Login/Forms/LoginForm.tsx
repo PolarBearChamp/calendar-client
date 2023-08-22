@@ -1,8 +1,8 @@
 import { useRouter } from 'next/navigation'
 import { useForm } from 'react-hook-form'
 
-import { Button, ButtonTheme } from '@/ui/Buttons/Button'
-import { CustomLink, LinkTheme } from '@/ui/Links/CustomLink'
+import { Button, ButtonTheme } from '@/SharedLayer/ui/Button/Button'
+import { CustomLink, LinkTheme } from '@/SharedLayer/ui/Links/CustomLink'
 
 import cls from './LoginForm.module.scss'
 import { Input } from '@/SharedLayer/ui/Input/Input'

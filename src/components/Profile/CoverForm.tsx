@@ -4,7 +4,11 @@ import cls from './Profile.module.scss'
 
 import { useRouter } from 'next/navigation'
 import { useForm } from 'react-hook-form'
-import { Button, ButtonSize, ButtonTheme } from '@/ui/Buttons/Button'
+import {
+  Button,
+  ButtonSize,
+  ButtonTheme,
+} from '@/SharedLayer/ui/Buttons/Button'
 import Image from 'next/image'
 import { Input, InputSize } from '@/SharedLayer/ui/Input/Input'
 

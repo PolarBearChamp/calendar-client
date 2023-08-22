@@ -3,7 +3,11 @@ import { useRouter } from 'next/navigation'
 import { useForm } from 'react-hook-form'
 import { clsx } from 'clsx'
 
-import { Button, ButtonSize, ButtonTheme } from '@/ui/Buttons/Button'
+import {
+  Button,
+  ButtonSize,
+  ButtonTheme,
+} from '@/SharedLayer/ui/Buttons/Button'
 
 import cls from './Profile.module.scss'
 import { Input, InputSize } from '@/SharedLayer/ui/Input/Input'

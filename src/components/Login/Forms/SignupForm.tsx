@@ -2,14 +2,15 @@ import Link from 'next/link'
 import { useForm } from 'react-hook-form'
 import { clsx } from 'clsx'
 
-import { CustomLink, LinkTheme } from '@/ui/Links/CustomLink'
+import { CustomLink, LinkTheme } from '@/SharedLayer/ui/Links/CustomLink'
 import { Checkbox } from '@/SharedLayer/ui/CheckBox/Checkbox'
-import { Button, ButtonTheme } from '@/ui/Buttons/Button'
+import { Button, ButtonTheme } from '@/SharedLayer/ui/Button/Button'
 
 import cls from './LoginForm.module.scss'
 import { Input } from '@/SharedLayer/ui/Input/Input'
+import { FC } from 'react'
 
-const SignupForm: React.FC = () => {
+const SignupForm: FC = () => {
   const {
     register,
     handleSubmit,
