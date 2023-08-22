@@ -1,8 +1,17 @@
-"use client"
+'use client'
 
-import LoginModule from "@/src/modules/LoginModule/LoginModule"
-const page = () => {
-    return <LoginModule />
+import cls from './LoginPage.module.scss'
+import { FC } from 'react'
+import LoginForm from '@/FeatureLayer/Login/ui/LoginForm/LoginForm'
+import Slides from '@/SharedLayer/ui/Slides/Slides'
+
+const LoginPage: FC = () => {
+  return (
+    <div className={cls.container}>
+      <LoginForm />
+      <Slides />
+    </div>
+  )
 }
 
-export default page
+export default LoginPage
