@@ -4,7 +4,7 @@ import { format, getDay, getDaysInMonth, startOfMonth } from 'date-fns'
 
 import CalendarHeader from '@/components/Calendar/CalendarHeader/CalendarHeader'
 import { UserControls } from '@/WidgetLayer/UserControls'
-import Navigation from '@/components/Navigation/Navigation'
+import { Navigation } from '@/WidgetLayer/Navigation'
 import Calendar from '@/components/Calendar/Calendar'
 import Header from '@/components/Header/Header'
 import { ICalendarItem } from '@/types'
