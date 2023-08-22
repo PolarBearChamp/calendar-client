@@ -12,10 +12,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
     return (
         <html lang="en">
-            <body className={clsx(`app ${theme}`)}>
-                {/* <Logo /> */}
-                {children}
-            </body>
+            <body className={clsx(`app ${theme}`)}>{children}</body>
         </html>
     )
 }

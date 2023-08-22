@@ -72,6 +72,7 @@ const CalendarModule: React.FC<IProps> = ({ params }) => {
 
     const generateDataForCalendar = () => {
         const result: ICalendarItem[] = []
+
         for (let i = 1; i <= getDaysInMonth(selectedDate); i++) {
             const rand = Math.random()
             const id = (((rand * 10) % 10) + 4).toFixed(0)
