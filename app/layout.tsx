@@ -1,13 +1,10 @@
 "use client"
-import { Metadata } from "next"
 
 import "@/styles/index.scss"
 import { clsx } from "clsx"
-export const metadata: Metadata = {
-    title: "Home",
-    description: "Welcome to Next.js",
-}
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+import { ReactNode } from "react"
+
+export default function RootLayout({ children }: { children: ReactNode }) {
     const theme = localStorage.getItem("theme") || "light"
 
     return (
