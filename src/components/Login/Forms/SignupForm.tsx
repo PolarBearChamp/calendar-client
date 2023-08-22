@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form'
 import { clsx } from 'clsx'
 
 import { CustomLink, LinkTheme } from '@/ui/Links/CustomLink'
-import PrimaryCheckbox from '@/ui/checkbox/PrimaryCheckbox'
+import { Checkbox } from '@/SharedLayer/ui/CheckBox/Checkbox'
 import { Button, ButtonTheme } from '@/ui/Buttons/Button'
 
 import cls from './LoginForm.module.scss'
@@ -68,7 +68,7 @@ const SignupForm: React.FC = () => {
         <span>Минимальная длина 6 символов</span>
       )}
       <div className={cls.policy}>
-        <PrimaryCheckbox
+        <Checkbox
           id="policy"
           name="policy"
           register={register}
