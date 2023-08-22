@@ -1,17 +1,17 @@
-import Image from "next/image"
+import Image from 'next/image'
 
-import SignupForm from "@/components/Login/Forms/SignupForm"
-import cls from "./SignUpModule.module.scss"
+import cls from '../../../app/signup/SignUpModule.module.scss'
+import SignupForm from '@/FeatureLayer/SignUp/ui/SignUpForm/SignupForm'
 
 const SignUpModule = () => {
-    return (
-        <div className={cls.container}>
-            <div className={cls.bg}>
-                <Image src="/bg/auth.jpg" alt="bg" fill className={cls.image} />
-            </div>
-            <SignupForm />
-        </div>
-    )
+  return (
+    <div className={cls.container}>
+      <div className={cls.bg}>
+        <Image src="/bg/auth.jpg" alt="bg" fill className={cls.image} />
+      </div>
+      <SignupForm />
+    </div>
+  )
 }
 
 export default SignUpModule

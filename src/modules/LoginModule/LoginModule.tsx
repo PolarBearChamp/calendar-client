@@ -1,7 +1,7 @@
-import LoginForm from '@/components/Login/Forms/LoginForm'
-import Slides from '@/components/Login/Slides/Slides'
 import cls from './LoginModule.module.scss'
 import { FC } from 'react'
+import LoginForm from '@/FeatureLayer/Login/ui/LoginForm/LoginForm'
+import Slides from '@/components/Login/Slides/Slides'
 
 const LoginModule: FC = () => {
   return (
