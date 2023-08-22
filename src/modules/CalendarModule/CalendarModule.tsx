@@ -2,11 +2,10 @@ import { useCallback, useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { format, getDay, getDaysInMonth, startOfMonth } from 'date-fns'
 
-import CalendarHeader from '@/components/Calendar/CalendarHeader/CalendarHeader'
+import { CalendarHeader } from '@/EntityLayer/Calendar/ui/CalendarHeader/CalendarHeader'
 import { UserControls } from '@/WidgetLayer/UserControls'
 import { Navigation } from '@/WidgetLayer/Navigation'
-import Calendar from '@/components/Calendar/Calendar'
-import Header from '@/components/Header/Header'
+import { Calendar } from '@/EntityLayer/Calendar'
 import { ICalendarItem } from '@/types'
 import cls from './CalendarModule.module.scss'
 
@@ -93,7 +92,7 @@ const CalendarModule: React.FC<IProps> = ({ params }) => {
   return (
     <div className={cls.container}>
       <div className={cls.header}>
-        <Header year={year} month={month} />
+        <CalendarHeader year={year} month={month} />
       </div>
       <div className={cls.content}>
         <div className={cls.controls}>
