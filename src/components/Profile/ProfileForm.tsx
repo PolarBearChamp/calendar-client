@@ -3,11 +3,7 @@ import { useRouter } from 'next/navigation'
 import { useForm } from 'react-hook-form'
 import { clsx } from 'clsx'
 
-import {
-  Button,
-  ButtonSize,
-  ButtonTheme,
-} from '@/SharedLayer/ui/Buttons/Button'
+import { Button, ButtonSize, ButtonTheme } from '@/SharedLayer/ui/Button/Button'
 
 import cls from './Profile.module.scss'
 import { Input, InputSize } from '@/SharedLayer/ui/Input/Input'
@@ -24,11 +20,11 @@ export const ProfileForm: FC<ProfileFormProps> = ({ className }) => {
     handleSubmit,
     formState: { errors },
   } = useForm()
+
   const onSubmit = handleSubmit((data) => {
     console.log(data)
     router.push('/home')
   })
-  console.log(errors)
 
   return (
     <form
