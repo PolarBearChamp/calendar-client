@@ -1,6 +1,6 @@
 'use client'
 
-import cls from './CalendarModule.module.scss'
+import cls from './CalendarPage.module.scss'
 
 import { useCallback, useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
@@ -16,7 +16,7 @@ import { DateHeader } from '@/EntityLayer/Calendar/ui/DateHeader/DateHeader'
 
 const REG = /^\d{4}-\d{2}$/gm
 
-const CalendarModule = ({ params }: { params: { date: string } }) => {
+const Page = ({ params }: { params: { date: string } }) => {
   const router = useRouter()
 
   const paramsMonth = params.date.split('-')[1]
@@ -109,4 +109,4 @@ const CalendarModule = ({ params }: { params: { date: string } }) => {
   )
 }
 
-export default CalendarModule
+export default Page
