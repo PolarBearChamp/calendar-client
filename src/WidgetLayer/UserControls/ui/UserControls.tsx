@@ -7,8 +7,9 @@ import {
 } from '@/SharedLayer/ui/Links/CustomLink'
 import { ThemeSwitcher } from '@/SharedLayer/ui/ThemeSwitcher/ThemeSwitcher'
 import cls from './UserControls.module.scss'
+import { FC } from 'react'
 
-const UserControls: React.FC = () => (
+export const UserControls: FC = () => (
   <div className={cls.container}>
     <CustomLink
       href="/friends"
@@ -36,5 +37,3 @@ const UserControls: React.FC = () => (
     <ThemeSwitcher />
   </div>
 )
-
-export default UserControls
