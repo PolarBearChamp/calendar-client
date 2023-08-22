@@ -1,8 +1,8 @@
 import { FC } from "react"
 import { clsx } from "clsx"
 import cls from "./ProfileModule.module.scss"
-import { ProfileForm } from "@/src/components/Profile/ProfileForm"
-import { CoverForm } from "@/src/components/Profile/CoverForm"
+import { ProfileForm } from "@/components/Profile/ProfileForm"
+import { CoverForm } from "@/components/Profile/CoverForm"
 
 interface ProfileModuleProps {
     className?: string

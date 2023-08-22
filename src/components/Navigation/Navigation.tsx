@@ -1,6 +1,6 @@
 import Image from "next/image"
 
-import { Button, ButtonTheme } from "@/src/ui/Buttons/Button"
+import { Button, ButtonTheme } from "@/ui/Buttons/Button"
 import cls from "./Navigation.module.scss"
 
 interface IProps {

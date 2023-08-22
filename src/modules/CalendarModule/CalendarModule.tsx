@@ -1,21 +1,13 @@
 import { useCallback, useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
-import {
-    addMonths,
-    format,
-    subMonths,
-    getDaysInMonth,
-    getDate,
-    getDay,
-    startOfMonth,
-} from "date-fns"
+import { format, getDay, getDaysInMonth, startOfMonth } from "date-fns"
 
-import CalendarHeader from "@/src/components/Calendar/CalendarHeader/CalendarHeader"
-import UserControls from "@/src/components/UserControls/UserControls"
-import Navigation from "@/src/components/Navigation/Navigation"
-import Calendar from "@/src/components/Calendar/Calendar"
-import Header from "@/src/components/Header/Header"
-import { ICalendarItem } from "@/src/types"
+import CalendarHeader from "@/components/Calendar/CalendarHeader/CalendarHeader"
+import UserControls from "@/components/UserControls/UserControls"
+import Navigation from "@/components/Navigation/Navigation"
+import Calendar from "@/components/Calendar/Calendar"
+import Header from "@/components/Header/Header"
+import { ICalendarItem } from "@/types"
 import cls from "./CalendarModule.module.scss"
 
 interface IProps {

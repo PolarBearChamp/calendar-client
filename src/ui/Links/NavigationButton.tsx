@@ -1,6 +1,6 @@
 import Image from "next/image"
 
-import { NAVIGATION_ACTION } from "@/src/types"
+import { NAVIGATION_ACTION } from "@/types"
 import cls from "./CustomLink.module.scss"
 
 interface IProps {

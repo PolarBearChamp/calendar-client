@@ -1,6 +1,6 @@
 import Image from "next/image"
 
-import SignupForm from "@/src/components/Login/Forms/SignupForm"
+import SignupForm from "@/components/Login/Forms/SignupForm"
 import cls from "./SignUpModule.module.scss"
 
 const SignUpModule = () => {

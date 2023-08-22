@@ -1,4 +1,4 @@
-import { ICalendarItem } from "@/src/types"
+import { ICalendarItem } from "@/types"
 import Day from "./Day/Day"
 import cls from "./Calendar.module.scss"
 

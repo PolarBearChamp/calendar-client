@@ -1,7 +1,7 @@
 import { clsx } from "clsx"
 
 import SlideItem from "../SlideItem/SlideItem"
-import { ISlideItemData, SLIDE_MOVE_DIRECTION } from "@/src/types"
+import { ISlideItemData, SLIDE_MOVE_DIRECTION } from "@/types"
 import cls from "./SlideColumn.module.scss"
 
 interface IProps {

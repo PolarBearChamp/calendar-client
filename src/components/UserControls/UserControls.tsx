@@ -1,7 +1,7 @@
 import Image from "next/image"
 
-import { CustomLink, LinkStatus, LinkTheme } from "@/src/ui/Links/CustomLink"
-import { ThemeSwitcher } from "@/src/ui/ThemeSwitcher/ThemeSwitcher"
+import { CustomLink, LinkStatus, LinkTheme } from "@/ui/Links/CustomLink"
+import { ThemeSwitcher } from "@/ui/ThemeSwitcher/ThemeSwitcher"
 import cls from "./UserControls.module.scss"
 
 const UserControls: React.FC = () => (

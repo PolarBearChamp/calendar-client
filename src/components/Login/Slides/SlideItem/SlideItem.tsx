@@ -1,7 +1,7 @@
 import Image from "next/image"
 import { clsx } from "clsx"
 
-import { ISlideItemData } from "@/src/types"
+import { ISlideItemData } from "@/types"
 import cls from "./SlideItem.module.scss"
 
 const SlideItem: React.FC<ISlideItemData> = ({ text, type, image }) => (

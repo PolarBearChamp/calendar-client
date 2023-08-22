@@ -1,6 +1,6 @@
 "use client"
 
-import { ProfileModule } from "@/src/modules/ProfileModule/ProfileModule"
+import { ProfileModule } from "@/modules/ProfileModule/ProfileModule"
 
 const ProfilePage = () => {
     return <ProfileModule />

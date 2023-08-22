@@ -1,6 +1,6 @@
 "use client"
 
-import SignUpModule from "@/src/modules/SignUpModule/SignUpModule"
+import SignUpModule from "@/modules/SignUpModule/SignUpModule"
 
 const SignUpPage = () => {
     return <SignUpModule />

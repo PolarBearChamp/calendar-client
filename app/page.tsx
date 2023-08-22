@@ -1,6 +1,6 @@
 "use client"
 
-import LoginModule from "@/src/modules/LoginModule/LoginModule"
+import LoginModule from "@/modules/LoginModule/LoginModule"
 
 const page = () => {
     return <LoginModule />
