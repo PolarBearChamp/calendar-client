@@ -3,10 +3,15 @@ import { useRouter } from 'next/navigation'
 import { useForm } from 'react-hook-form'
 import { clsx } from 'clsx'
 
-import { Button, ButtonSize, ButtonTheme } from '@/SharedLayer/ui/Button/Button'
+import {
+  Button,
+  ButtonSize,
+  ButtonTheme,
+  Input,
+  InputSize,
+} from '@/SharedLayer/ui'
 
 import cls from './Profile.module.scss'
-import { Input, InputSize } from '@/SharedLayer/ui/Input/Input'
 
 interface ProfileFormProps {
   className?: string

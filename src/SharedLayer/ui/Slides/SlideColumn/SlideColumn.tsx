@@ -1,38 +1,44 @@
-import { clsx } from "clsx"
+import { clsx } from 'clsx'
 
-import SlideItem from "../SlideItem/SlideItem"
-import { ISlideItemData, SLIDE_MOVE_DIRECTION } from "@/types"
-import cls from "./SlideColumn.module.scss"
+import SlideItem from '../SlideItem/SlideItem'
+import { ISlideItemData, SLIDE_MOVE_DIRECTION } from './../../../model'
+import cls from './SlideColumn.module.scss'
+import { FC } from 'react'
 
 interface IProps {
-    data: ISlideItemData[]
-    direction: SLIDE_MOVE_DIRECTION
+  data: ISlideItemData[]
+  direction: SLIDE_MOVE_DIRECTION
 }
 
-const SlideColumn: React.FC<IProps> = ({ data, direction }) => {
-    const setStyleAnimation = () => {
-        switch (direction) {
-            case SLIDE_MOVE_DIRECTION.UP1:
-                return cls.upFirst
+const SlideColumn: FC<IProps> = ({ data, direction }) => {
+  const setStyleAnimation = () => {
+    switch (direction) {
+      case SLIDE_MOVE_DIRECTION.UP1:
+        return cls.upFirst
 
-            case SLIDE_MOVE_DIRECTION.UP2:
-                return cls.upSecond
+      case SLIDE_MOVE_DIRECTION.UP2:
+        return cls.upSecond
 
-            case SLIDE_MOVE_DIRECTION.UP3:
-                return cls.upThird
-        }
+      case SLIDE_MOVE_DIRECTION.UP3:
+        return cls.upThird
     }
+  }
 
-    return (
-        <div className={clsx(cls.container, setStyleAnimation())}>
-            {data &&
-                data.map((item, i) => {
-                    return (
-                        <SlideItem key={i} text={item.text} type={item.type} image={item.image} />
-                    )
-                })}
-        </div>
-    )
+  return (
+    <div className={clsx(cls.container, setStyleAnimation())}>
+      {data &&
+        data.map((item, i) => {
+          return (
+            <SlideItem
+              key={i}
+              text={item.text}
+              type={item.type}
+              image={item.image}
+            />
+          )
+        })}
+    </div>
+  )
 }
 
 export default SlideColumn

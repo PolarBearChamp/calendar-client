@@ -1,8 +1,9 @@
 'use client'
 import Image from 'next/image'
 
+import { SignupForm } from '@/FeatureLayer/SignUp'
+
 import cls from './SignUpModule.module.scss'
-import SignupForm from '@/FeatureLayer/SignUp/ui/SignUpForm/SignupForm'
 
 const SignUpPage = () => {
   return (

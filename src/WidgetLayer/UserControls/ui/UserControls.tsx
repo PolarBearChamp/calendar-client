@@ -1,3 +1,4 @@
+import { FC } from 'react'
 import Image from 'next/image'
 
 import {
@@ -5,9 +6,9 @@ import {
   LinkStatus,
   LinkTheme,
 } from '@/SharedLayer/ui/Links/CustomLink'
-import { ThemeSwitcher } from '@/SharedLayer/ui/ThemeSwitcher/ThemeSwitcher'
+import { ThemeSwitcher } from '@/SharedLayer/ui'
+
 import cls from './UserControls.module.scss'
-import { FC } from 'react'
 
 export const UserControls: FC = () => (
   <div className={cls.container}>

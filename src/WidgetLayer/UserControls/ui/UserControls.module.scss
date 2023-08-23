@@ -1,13 +1,11 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    width: 78px;
-    align-items: center;
-    box-shadow:
-        1px 5px 5px 0px rgba(0, 0, 0, 0.09),
-        2px 12px 7px 0px rgba(0, 0, 0, 0.05);
-    padding: 44px 18px;
-    border-radius: 100px;
-    background: var(--secondary-bg);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  box-shadow: 1px 5px 5px 0 rgba(0, 0, 0, 0.09),
+  2px 12px 7px 0 rgba(0, 0, 0, 0.05);
+  padding: 44px 18px;
+  border-radius: 100px;
+  background: var(--secondary-bg);
 }

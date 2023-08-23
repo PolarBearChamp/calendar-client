@@ -1,12 +1,18 @@
 import { FC } from 'react'
-import { clsx } from 'clsx'
-import cls from './Profile.module.scss'
-
 import { useRouter } from 'next/navigation'
 import { useForm } from 'react-hook-form'
-import { Button, ButtonSize, ButtonTheme } from '@/SharedLayer/ui/Button/Button'
+import { clsx } from 'clsx'
 import Image from 'next/image'
-import { Input, InputSize } from '@/SharedLayer/ui/Input/Input'
+
+import {
+  Button,
+  ButtonSize,
+  ButtonTheme,
+  Input,
+  InputSize,
+} from '@/SharedLayer/ui'
+
+import cls from './CoverForm.module.scss'
 
 interface CoverFormProps {
   className?: string

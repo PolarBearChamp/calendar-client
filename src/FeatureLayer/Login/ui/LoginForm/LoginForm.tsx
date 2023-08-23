@@ -1,13 +1,13 @@
 import { useRouter } from 'next/navigation'
 import { useForm } from 'react-hook-form'
 
-import { Button, ButtonTheme } from '@/SharedLayer/ui/Button/Button'
+import { Button, ButtonTheme, Input } from '@/SharedLayer/ui'
 import { CustomLink, LinkTheme } from '@/SharedLayer/ui/Links/CustomLink'
 
 import cls from './LoginForm.module.scss'
-import { Input } from '@/SharedLayer/ui/Input/Input'
+import { FC } from 'react'
 
-const LoginForm: React.FC = () => {
+const LoginForm: FC = () => {
   const router = useRouter()
 
   const {

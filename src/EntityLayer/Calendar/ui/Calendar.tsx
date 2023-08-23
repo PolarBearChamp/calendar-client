@@ -1,7 +1,9 @@
-import { ICalendarItem } from '@/types'
-import Day from './Day/Day'
-import cls from './Calendar.module.scss'
 import { FC } from 'react'
+
+import Day from './Day/Day'
+import { ICalendarItem } from '@/types'
+
+import cls from './Calendar.module.scss'
 
 interface IProps {
   items: ICalendarItem[]
