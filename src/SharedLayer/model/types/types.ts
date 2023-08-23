@@ -58,8 +58,9 @@ export interface ISignupData {
 export interface IFriendData {
   id: number
   username: string
-  status: string
-  image: string
+  status?: string
+  image?: string
+  url: string
 }
 
 export type SlideItemType = 'date' | 'text'

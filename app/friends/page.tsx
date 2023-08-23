@@ -14,30 +14,33 @@ const FriendsPage: FC = () => {
         username: 'test name',
         status: 'test status',
         image: '/songs/3.png',
+        url: 'test',
       },
       {
         id: 2,
         username: 'test name',
         status: 'test status',
         image: '/songs/2.webp',
+        url: 'test',
       },
       {
         id: 3,
         username: 'test name',
-        status: 'test status',
         image: '/songs/1.webp',
+        url: 'test',
       },
       {
         id: 4,
         username: 'test name',
         status: 'test status',
-        image: '/songs/7.png',
+        url: 'test',
       },
       {
         id: 5,
         username: 'test name',
         status: 'test status',
         image: '/songs/8.png',
+        url: 'test',
       },
     ]
   }

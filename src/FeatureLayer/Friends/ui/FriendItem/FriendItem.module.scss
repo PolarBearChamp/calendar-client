@@ -1,0 +1,32 @@
+.FriendItem {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  font: var(--font-m);
+
+
+  .image {
+    position: relative;
+    width: 40px;
+    height: 40px;
+
+    img {
+      border-radius: 5px;
+      border: 1px solid rgba(63, 87, 255, 0.16);
+    }
+  }
+
+  .info {
+    font-weight: 600;
+  }
+
+  .status {
+    font-weight: 500;
+    color: var(--primary-blue);
+  }
+}
+
+.link {
+  display: inline-block;
+  width: 250px;
+}
