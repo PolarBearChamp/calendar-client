@@ -4,7 +4,7 @@ import { clsx } from 'clsx'
 
 import { Button, ButtonTheme } from '../Button/Button'
 import cls from './ThemeSwitcher.module.scss'
-import { Theme } from '../../model/types/types'
+import { Theme } from '../../model'
 
 interface ThemeSwitcherProps {
   className?: string

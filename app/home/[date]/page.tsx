@@ -7,7 +7,7 @@ import { format, getDay, getDaysInMonth, startOfMonth } from 'date-fns'
 import { Calendar, CalendarHeader, DateHeader } from '@/EntityLayer/Calendar'
 import { UserControls } from '@/WidgetLayer/UserControls'
 import { Navigation } from '@/WidgetLayer/Navigation'
-import { ICalendarItem } from '@/SharedLayer/model/types/types'
+import { ICalendarItem } from '@/SharedLayer/model'
 
 import cls from './CalendarPage.module.scss'
 

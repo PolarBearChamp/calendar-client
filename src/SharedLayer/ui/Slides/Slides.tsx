@@ -1,6 +1,6 @@
 import { FC } from 'react'
 
-import { ISlideItemData, SLIDE_MOVE_DIRECTION } from './../../model/types/types'
+import { ISlideItemData, SLIDE_MOVE_DIRECTION } from './../../model'
 import SlideColumn from './SlideColumn/SlideColumn'
 
 import cls from './Slides.module.scss'

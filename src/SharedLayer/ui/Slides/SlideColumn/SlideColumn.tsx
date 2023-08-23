@@ -1,18 +1,16 @@
 import { clsx } from 'clsx'
 
 import SlideItem from '../SlideItem/SlideItem'
-import {
-  ISlideItemData,
-  SLIDE_MOVE_DIRECTION,
-} from './../../../model/types/types'
+import { ISlideItemData, SLIDE_MOVE_DIRECTION } from './../../../model'
 import cls from './SlideColumn.module.scss'
+import { FC } from 'react'
 
 interface IProps {
   data: ISlideItemData[]
   direction: SLIDE_MOVE_DIRECTION
 }
 
-const SlideColumn: React.FC<IProps> = ({ data, direction }) => {
+const SlideColumn: FC<IProps> = ({ data, direction }) => {
   const setStyleAnimation = () => {
     switch (direction) {
       case SLIDE_MOVE_DIRECTION.UP1:

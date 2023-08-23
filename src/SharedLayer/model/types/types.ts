@@ -55,6 +55,13 @@ export interface ISignupData {
   password: string
 }
 
+export interface IFriendData {
+  id: number
+  username: string
+  status: string
+  image: string
+}
+
 export type SlideItemType = 'date' | 'text'
 export type InputType = 'text' | 'number' | 'email' | 'password'
 export type RenderCalendarItem = (props: ICalendarItem) => ReactElement
