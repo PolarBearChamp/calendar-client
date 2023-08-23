@@ -2,8 +2,7 @@
 import { FC } from 'react'
 import { clsx } from 'clsx'
 import cls from './ProfilePage.module.scss'
-import { ProfileForm } from '@/components/Profile/ProfileForm'
-import { CoverForm } from '@/components/Profile/CoverForm'
+import { CoverForm, ProfileForm } from '@/EntityLayer/Profile'
 
 const ProfilePage: FC = () => {
   return (

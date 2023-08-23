@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import { clsx } from 'clsx'
-import cls from './Profile.module.scss'
+import cls from './CoverForm.module.scss'
 
 import { useRouter } from 'next/navigation'
 import { useForm } from 'react-hook-form'
