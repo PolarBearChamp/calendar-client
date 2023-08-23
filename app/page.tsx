@@ -1,9 +1,11 @@
 'use client'
 
-import cls from './LoginPage.module.scss'
 import { FC } from 'react'
-import LoginForm from '@/FeatureLayer/Login/ui/LoginForm/LoginForm'
-import Slides from '@/SharedLayer/ui/Slides/Slides'
+
+import { LoginForm } from '@/FeatureLayer/Login'
+import { Slides } from '@/SharedLayer/ui'
+
+import cls from './LoginPage.module.scss'
 
 const LoginPage: FC = () => {
   return (

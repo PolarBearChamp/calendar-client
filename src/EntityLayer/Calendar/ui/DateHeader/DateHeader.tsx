@@ -1,5 +1,6 @@
-import cls from './DateHeader.module.scss'
 import { FC } from 'react'
+
+import cls from './DateHeader.module.scss'
 
 interface IProps {
   year: string

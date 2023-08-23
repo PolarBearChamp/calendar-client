@@ -1,8 +1,10 @@
 'use client'
 import { FC } from 'react'
 import { clsx } from 'clsx'
-import cls from './ProfilePage.module.scss'
+
 import { CoverForm, ProfileForm } from '@/EntityLayer/Profile'
+
+import cls from './ProfilePage.module.scss'
 
 const ProfilePage: FC = () => {
   return (

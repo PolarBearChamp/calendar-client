@@ -1,18 +1,15 @@
 'use client'
 
-import cls from './CalendarPage.module.scss'
-
 import { useCallback, useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { format, getDay, getDaysInMonth, startOfMonth } from 'date-fns'
 
-import { CalendarHeader } from '@/EntityLayer/Calendar/ui/CalendarHeader/CalendarHeader'
+import { Calendar, CalendarHeader, DateHeader } from '@/EntityLayer/Calendar'
 import { UserControls } from '@/WidgetLayer/UserControls'
 import { Navigation } from '@/WidgetLayer/Navigation'
-import { Calendar } from '@/EntityLayer/Calendar'
-import { ICalendarItem } from '@/types'
+import { ICalendarItem } from '@/SharedLayer/model/types/types'
 
-import { DateHeader } from '@/EntityLayer/Calendar/ui/DateHeader/DateHeader'
+import cls from './CalendarPage.module.scss'
 
 const REG = /^\d{4}-\d{2}$/gm
 

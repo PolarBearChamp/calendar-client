@@ -1,5 +1,6 @@
-import { Calendar } from '@/EntityLayer/Calendar/ui/Calendar'
+import { Calendar } from './ui/Calendar'
+import { calendarSlice } from './model/slice/calendarSlice'
+import { CalendarHeader } from './ui/CalendarHeader/CalendarHeader'
+import { DateHeader } from './ui/DateHeader/DateHeader'
 
-import { calendarSlice } from '@/EntityLayer/Calendar/model/slice/calendarSlice'
-
-export { Calendar, calendarSlice }
+export { Calendar, calendarSlice, CalendarHeader, DateHeader }
