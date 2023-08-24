@@ -3,7 +3,28 @@
   align-items: center;
   gap: 22px;
   font: var(--font-m);
+  color: var(--primary-color);
 
+  a {
+    color: var(--primary-color);
+  }
+
+  @media (min-width: 901px) {
+    &:not(:nth-child(3n)) {
+      border-right: 1px solid #6A75BC; /* Цвет и стиль разделителя */
+    }
+  }
+
+  @media (max-width: 900px) {
+    &:not(:nth-child(2n)) {
+      border-right: 1px solid #6A75BC; /* Цвет и стиль разделителя */
+    }
+  }
+  @media (max-width: 660px) {
+    &:not(:nth-child(2n)) {
+      border-right: none; /* Цвет и стиль разделителя */
+    }
+  }
 
   .image {
     position: relative;
@@ -24,9 +45,4 @@
     font-weight: 500;
     color: var(--primary-blue);
   }
-}
-
-.link {
-  display: inline-block;
-  width: 250px;
 }
