@@ -5,6 +5,7 @@ import { clsx } from 'clsx'
 import cls from './FriendsPage.module.scss'
 import { Friends } from '@/FeatureLayer/Friends'
 import { IFriendData } from '@/SharedLayer/model'
+import { UserControls } from '@/WidgetLayer/UserControls'
 
 const FriendsPage: FC = () => {
   const getData = (): IFriendData[] => {
@@ -33,6 +34,7 @@ const FriendsPage: FC = () => {
         id: 4,
         username: 'test name',
         status: 'test status',
+        image: '/songs/11.png',
         url: 'test',
       },
       {
@@ -47,7 +49,11 @@ const FriendsPage: FC = () => {
 
   return (
     <div className={clsx(cls.FriendsModule)}>
-      <Friends data={getData()} />
+      <h1>Do you know these guys?</h1>
+      <div className={cls.content}>
+        <UserControls />
+        <Friends data={getData()} />
+      </div>
     </div>
   )
 }

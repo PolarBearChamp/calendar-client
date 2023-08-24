@@ -1,0 +1,12 @@
+.Wrapper {
+  max-width: 1000px;
+  width: 100%;
+  box-shadow: var(--shadow);
+  border-radius: 10px;
+  padding: 55px 77px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  background: var(--secondary-bg);
+  height: fit-content;
+}

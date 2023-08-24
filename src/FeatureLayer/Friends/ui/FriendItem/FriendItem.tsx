@@ -11,16 +11,18 @@ interface IProps {
 
 export const FriendItem: FC<IProps> = ({ friend }) => {
   return (
-    <Link href={`/${friend.url}`} className={cls.link}>
-      <div className={cls.FriendItem}>
-        <div className={cls.image}>
+    <div className={cls.FriendItem}>
+      <div className={cls.image}>
+        <Link href={`/${friend.url}`}>
           {friend.image && <Image src={friend.image} alt={'friend'} fill />}
-        </div>
-        <div className={cls.info}>
-          <div>{friend.username}</div>
-          <div className={cls.status}>{friend.status}</div>
-        </div>
+        </Link>
       </div>
-    </Link>
+      <div className={cls.info}>
+        <Link href={`/${friend.url}`}>
+          <div>{friend.username}</div>
+        </Link>
+        <div className={cls.status}>{friend.status}</div>
+      </div>
+    </div>
   )
 }

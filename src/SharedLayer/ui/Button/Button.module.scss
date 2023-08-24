@@ -5,6 +5,7 @@
   box-sizing: content-box;
   cursor: pointer;
   transition: all 0.3s;
+  height: min-content;
 }
 
 .primary {
@@ -86,8 +87,9 @@
 
 .s {
   font: var(--font-s);
-  padding: 6px 0;
+  padding: 8px 0;
   font-weight: 600;
+
 }
 
 .m {
