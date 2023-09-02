@@ -85,6 +85,15 @@
   }
 }
 
+.icon {
+  background: transparent;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+}
+
 .s {
   font: var(--font-s);
   padding: 8px 0;
