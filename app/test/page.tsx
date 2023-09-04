@@ -1,6 +1,7 @@
 'use client'
 import React from 'react'
 import { FeedItem } from '@/FeatureLayer/Feed/ui/FeedItem'
+import { AddSongModal } from '@/FeatureLayer/AddSong'
 
 const data = {
   userId: '1',
@@ -26,6 +27,7 @@ const Page = () => {
   return (
     <div>
       <FeedItem {...data} />
+      <AddSongModal />
     </div>
   )
 }
