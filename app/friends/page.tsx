@@ -6,6 +6,7 @@ import cls from './FriendsPage.module.scss'
 import { Friends } from '@/FeatureLayer/Friends'
 import { IFriendData } from '@/SharedLayer/model'
 import { UserControls } from '@/WidgetLayer/UserControls'
+import { WithLogo } from '@/SharedLayer/ui/Layouts'
 
 const FriendsPage: FC = () => {
   const getData = (): IFriendData[] => {
@@ -48,13 +49,15 @@ const FriendsPage: FC = () => {
   }
 
   return (
-    <div className={clsx(cls.FriendsModule)}>
-      <h1>Do you know these guys?</h1>
-      <div className={cls.content}>
-        <UserControls />
-        <Friends data={getData()} />
+    <WithLogo>
+      <div className={clsx(cls.FriendsModule)}>
+        <h1>Do you know these guys?</h1>
+        <div className={cls.content}>
+          <UserControls />
+          <Friends data={getData()} />
+        </div>
       </div>
-    </div>
+    </WithLogo>
   )
 }
 export default FriendsPage
