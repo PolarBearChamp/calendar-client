@@ -5,13 +5,16 @@ import { clsx } from 'clsx'
 import { CoverForm, ProfileForm } from '@/EntityLayer/Profile'
 
 import cls from './ProfilePage.module.scss'
+import { WithLogo } from '@/SharedLayer/ui/Layouts'
 
 const ProfilePage: FC = () => {
   return (
-    <div className={clsx(cls.ProfileModule)}>
-      <ProfileForm />
-      <CoverForm />
-    </div>
+    <WithLogo>
+      <div className={clsx(cls.ProfileModule)}>
+        <ProfileForm />
+        <CoverForm />
+      </div>
+    </WithLogo>
   )
 }
 export default ProfilePage
