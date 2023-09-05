@@ -1,0 +1,21 @@
+.container {
+  font: var(--font-l);
+  color: var(--inactive-color);
+  display: flex;
+  align-items: center;
+  gap: 240px;
+
+  span {
+    cursor: pointer;
+    padding: 11px;
+    transition: 0.1s all;
+    border-bottom: 4px solid transparent;
+  }
+
+  .active {
+    color: var(--primary-color);
+    font-weight: 600;
+    border-bottom: 4px solid var(--primary-blue);
+  }
+}
+

@@ -1,3 +1,4 @@
-import { FeedItem } from '@/FeatureLayer/Feed/ui/FeedItem'
+import { FeedItem } from './ui/FeedItem'
+import { FeedSwitcher } from './ui/FeedSwitcher'
 
-export { FeedItem }
+export { FeedItem, FeedSwitcher }
