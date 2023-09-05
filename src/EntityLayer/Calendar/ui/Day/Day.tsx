@@ -1,8 +1,9 @@
-import { FC } from 'react'
+import { FC, useCallback, useState } from 'react'
 import Image from 'next/image'
 import { clsx } from 'clsx'
 
 import cls from './Day.module.scss'
+import { AddSongModal } from '@/FeatureLayer/AddSong'
 
 interface IProps {
   day?: number
@@ -11,9 +12,17 @@ interface IProps {
 }
 
 const Day: FC<IProps> = ({ day, back, mock }) => {
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false)
+  const onShowModal = useCallback(() => {
+    setIsModalOpen(true)
+  }, [])
+
+  const onCloseModal = useCallback(() => {
+    setIsModalOpen(false)
+  }, [])
   if (!!back) {
     return (
-      <div className={clsx(cls.container, { mock })}>
+      <div className={clsx(cls.container)} onClick={onShowModal}>
         <span className={clsx(cls.number, cls.withBack)}>{day}</span>
         <Image
           src={`${back}`}
@@ -22,6 +31,9 @@ const Day: FC<IProps> = ({ day, back, mock }) => {
           height={100}
           className={cls.back}
         />
+        {isModalOpen && (
+          <AddSongModal isOpen={isModalOpen} onClose={onCloseModal} />
+        )}
       </div>
     )
   }
