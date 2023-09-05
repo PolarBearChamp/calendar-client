@@ -2,6 +2,7 @@
 import { FeedItem, FeedSwitcher } from '@/FeatureLayer/Feed'
 import cls from './DiscoveryPage.module.scss'
 import { UserControls } from '@/WidgetLayer/UserControls'
+import { WithLogo } from '@/SharedLayer/ui/Layouts'
 
 const DiscoveryPage = () => {
   const testData = [
@@ -87,24 +88,26 @@ const DiscoveryPage = () => {
     },
   ]
   return (
-    <div className={cls.wrapper}>
-      <h1 className={cls.header}>Feed</h1>
-      <div className={cls.controls}>
-        <UserControls />
-      </div>
-      <div className={cls.content}>
-        <div className={cls.feed}>
-          <FeedSwitcher />
-          {testData && (
-            <div className={cls.list}>
-              {testData.map((item, i) => {
-                return <FeedItem key={i} {...item} />
-              })}
-            </div>
-          )}
+    <WithLogo>
+      <div className={cls.wrapper}>
+        <h1 className={cls.header}>Feed</h1>
+        <div className={cls.controls}>
+          <UserControls />
+        </div>
+        <div className={cls.content}>
+          <div className={cls.feed}>
+            <FeedSwitcher />
+            {testData && (
+              <div className={cls.list}>
+                {testData.map((item, i) => {
+                  return <FeedItem key={i} {...item} />
+                })}
+              </div>
+            )}
+          </div>
         </div>
       </div>
-    </div>
+    </WithLogo>
   )
 }
 
