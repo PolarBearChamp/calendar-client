@@ -1,0 +1,12 @@
+.ThemeSwitcher {
+  display: flex;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: 0.2s all;
+
+  &:hover {
+    transform: rotateZ(180deg);
+  }
+}

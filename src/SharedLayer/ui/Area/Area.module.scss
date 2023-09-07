@@ -1,0 +1,10 @@
+.Area {
+  border: 1px solid var(--border-color);
+  background: transparent;
+  color: var(--border-color);
+  border-radius: 5px;
+  font-weight: 600;
+  font: var(--font-m);
+  padding: 16px 25px;
+  height: min-content;
+}

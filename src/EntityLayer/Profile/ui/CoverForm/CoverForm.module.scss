@@ -1,0 +1,38 @@
+.CoverForm {
+  display: flex;
+  gap: 55px;
+
+  .coverArea {
+    width: 310px;
+    height: 310px;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--secondary-bg);
+    border-radius: 5px;
+  }
+
+  .controls {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 235px;
+
+    .controlBlock {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .text {
+      display: inline;
+      font: var(--font-s);
+    }
+
+    span {
+      color: var(--primary-blue);
+      font-weight: 600;
+    }
+  }
+}

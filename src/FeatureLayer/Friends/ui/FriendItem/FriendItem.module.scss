@@ -1,0 +1,48 @@
+.FriendItem {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  font: var(--font-m);
+  color: var(--primary-color);
+
+  a {
+    color: var(--primary-color);
+  }
+
+  @media (min-width: 901px) {
+    &:not(:nth-child(3n)) {
+      border-right: 1px solid #6A75BC; /* Цвет и стиль разделителя */
+    }
+  }
+
+  @media (max-width: 900px) {
+    &:not(:nth-child(2n)) {
+      border-right: 1px solid #6A75BC; /* Цвет и стиль разделителя */
+    }
+  }
+  @media (max-width: 660px) {
+    &:not(:nth-child(2n)) {
+      border-right: none; /* Цвет и стиль разделителя */
+    }
+  }
+
+  .image {
+    position: relative;
+    width: 40px;
+    height: 40px;
+
+    img {
+      border-radius: 5px;
+      border: 1px solid rgba(63, 87, 255, 0.16);
+    }
+  }
+
+  .info {
+    font-weight: 600;
+  }
+
+  .status {
+    font-weight: 500;
+    color: var(--primary-blue);
+  }
+}

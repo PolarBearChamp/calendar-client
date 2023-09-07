@@ -1,0 +1,34 @@
+.wrapper {
+  display: grid;
+  grid-template-areas:
+'. h'
+'controls feed';
+
+  .header {
+    margin: 32px 0;
+    grid-area: h;
+  }
+
+  .controls {
+    grid-area: controls;
+    margin-left: 62px;
+  }
+
+  .content {
+    grid-area: feed;
+  }
+
+  .feed {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    align-items: center;
+    width: fit-content;
+  }
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+}

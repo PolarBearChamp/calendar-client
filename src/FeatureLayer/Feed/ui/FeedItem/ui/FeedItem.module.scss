@@ -1,0 +1,110 @@
+.FeedItem {
+  padding: 48px 48px 32px;
+  display: flex;
+  gap: 64px;
+  box-shadow: var(--shadow);
+  border-radius: 10px;
+  background: var(--secondary-bg);
+  width: 840px;
+
+  .song {
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+
+    &__image {
+      width: 244px;
+      height: 244px;
+      position: relative;
+
+      img {
+        border-radius: 20px;
+      }
+    }
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__name {
+      font-weight: 600;
+      color: var(--primary-color)
+    }
+
+    &__artist {
+      color: var(--primary-blue);
+    }
+  }
+
+  .post {
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+    font-size: 20px;
+
+    &__header {
+      display: flex;
+      justify-content: space-between;
+
+      .user {
+        display: flex;
+        gap: 32px;
+
+        &__avatar {
+          width: 54px;
+          height: 54px;
+          position: relative;
+
+          img {
+            border-radius: 5px;
+          }
+        }
+
+        &__info {
+          display: flex;
+          flex-direction: column;
+
+          .name {
+            font-weight: 600;
+            color: var(--primary-color);
+          }
+
+          .status {
+            font-weight: 500;
+            color: var(--primary-blue);
+          }
+        }
+      }
+    }
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+
+      .songLine {
+        font-weight: 500;
+      }
+    }
+
+    &__footer {
+      display: flex;
+      justify-content: space-between;
+
+      .tags {
+        display: flex;
+        gap: 8px;
+        font-weight: 600;
+        color: var(--primary-blue);
+      }
+
+      .rate {
+        display: flex;
+        gap: 20px;
+      }
+    }
+  }
+}
+
