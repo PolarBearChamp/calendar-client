@@ -11,3 +11,19 @@
   border-radius: 100px;
   background: var(--secondary-bg);
 }
+
+@media (max-width: 840px) {
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    gap: 40px;
+
+    box-shadow: 1px 5px 5px 0 rgba(0, 0, 0, 0.09),
+    2px 12px 7px 0 rgba(0, 0, 0, 0.05);
+    padding: 17px 30px;
+    border-radius: 100px;
+    background: var(--secondary-bg);
+  }
+}

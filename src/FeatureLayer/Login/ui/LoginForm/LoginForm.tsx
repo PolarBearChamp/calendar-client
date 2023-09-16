@@ -1,7 +1,13 @@
 import { useRouter } from 'next/navigation'
 import { useForm } from 'react-hook-form'
 
-import { Button, ButtonTheme, Input } from '@/SharedLayer/ui'
+import {
+  Button,
+  ButtonSize,
+  ButtonTheme,
+  Input,
+  InputSize,
+} from '@/SharedLayer/ui'
 import { CustomLink, LinkTheme } from '@/SharedLayer/ui/Links/CustomLink'
 
 import cls from './LoginForm.module.scss'
@@ -34,6 +40,7 @@ const LoginForm: FC = () => {
             placeholder="username@mail.com"
             register={register}
             options={{ required: true }}
+            textSize={InputSize.M}
           />
         </label>
         {errors.email && errors.email.type === 'required' && (
@@ -48,6 +55,7 @@ const LoginForm: FC = () => {
             placeholder="password"
             register={register}
             options={{ required: true, minLength: 6 }}
+            textSize={InputSize.M}
           />
         </label>
         {errors.password && errors.password.type === 'required' && (
@@ -61,7 +69,9 @@ const LoginForm: FC = () => {
         </CustomLink>
       </div>
       <div className={cls.submit}>
-        <Button theme={ButtonTheme.PRIMARY}>Sign in</Button>
+        <Button theme={ButtonTheme.PRIMARY} size={ButtonSize.M}>
+          Sign in
+        </Button>
         <span>
           bro, you really don&apos;t have an account?
           <CustomLink href="/signup" theme={LinkTheme.DEFAULT}>

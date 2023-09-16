@@ -32,7 +32,7 @@ export const FriendSearch: FC = () => {
           placeholder="find friend"
           register={register}
           options={{ required: true }}
-          textSize={InputSize.XS}
+          textSize={InputSize.S}
         />
         {errors.searchQuery && <span>ну введи ты хоть что-нибудь</span>}
       </div>

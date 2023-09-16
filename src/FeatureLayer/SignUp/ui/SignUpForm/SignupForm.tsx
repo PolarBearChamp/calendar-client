@@ -4,7 +4,14 @@ import { useForm } from 'react-hook-form'
 
 import { clsx } from 'clsx'
 import { CustomLink, LinkTheme } from '@/SharedLayer/ui/Links/CustomLink'
-import { Button, ButtonTheme, Checkbox, Input } from '@/SharedLayer/ui'
+import {
+  Button,
+  ButtonSize,
+  ButtonTheme,
+  Checkbox,
+  Input,
+  InputSize,
+} from '@/SharedLayer/ui'
 
 import cls from './SignupForm.module.scss'
 
@@ -30,6 +37,7 @@ const SignupForm: FC = () => {
           placeholder="your name"
           register={register}
           options={{ required: true }}
+          textSize={InputSize.M}
         />
       </label>
       {errors.name && errors.name.type === 'required' && (
@@ -44,6 +52,7 @@ const SignupForm: FC = () => {
           placeholder="username@mail.com"
           register={register}
           options={{ required: true }}
+          textSize={InputSize.M}
         />
       </label>
       {errors.email && errors.email.type === 'required' && (
@@ -58,6 +67,7 @@ const SignupForm: FC = () => {
           placeholder="password"
           register={register}
           options={{ required: true, minLength: 6 }}
+          textSize={InputSize.M}
         />
       </label>
       {errors.password && errors.password.type === 'required' && (
@@ -89,7 +99,9 @@ const SignupForm: FC = () => {
           .
         </span>
       </div>
-      <Button theme={ButtonTheme.PRIMARY}>Sign up</Button>
+      <Button theme={ButtonTheme.PRIMARY} size={ButtonSize.M}>
+        Sign up
+      </Button>
       <div className={cls.footer}>
         bro, you really have an account?
         <CustomLink href="/" theme={LinkTheme.DEFAULT}>

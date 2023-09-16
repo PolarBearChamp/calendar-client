@@ -4,15 +4,13 @@ import { clsx } from 'clsx'
 import cls from './Input.module.scss'
 
 export const enum InputSize {
-  XS = 'xs',
   S = 's',
   M = 'm',
-  L = 'l',
 }
 
 interface IProps extends InputHTMLAttributes<HTMLInputElement> {
   register: UseFormRegister<FieldValues>
-  textSize?: InputSize
+  textSize: InputSize
   options?: RegisterOptions
 }
 

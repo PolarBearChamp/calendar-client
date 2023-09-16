@@ -16,6 +16,7 @@ export const UserControls: FC = () => (
       href="/friends"
       theme={LinkTheme.FRIENDS}
       status={LinkStatus.DEFAULT}
+      className={cls.button}
     />
     <CustomLink
       href="/discovery"

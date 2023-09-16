@@ -1,8 +1,7 @@
-import Image from 'next/image'
-
-import { Button, ButtonTheme } from '@/SharedLayer/ui/Button/Button'
 import cls from './Navigation.module.scss'
 import { FC } from 'react'
+import { NavigationButton } from '@/SharedLayer/ui/NavigationButton/NavigationButton'
+import { NAVIGATION_ACTION } from '@/SharedLayer/model'
 
 interface IProps {
   nextMonth: () => void
@@ -11,11 +10,15 @@ interface IProps {
 
 export const Navigation: FC<IProps> = ({ nextMonth, prevMonth }) => (
   <div className={cls.container}>
-    <Button theme={ButtonTheme.NAVIGATION} onClick={nextMonth}>
-      <Image src="/icons/ArrowRight.svg" alt="next" width={35} height={35} />
-    </Button>
-    <Button theme={ButtonTheme.NAVIGATION} onClick={prevMonth}>
-      <Image src="/icons/ArrowLeft.svg" alt="prev" width={35} height={35} />
-    </Button>
+    <NavigationButton
+      icon={'/icons/ArrowRight.svg'}
+      action={NAVIGATION_ACTION.NEXT}
+      onClick={nextMonth}
+    />
+    <NavigationButton
+      icon={'/icons/ArrowLeft.svg'}
+      action={NAVIGATION_ACTION.PREV}
+      onClick={nextMonth}
+    />
   </div>
 )

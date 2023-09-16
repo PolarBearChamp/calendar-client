@@ -5,7 +5,7 @@ import SlideColumn from './SlideColumn/SlideColumn'
 
 import cls from './Slides.module.scss'
 
-const Slides: FC = () => {
+export const Slides: FC = () => {
   const data: ISlideItemData[][] = [
     [
       { text: '02.12.20', type: 'date', image: '/songs/8.png' },
@@ -74,5 +74,3 @@ const Slides: FC = () => {
     </div>
   )
 }
-
-export default Slides

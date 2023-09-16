@@ -2,9 +2,9 @@
 import Image from 'next/image'
 
 import { SignupForm } from '@/FeatureLayer/SignUp'
+import { WithLogo } from '@/SharedLayer/ui/Layouts'
 
 import cls from './SignUpModule.module.scss'
-import { WithLogo } from '@/SharedLayer/ui/Layouts'
 
 const SignUpPage = () => {
   return (
