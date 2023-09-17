@@ -1,6 +1,6 @@
 import cls from './Navigation.module.scss'
 import { FC } from 'react'
-import { NavigationButton } from '@/SharedLayer/ui/NavigationButton/NavigationButton'
+import { NavigationButton } from '@/SharedLayer/ui'
 import { NAVIGATION_ACTION } from '@/SharedLayer/model'
 
 interface IProps {
@@ -18,7 +18,7 @@ export const Navigation: FC<IProps> = ({ nextMonth, prevMonth }) => (
     <NavigationButton
       icon={'/icons/ArrowLeft.svg'}
       action={NAVIGATION_ACTION.PREV}
-      onClick={nextMonth}
+      onClick={prevMonth}
     />
   </div>
 )

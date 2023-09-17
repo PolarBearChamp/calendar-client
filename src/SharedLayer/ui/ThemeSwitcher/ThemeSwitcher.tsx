@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { clsx } from 'clsx'
 
-import { Button, ButtonTheme } from '../Button/Button'
+import { Button, ButtonSize, ButtonTheme } from '../Button/Button'
 import cls from './ThemeSwitcher.module.scss'
 import { Theme } from '../../model'
 
@@ -33,13 +33,13 @@ export const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
 
   return (
     <Button
-      theme={ButtonTheme.DEFAULT}
+      theme={ButtonTheme.ICON}
       className={clsx(className, cls.ThemeSwitcher)}
       onClick={toggleTheme}
-    >
+      size={ButtonSize.S}>
       <Image
         src={srcThemeIcon}
-        alt="theme"
+        alt='theme'
         width={40}
         height={40}
         className={cls.ThemeSwitcherImage}

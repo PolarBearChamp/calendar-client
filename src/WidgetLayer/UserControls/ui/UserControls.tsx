@@ -1,41 +1,16 @@
 import { FC } from 'react'
-import Image from 'next/image'
-
-import {
-  CustomLink,
-  LinkStatus,
-  LinkTheme,
-} from '@/SharedLayer/ui/Links/CustomLink'
-import { ThemeSwitcher } from '@/SharedLayer/ui'
+import { ThemeSwitcher, UserControlButton } from '@/SharedLayer/ui'
 
 import cls from './UserControls.module.scss'
+import { UserControlType } from '@/SharedLayer/ui/UserControlButton/UserControlButton'
 
-export const UserControls: FC = () => (
-  <div className={cls.container}>
-    <CustomLink
-      href="/friends"
-      theme={LinkTheme.FRIENDS}
-      status={LinkStatus.DEFAULT}
-      className={cls.button}
-    />
-    <CustomLink
-      href="/discovery"
-      theme={LinkTheme.DISCOVERY}
-      status={LinkStatus.DEFAULT}
-    />
-    <CustomLink
-      href="/profile"
-      theme={LinkTheme.PROFILE}
-      status={LinkStatus.DEFAULT}
-    >
-      <Image
-        src="/icons/legasov.png"
-        alt="profile image"
-        height={40}
-        width={40}
-        quality={100}
-      />
-    </CustomLink>
-    <ThemeSwitcher />
-  </div>
-)
+export const UserControls: FC = () => {
+  return (
+    <div className={cls.container}>
+      <UserControlButton route="/friends" type={UserControlType.FRIENDS} />
+      <UserControlButton route="/discovery" type={UserControlType.DISCOVERY} />
+      <UserControlButton route="/profile" type={UserControlType.PROFILE} />
+      <ThemeSwitcher />
+    </div>
+  )
+}

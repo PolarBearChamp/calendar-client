@@ -4,7 +4,8 @@ import { Input, InputSize } from './Input/Input'
 import { Logo } from './Logo/Logo'
 import { Slides } from './Slides/Slides'
 import { ThemeSwitcher } from './ThemeSwitcher/ThemeSwitcher'
-import NavigationButton from './NavigationButton/NavigationButton'
+import { NavigationButton } from './NavigationButton/NavigationButton'
+import { UserControlButton } from './UserControlButton/UserControlButton'
 
 export {
   Input,
@@ -17,4 +18,5 @@ export {
   Checkbox,
   ThemeSwitcher,
   NavigationButton,
+  UserControlButton,
 }
