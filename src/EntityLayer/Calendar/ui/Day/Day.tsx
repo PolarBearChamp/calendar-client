@@ -20,10 +20,17 @@ const Day: FC<IProps> = ({ day, back, mock }) => {
   const onCloseModal = useCallback(() => {
     setIsModalOpen(false)
   }, [])
+
   if (!!back) {
     return (
       <div className={clsx(cls.container)} onClick={onShowModal}>
-        <span className={clsx(cls.number, cls.withBack)}>{day}</span>
+        <div className={clsx(cls.number, cls.withBack)}>{day}</div>
+
+        <div className={cls.info}>
+          <div className={clsx(cls.artist, cls.textWrapper)}>Kanye West</div>
+          <div className={clsx(cls.song, cls.textWrapper)}>Runaway</div>
+        </div>
+
         <Image
           src={`${back}`}
           alt=""
@@ -31,6 +38,7 @@ const Day: FC<IProps> = ({ day, back, mock }) => {
           height={100}
           className={cls.back}
         />
+
         {isModalOpen && (
           <AddSongModal isOpen={isModalOpen} onClose={onCloseModal} />
         )}
