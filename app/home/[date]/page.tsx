@@ -5,8 +5,8 @@ import { useRouter } from 'next/navigation'
 import { format, getDay, getDaysInMonth, startOfMonth } from 'date-fns'
 
 import { Calendar, CalendarHeader, DateHeader } from '@/EntityLayer/Calendar'
-import { UserControls } from '@/WidgetLayer/UserControls'
-import { Navigation } from '@/WidgetLayer/Navigation'
+import { UserControls } from '../../../src/FeatureLayer/UserControls'
+import { Navigation } from '../../../src/FeatureLayer/Navigation'
 import { ICalendarItem } from '@/SharedLayer/model'
 
 import cls from './CalendarPage.module.scss'

@@ -1,57 +1,37 @@
-.control {
-  display: block;
-  width: 45px;
-  height: 45px;
-}
-
 .friends {
   transition: all 0.2s;
   background-repeat: no-repeat;
   background-position: center center;
-
-  &__light {
-    background-image: url("../../../../public/icons/FriendsLight.svg");
-  }
-
-  &__dark {
-    background-image: url("../../../../public/icons/FriendsDark.svg");
-  }
-
-  &:hover {
-    background-image: url("../../../../public/icons/FriendsLightHover.svg");
-  }
+  //
+  //&__light {
+  //  background-image: url("../../../../public/icons/FriendsLight.svg");
+  //}
+  //
+  //&__dark {
+  //  background-image: url("../../../../public/icons/FriendsDark.svg");
+  //}
+  //
+  //&:hover {
+  //  background-image: url("../../../../public/icons/FriendsLightHover.svg");
+  //}
 }
 
 .discovery {
   transition: all 0.2s;
   background-repeat: no-repeat;
   background-position: center center;
-
-  &__light {
-    background-image: url("../../../../public/icons/DiscoveryLight.svg");
-  }
-
-  &__dark {
-    background-image: url("../../../../public/icons/DiscoveryDark.svg");
-  }
-
-  &:hover {
-    background-image: url("../../../../public/icons/DiscoveryLightHover.svg");
-  }
 }
 
 
 .profile {
-  background-position: center center;
-  border: 2px solid rgba(0, 0, 0, 0);
-  border-radius: 100%;
   transition: all 0.2s;
 
-  background-image: url("../../../../public/icons/legasov.png");
-  background-repeat: no-repeat;
-  background-size: contain;
+  img {
+    border: 2px solid rgba(0, 0, 0, 0);
+    border-radius: 100%;
 
-  &:hover {
-    border: 2px solid var(--primary-blue);
+    &:hover {
+      border: 2px solid var(--primary-blue);
+    }
   }
 }

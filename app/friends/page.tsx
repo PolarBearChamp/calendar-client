@@ -5,7 +5,7 @@ import { clsx } from 'clsx'
 import cls from './FriendsPage.module.scss'
 import { Friends } from '@/FeatureLayer/Friends'
 import { IFriendData } from '@/SharedLayer/model'
-import { UserControls } from '@/WidgetLayer/UserControls'
+import { UserControls } from '../../src/FeatureLayer/UserControls'
 import { WithLogo } from '@/SharedLayer/ui/Layouts'
 
 const FriendsPage: FC = () => {
