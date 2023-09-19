@@ -1,8 +1,8 @@
-import React, { FC, Suspense } from 'react'
-import cls from './AddSongModal.module.scss'
-import { Modal } from '@/SharedLayer/ui/Modal'
+import { FC, Suspense } from 'react'
 import { clsx } from 'clsx'
-import { AddSongFormAsync } from '@/FeatureLayer/AddSong/ui/AddSongForm/AddSongForm.async'
+import { Modal } from '@/SharedLayer/ui/Modal'
+import { AddSongFormAsync } from '../AddSongForm/AddSongForm.async'
+import cls from './AddSongModal.module.scss'
 
 interface AddSongModalProps {
   className?: string
@@ -18,7 +18,7 @@ const AddSongModal: FC<AddSongModalProps> = ({
   return (
     <Modal
       className={clsx(cls.LoginModal, className)}
-      isOpen={true}
+      isOpen={isOpen}
       onClose={onClose}
       lazy
     >

@@ -6,8 +6,10 @@ import { Slides } from './Slides/Slides'
 import { ThemeSwitcher } from './ThemeSwitcher/ThemeSwitcher'
 import { NavigationButton } from './NavigationButton/NavigationButton'
 import { UserControlButton } from './UserControlButton/UserControlButton'
+import { Area } from './Area/Area'
 
 export {
+  Area,
   Input,
   InputSize,
   Button,

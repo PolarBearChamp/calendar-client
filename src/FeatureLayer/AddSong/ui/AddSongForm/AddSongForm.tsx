@@ -1,16 +1,16 @@
 import React, { FC } from 'react'
-import cls from './AddSongForm.module.scss'
+import { useForm } from 'react-hook-form'
+import Image from 'next/image'
+import { clsx } from 'clsx'
 import {
+  Area,
   Button,
   ButtonSize,
   ButtonTheme,
   Input,
   InputSize,
 } from '@/SharedLayer/ui'
-import { useForm } from 'react-hook-form'
-import Image from 'next/image'
-import { clsx } from 'clsx'
-import { Area } from '@/SharedLayer/ui/Area/Area'
+import cls from './AddSongForm.module.scss'
 
 export interface AddSongFormProps {
   onSuccess: () => void
@@ -56,7 +56,7 @@ const AddSongForm: FC<AddSongFormProps> = ({ onSuccess }) => {
           placeholder="url"
           register={register}
           options={{ required: true }}
-          textSize={InputSize.XS}
+          textSize={InputSize.S}
         />
         <div className={cls.description}>
           <span>what's on your mind?</span>
@@ -78,7 +78,7 @@ const AddSongForm: FC<AddSongFormProps> = ({ onSuccess }) => {
             placeholder="happy"
             register={register}
             options={{ required: true }}
-            textSize={InputSize.XS}
+            textSize={InputSize.S}
           />
         </div>
         <div className={cls.controls}>
