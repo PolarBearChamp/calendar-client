@@ -17,10 +17,13 @@ export const Calendar: FC<IProps> = ({ items, offset }) => {
         Array(offset)
           .fill(undefined)
           .map((_, i) => {
-            return <Day key={i} mock={true} />
+            return <Day key={i} mock />
           })}
       {items.map((el) => {
-        return <Day key={el.day} day={el.day} back={el?.cover} />
+        if (el.data !== undefined && Object.keys(el.data).length > 0) {
+          return <Day key={el.day} day={el.day} data={el.data} />
+        }
+        return <Day key={el.day} day={el.day} />
       })}
     </div>
   )

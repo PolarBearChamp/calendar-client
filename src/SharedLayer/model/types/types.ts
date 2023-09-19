@@ -1,5 +1,3 @@
-import { ReactElement } from 'react'
-
 export const enum Theme {
   LIGHT = 'light',
   DARK = 'dark',
@@ -40,8 +38,15 @@ export interface IDateContext {
 
 export interface ICalendarItem {
   day: number
-  cover?: string
-  link?: string
+  data?: Partial<ISongData>
+}
+
+export interface ISongData {
+  postId: string
+  link: string
+  artist: string
+  name: string
+  cover: string
 }
 
 export interface ILoginData {
@@ -64,5 +69,3 @@ export interface IFriendData {
 }
 
 export type SlideItemType = 'date' | 'text'
-export type InputType = 'text' | 'number' | 'email' | 'password'
-export type RenderCalendarItem = (props: ICalendarItem) => ReactElement

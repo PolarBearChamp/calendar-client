@@ -9,7 +9,7 @@
   background: var(--secondary-bg);
 
   transition: all 0.3s ease;
-  
+
   &:hover {
     transform: scale(1.1);
 
@@ -52,7 +52,7 @@
   font-weight: 700;
 }
 
-.withBack {
+.withCover {
   z-index: 10;
   color: white;
 }

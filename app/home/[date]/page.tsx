@@ -7,7 +7,7 @@ import { format, getDay, getDaysInMonth, startOfMonth } from 'date-fns'
 import { Calendar, CalendarHeader, DateHeader } from '@/EntityLayer/Calendar'
 import { UserControls } from '../../../src/FeatureLayer/UserControls'
 import { Navigation } from '../../../src/FeatureLayer/Navigation'
-import { ICalendarItem } from '@/SharedLayer/model'
+import { ICalendarItem, ISongData } from '@/SharedLayer/model'
 
 import cls from './CalendarPage.module.scss'
 
@@ -72,12 +72,19 @@ const Page = ({ params }: { params: { date: string } }) => {
     for (let i = 1; i <= getDaysInMonth(selectedDate); i++) {
       const rand = Math.random()
       const id = (((rand * 10) % 10) + 4).toFixed(0)
-
-      result.push({
-        day: i,
+      const data: Partial<ISongData> = {
+        postId: id,
         cover: `/songs/${id}.png`,
-        link: 'https://github.com/',
-      })
+        artist: 'Александр Розенбаум',
+        name: 'Гоп-стоп',
+      }
+      if (i % 2 === 0) {
+        result.push({ day: i, data })
+      } else {
+        result.push({
+          day: i,
+        })
+      }
     }
 
     return result
