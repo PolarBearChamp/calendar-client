@@ -1,9 +1,9 @@
 import React, { FC } from 'react'
-import { IFriendData } from '@/SharedLayer/model'
 import Image from 'next/image'
-
-import cls from './FriendItem.module.scss'
 import Link from 'next/link'
+
+import { IFriendData } from '@/SharedLayer/model'
+import cls from './FriendItem.module.scss'
 
 interface IProps {
   friend: IFriendData

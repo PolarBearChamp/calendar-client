@@ -4,27 +4,20 @@
   gap: 22px;
   font: var(--font-m);
   color: var(--primary-color);
+  box-sizing: content-box;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  padding: 8px 12px;
+  transition: border 0.3s;
+
+  &:hover {
+    border: 1px solid var(--secondary-border);
+  }
 
   a {
     color: var(--primary-color);
   }
 
-  @media (min-width: 901px) {
-    &:not(:nth-child(3n)) {
-      border-right: 1px solid #6A75BC; /* Цвет и стиль разделителя */
-    }
-  }
-
-  @media (max-width: 900px) {
-    &:not(:nth-child(2n)) {
-      border-right: 1px solid #6A75BC; /* Цвет и стиль разделителя */
-    }
-  }
-  @media (max-width: 660px) {
-    &:not(:nth-child(2n)) {
-      border-right: none; /* Цвет и стиль разделителя */
-    }
-  }
 
   .image {
     position: relative;
