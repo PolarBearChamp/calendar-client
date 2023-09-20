@@ -36,19 +36,20 @@ const AddSongForm: FC<AddSongFormProps> = ({ onSuccess }) => {
       <div className={cls.left}>
         <span className={cls.left__text}>Insert the link, bro</span>
         {dataFromLink?.image && (
-          <div className={cls.cover}>
-            <Image src={dataFromLink.image} alt={'cover'} fill />
-          </div>
+          <>
+            <div className={cls.cover}>
+              <Image src={dataFromLink?.image} alt={'cover'} fill />
+            </div>
+            <div className={cls.songInfo}>
+              {dataFromLink?.song && <span>{dataFromLink?.song}</span>}
+              {dataFromLink?.artist && (
+                <span className={clsx(cls.artist)}>{dataFromLink?.artist}</span>
+              )}
+            </div>
+          </>
         )}
-
-        <div className={cls.songInfo}>
-          {dataFromLink?.song && <span>{dataFromLink.song}</span>}
-          {dataFromLink?.artist && (
-            <span className={clsx(cls.artist)}>{dataFromLink.artist}</span>
-          )}
-        </div>
       </div>
-      <div className={cls.right}>
+      <form onSubmit={handleSubmit(onSubmit)} className={cls.right}>
         <Input
           id="link"
           name="link"
@@ -82,14 +83,18 @@ const AddSongForm: FC<AddSongFormProps> = ({ onSuccess }) => {
           />
         </div>
         <div className={cls.controls}>
-          <Button theme={ButtonTheme.CANCEL} size={ButtonSize.S}>
-            exit
-          </Button>
-          <Button theme={ButtonTheme.PRIMARY} size={ButtonSize.S}>
+          {/*<Button theme={ButtonTheme.CANCEL} size={ButtonSize.S}>*/}
+          {/*  exit*/}
+          {/*</Button>*/}
+          <Button
+            theme={ButtonTheme.PRIMARY}
+            size={ButtonSize.S}
+            type={'submit'}
+          >
             upload
           </Button>
         </div>
-      </div>
+      </form>
     </div>
   )
 }

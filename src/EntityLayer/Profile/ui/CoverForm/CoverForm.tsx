@@ -57,7 +57,7 @@ export const CoverForm: FC<CoverFormProps> = ({ className }) => {
           <span>Write what&apos;s on your mind</span> and you&apos;ll see{' '}
           <span>your cover</span> in the mood
         </div>
-        <div className={clsx(cls.text)}>
+        <div className={clsx(cls.text, cls.lowText)}>
           or just <span>upload it</span> yourself, focusing on your preferences
         </div>
         <div className={cls.controlBlock}>
