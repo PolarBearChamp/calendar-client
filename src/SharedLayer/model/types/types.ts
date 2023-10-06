@@ -1,22 +1,6 @@
-export const enum Theme {
-  LIGHT = 'light',
-  DARK = 'dark',
-}
-
-export const enum DAY_STATUS {
-  ACTIVE = 'active',
-  DEFAULT = 'default',
-}
-
 export const enum NAVIGATION_ACTION {
   NEXT = 'next',
   PREV = 'previous',
-}
-
-export const enum DAY_CONTROL_ACTION {
-  EDIT = 'edit',
-  SHARE = 'share',
-  DELETE = 'delete',
 }
 
 export const enum SLIDE_MOVE_DIRECTION {

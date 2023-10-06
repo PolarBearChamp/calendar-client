@@ -11,13 +11,13 @@ import FriendsDark from '../../../public/icons/FriendsDark.svg'
 import FriendsDarkHover from '../../../public/icons/FriendsDarkHover.svg'
 
 const ICONS = {
-  dark: {
+  app_dark_theme: {
     icDiscovery: DiscoveryDark,
     icFriends: FriendsDark,
     icDiscoveryHover: DiscoveryDarkHover,
     icFriendsHover: FriendsDarkHover,
   },
-  light: {
+  app_light_theme: {
     icDiscovery: DiscoveryLight,
     icFriends: FriendsLight,
     icDiscoveryHover: DiscoveryLightHover,
