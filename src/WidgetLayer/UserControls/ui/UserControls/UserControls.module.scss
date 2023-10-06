@@ -5,12 +5,21 @@
   align-items: center;
   max-width: fit-content;
 
-  box-shadow:
-    1px 5px 5px 0 rgba(0, 0, 0, 0.09),
-    2px 12px 7px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 1px 5px 5px 0 rgba(0, 0, 0, 0.09),
+  2px 12px 7px 0 rgba(0, 0, 0, 0.05);
   padding: 44px 18px;
   border-radius: 100px;
   background: var(--secondary-bg);
+
+  img {
+    &:hover {
+      fill: var(--primary-blue);
+    }
+  }
+
+  .avatar {
+    border-radius: 50%;
+  }
 }
 
 @media (max-width: 840px) {
@@ -20,9 +29,8 @@
     width: fit-content;
     gap: 40px;
 
-    box-shadow:
-      1px 5px 5px 0 rgba(0, 0, 0, 0.09),
-      2px 12px 7px 0 rgba(0, 0, 0, 0.05);
+    box-shadow: 1px 5px 5px 0 rgba(0, 0, 0, 0.09),
+    2px 12px 7px 0 rgba(0, 0, 0, 0.05);
     padding: 17px 30px;
     border-radius: 100px;
     background: var(--secondary-bg);

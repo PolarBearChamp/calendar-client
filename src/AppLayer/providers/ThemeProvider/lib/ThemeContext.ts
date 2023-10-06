@@ -10,8 +10,9 @@ export interface ThemeContextProps {
   setTheme?: (theme: Theme) => void
 }
 
-const localTheme = localStorage.getItem('theme') as Theme
+export const LOCAL_STORAGE_THEME_KEY = 'theme'
+
+const localTheme = localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as Theme
 export const ThemeContext = createContext<ThemeContextProps>({
   theme: localTheme,
 })
-export const LOCAL_STORAGE_THEME_KEY = 'theme'

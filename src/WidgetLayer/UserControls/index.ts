@@ -1,3 +1,3 @@
-import { UserControls } from './ui/UserControls'
+import { UserControls } from './ui/UserControls/UserControls'
 
 export { UserControls }

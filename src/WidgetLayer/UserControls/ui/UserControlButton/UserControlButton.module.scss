@@ -2,28 +2,25 @@
   transition: all 0.2s;
   background-repeat: no-repeat;
   background-position: center center;
-  //
-  //&__light {
-  //  background-image: url("../../../../public/icons/FriendsLight.svg");
-  //}
-  //
-  //&__dark {
-  //  background-image: url("../../../../public/icons/FriendsDark.svg");
-  //}
-  //
-  //&:hover {
-  //  background-image: url("../../../../public/icons/FriendsLightHover.svg");
-  //}
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .discovery {
   transition: all 0.2s;
   background-repeat: no-repeat;
   background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .profile {
   transition: all 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   img {
     border: 2px solid rgba(0, 0, 0, 0);

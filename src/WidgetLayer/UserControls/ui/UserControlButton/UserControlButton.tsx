@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react'
+import React, { FC, useCallback, useState } from 'react'
 import Link from 'next/link'
 import { clsx } from 'clsx'
 import cls from './UserControlButton.module.scss'
@@ -24,8 +24,8 @@ export const UserControlButton: FC<IProps> = ({
   iconOnHover,
 }) => {
   const [isHovering, setIsHovered] = useState(false)
-  const onMouseEnter = () => setIsHovered(true)
-  const onMouseLeave = () => setIsHovered(false)
+  const onMouseEnter = useCallback(() => setIsHovered(true), [setIsHovered])
+  const onMouseLeave = useCallback(() => setIsHovered(false), [setIsHovered])
   return (
     <Link
       href={route}

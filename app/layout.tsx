@@ -2,19 +2,26 @@
 
 import { ReactNode } from 'react'
 
-import { ThemeProvider, useTheme } from '@/AppLayer/providers/ThemeProvider'
-import { Theme } from '@/AppLayer/providers/ThemeProvider/lib/ThemeContext'
+import {
+  Theme,
+  ThemeProvider,
+  useTheme,
+} from '@/AppLayer/providers/ThemeProvider'
 import '@/AppLayer/style/index.scss'
 import { clsx } from 'clsx'
+import { Provider } from 'react-redux'
+import { store } from '@/AppLayer/providers/StoreProvider/config/store'
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   const { theme } = useTheme()
 
   return (
     <html lang="en">
-      <ThemeProvider initialTheme={Theme.LIGHT}>
-        <body className={clsx('app', theme)}>{children}</body>
-      </ThemeProvider>
+      <Provider store={store}>
+        <ThemeProvider initialTheme={Theme.LIGHT}>
+          <body className={clsx('app', theme)}>{children}</body>
+        </ThemeProvider>
+      </Provider>
     </html>
   )
 }

@@ -7,21 +7,22 @@ import DiscoveryDarkHover from '../../../public/icons/DiscoveryDarkHover.svg'
 // Friends Icons
 import FriendsLight from '../../../public/icons/FriendsLight.svg'
 import FriendsLightHover from '../../../public/icons/FriendsLightHover.svg'
-import FriendsDark from '../../../public/icons/FriendsDark.svg'
 import FriendsDarkHover from '../../../public/icons/FriendsDarkHover.svg'
+import FriendsDark from '../../../public/icons/FriendsDark.svg'
+import { Theme } from '@/AppLayer/providers/ThemeProvider'
 
 const ICONS = {
-  app_dark_theme: {
-    icDiscovery: DiscoveryDark,
-    icFriends: FriendsDark,
-    icDiscoveryHover: DiscoveryDarkHover,
-    icFriendsHover: FriendsDarkHover,
-  },
-  app_light_theme: {
+  [Theme.LIGHT]: {
     icDiscovery: DiscoveryLight,
     icFriends: FriendsLight,
     icDiscoveryHover: DiscoveryLightHover,
     icFriendsHover: FriendsLightHover,
+  },
+  [Theme.DARK]: {
+    icDiscovery: DiscoveryDark,
+    icFriends: FriendsDark,
+    icDiscoveryHover: DiscoveryDarkHover,
+    icFriendsHover: FriendsDarkHover,
   },
 }
 
