@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation'
 import { format, getDay, getDaysInMonth, startOfMonth } from 'date-fns'
 
 import { Calendar, CalendarHeader, DateHeader } from '@/EntityLayer/Calendar'
-import { UserControls } from '../../../src/FeatureLayer/UserControls'
+import { UserControls } from '../../../src/WidgetLayer/UserControls'
 import { Navigation } from '../../../src/FeatureLayer/Navigation'
 import { ICalendarItem, ISongData } from '@/SharedLayer/model'
 

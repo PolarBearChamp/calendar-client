@@ -68,7 +68,7 @@ export const Modal: FC<ModalProps> = (props) => {
   if (lazy && !isMounted) {
     return null
   }
- 
+
   return (
     <Portal>
       <div className={clsx(cls.Modal, mods, [className])}>

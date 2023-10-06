@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { FriendItem } from '@/FeatureLayer/Friends/ui/FriendItem/FriendItem'
+import { FriendItem } from '@/EntityLayer/Friends/ui/FriendItem/FriendItem'
 import { IFriendData } from '@/SharedLayer/model'
 import cls from './FriendList.module.scss'
 

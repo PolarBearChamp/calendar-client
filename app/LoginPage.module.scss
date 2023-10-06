@@ -1,17 +1,17 @@
 .container {
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;
-    align-items: center;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
 
-    max-width: 1440px;
-    margin: 0 auto;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 @media (max-width: 430px) {
-    .container {
-        display: flex;
-        flex-direction: column-reverse;
-    }
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }

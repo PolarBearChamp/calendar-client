@@ -1,11 +1,11 @@
 .container {
-    display: flex;
-    gap: 16px;
-    overflow: hidden;
-    height: 100%;
+  display: flex;
+  gap: 16px;
+  overflow: hidden;
+  height: 100%;
 }
 
 @media (max-width: 430px) {
-    .container {
-    }
+  .container {
+  }
 }

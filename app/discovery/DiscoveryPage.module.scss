@@ -1,8 +1,8 @@
 .wrapper {
   display: grid;
   grid-template-areas:
-'. h'
-'controls feed';
+    '. h'
+    'controls feed';
 
   .header {
     margin: 32px 0;

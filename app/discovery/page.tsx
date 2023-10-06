@@ -1,7 +1,7 @@
 'use client'
-import { FeedItem, FeedSwitcher } from '@/FeatureLayer/Feed'
+import { FeedItem, FeedSwitcher } from '../../src/EntityLayer/Feed'
 import cls from './DiscoveryPage.module.scss'
-import { UserControls } from '../../src/FeatureLayer/UserControls'
+import { UserControls } from '../../src/WidgetLayer/UserControls'
 import { WithLogo } from '@/SharedLayer/ui/Layouts'
 
 const DiscoveryPage = () => {

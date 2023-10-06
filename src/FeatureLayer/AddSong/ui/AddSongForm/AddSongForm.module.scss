@@ -7,7 +7,6 @@
   border-radius: 20px;
 
   .left {
-
     display: flex;
     flex-direction: column;
 
@@ -40,9 +39,8 @@
     }
 
     .artist {
-      color: var(--primary-blue)
+      color: var(--primary-blue);
     }
-
   }
 
   .right {
@@ -69,4 +67,3 @@
     }
   }
 }
-

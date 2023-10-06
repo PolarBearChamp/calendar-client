@@ -3,9 +3,9 @@ import { FC } from 'react'
 import { clsx } from 'clsx'
 
 import cls from './FriendsPage.module.scss'
-import { Friends } from '@/FeatureLayer/Friends'
+import { Friends } from '../../src/EntityLayer/Friends'
 import { IFriendData } from '@/SharedLayer/model'
-import { UserControls } from '../../src/FeatureLayer/UserControls'
+import { UserControls } from '../../src/WidgetLayer/UserControls'
 import { WithLogo } from '@/SharedLayer/ui/Layouts'
 
 const FriendsPage: FC = () => {

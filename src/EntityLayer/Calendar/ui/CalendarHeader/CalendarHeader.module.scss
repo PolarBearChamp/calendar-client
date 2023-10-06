@@ -1,16 +1,16 @@
 .container {
-    display: grid;
-    grid-template-columns: repeat(7, minmax(0, 1fr));
-    gap: 16px;
-    justify-items: center;
-    padding-bottom: 4px;
-    font-size: 20px;
-    font-weight: 700;
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 16px;
+  justify-items: center;
+  padding-bottom: 4px;
+  font-size: 20px;
+  font-weight: 700;
 }
 
 .selected {
-    color: var(--primary-blue);
+  color: var(--primary-blue);
 }
 .default {
-    color: var(--primary-gray);
+  color: var(--primary-gray);
 }

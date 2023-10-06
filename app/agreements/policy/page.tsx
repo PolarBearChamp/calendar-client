@@ -1,5 +1,5 @@
 const PolicyPage = () => {
-    return <div>policy</div>
+  return <div>policy</div>
 }
 
 export default PolicyPage

@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap');
 
 :root {
-  --font-family-main: "Montserrat", sans-serif;
+  --font-family-main: 'Montserrat', sans-serif;
 
   --font-size-s: 12px;
   --font-line-s: 16px;
@@ -15,7 +15,10 @@
   --font-line-l: 28px;
   --font-l: var(--font-size-l) / var(--font-line-l) var(--font-family-main);
 
-  --shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.10), 8px 5px 21px 0px rgba(0, 0, 0, 0.10), 34px 20px 39px 0px rgba(0, 0, 0, 0.09), 75px 44px 52px 0px rgba(0, 0, 0, 0.05), 134px 79px 62px 0px rgba(0, 0, 0, 0.01), 209px 123px 68px 0px rgba(0, 0, 0, 0.00);
+  --shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1),
+    8px 5px 21px 0px rgba(0, 0, 0, 0.1), 34px 20px 39px 0px rgba(0, 0, 0, 0.09),
+    75px 44px 52px 0px rgba(0, 0, 0, 0.05),
+    134px 79px 62px 0px rgba(0, 0, 0, 0.01),
+    209px 123px 68px 0px rgba(0, 0, 0, 0);
   --overlay-color: rgba(0, 0, 0, 0.6);
-
 }
