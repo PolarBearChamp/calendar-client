@@ -1,36 +1,27 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-import { addMonths, format, subMonths } from 'date-fns'
+import { format } from 'date-fns'
+import { Calendar } from '../../model/types/calendar'
 
 const today = new Date()
 
 const currentMonth = format(today, 'MMMM')
 const currentYear = format(today, 'yyyy')
 
-interface CalendarState {
-  month: string
-  year: string
-}
-
-// Define the initial state using that type
-const initialState: CalendarState = {
-  month: currentMonth,
-  year: currentYear,
+const initialState: Calendar = {
+  date: {
+    month: currentMonth,
+    year: currentYear,
+  },
+  data: [],
 }
 
 export const calendarSlice = createSlice({
-  name: 'calendar',
+  name: 'calendarSlice',
   initialState,
-  reducers: {
-    nextMonth: (state) => {
-      state.month = format(addMonths(new Date(), 1), 'MMMM')
-    },
-    prevMonth: (state) => {
-      state.month = format(subMonths(new Date(), 1), 'MMMM')
-    },
-  },
+  reducers: {},
+  extraReducers: {},
 })
 
-export const { nextMonth, prevMonth } = calendarSlice.actions
-
-export default calendarSlice.reducer
+export const { actions: calendarActions } = calendarSlice
+export const { reducer: calendarReducer } = calendarSlice

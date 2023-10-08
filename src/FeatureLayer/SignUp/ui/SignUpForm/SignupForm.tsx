@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { useForm } from 'react-hook-form'
 
 import { clsx } from 'clsx'
-import { CustomLink, LinkTheme } from '@/SharedLayer/ui/Links/CustomLink'
+
 import {
   Button,
   ButtonSize,
@@ -104,9 +104,7 @@ const SignupForm: FC = () => {
       </Button>
       <div className={cls.footer}>
         bro, you really have an account?
-        <CustomLink href="/" theme={LinkTheme.DEFAULT}>
-          &nbsp;Log in
-        </CustomLink>
+        <Link href="/">&nbsp;Log in</Link>
       </div>
     </form>
   )

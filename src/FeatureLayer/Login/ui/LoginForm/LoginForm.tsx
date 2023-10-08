@@ -8,23 +8,30 @@ import {
   Input,
   InputSize,
 } from '@/SharedLayer/ui'
-import { CustomLink, LinkTheme } from '@/SharedLayer/ui/Links/CustomLink'
 
 import cls from './LoginForm.module.scss'
 import { FC } from 'react'
+import Link from 'next/link'
+import { useLoginByEmailMutation } from '@/SharedLayer/model/api/api'
 
 const LoginForm: FC = () => {
   const router = useRouter()
+
+  const [onLogin, result] = useLoginByEmailMutation()
 
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm()
+
   const onSubmit = handleSubmit((data) => {
-    console.log(data)
-    router.push('/home')
+    onLogin(data)
+    if (result.isSuccess) {
+      router.push('/home')
+    }
   })
+
   console.log(errors)
 
   return (
@@ -64,9 +71,7 @@ const LoginForm: FC = () => {
         {errors.password && errors.password.type === 'minLength' && (
           <div className={cls.warning}>Минимальная длина 6 символов</div>
         )}
-        <CustomLink href="/forget" theme={LinkTheme.DEFAULT}>
-          bro, did you really forget the password?
-        </CustomLink>
+        <Link href="/forget">bro, did you really forget the password?</Link>
       </div>
       <div className={cls.submit}>
         <Button theme={ButtonTheme.PRIMARY} size={ButtonSize.M}>
@@ -74,9 +79,7 @@ const LoginForm: FC = () => {
         </Button>
         <span>
           bro, you really don&apos;t have an account?
-          <CustomLink href="/signup" theme={LinkTheme.DEFAULT}>
-            &nbsp;Sign up for free
-          </CustomLink>
+          <Link href="/signup">&nbsp;Sign up for free</Link>
         </span>
       </div>
     </form>

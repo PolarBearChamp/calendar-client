@@ -1,3 +1,5 @@
-export interface StateSchema {}
+import { LoginSchema } from '@/FeatureLayer/Login/model/types/loginSchema'
 
-export type StateSchemaKey = keyof StateSchema
+export interface StateSchema {
+  login?: LoginSchema
+}

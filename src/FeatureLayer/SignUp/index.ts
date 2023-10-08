@@ -1,3 +1,3 @@
-import SignupForm from '@/FeatureLayer/SignUp/ui/SignUpForm/SignupForm'
+import SignupForm from './ui/SignUpForm/SignupForm'
 
 export { SignupForm }
