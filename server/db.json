@@ -1,0 +1,34 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "user1",
+      "password": "password1"
+    },
+    {
+      "id": 2,
+      "username": "user2",
+      "password": "password2"
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Задача 1",
+      "description": "Описание задачи 1",
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "title": "Задача 2",
+      "description": "Описание задачи 2",
+      "userId": 1
+    },
+    {
+      "id": 3,
+      "title": "Задача 3",
+      "description": "Описание задачи 3",
+      "userId": 2
+    }
+  ]
+}
