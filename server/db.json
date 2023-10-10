@@ -1,34 +1,63 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "username": "user1",
+      "email": "user1@gmail.com",
+      "birthday": "16-09-2008",
       "password": "password1"
     },
     {
-      "id": 2,
+      "id": "2",
       "username": "user2",
+      "email": "user2@gmail.com",
+      "birthday": "16-09-2008",
       "password": "password2"
+    },
+    {
+      "id": "3",
+      "username": "user3",
+      "email": "user3@gmail.com",
+      "birthday": "16-09-2008",
+      "password": "password3"
     }
   ],
-  "tasks": [
+  "posts": [
     {
-      "id": 1,
-      "title": "Задача 1",
-      "description": "Описание задачи 1",
-      "userId": 1
+      "id": "1",
+      "title": "MODUS",
+      "artist": "Joji",
+      "userId": "1",
+      "description": "Описание поста 1",
+      "tags": [
+        "happy",
+        "energy"
+      ],
+      "link": "https://www.google.com"
     },
     {
-      "id": 2,
-      "title": "Задача 2",
-      "description": "Описание задачи 2",
-      "userId": 1
+      "id": "2",
+      "title": "Gimme love",
+      "artist": "Joji",
+      "userId": "1",
+      "description": "Описание поста 2",
+      "tags": [
+        "love",
+        "energy"
+      ],
+      "link": "https://www.google.com"
     },
     {
-      "id": 3,
-      "title": "Задача 3",
-      "description": "Описание задачи 3",
-      "userId": 2
+      "id": "3",
+      "title": "Glimpse of us",
+      "artist": "Joji",
+      "userId": "2",
+      "description": "Описание поста 3",
+      "tags": [
+        "sad",
+        "love"
+      ],
+      "link": "https://www.google.com"
     }
   ]
 }
