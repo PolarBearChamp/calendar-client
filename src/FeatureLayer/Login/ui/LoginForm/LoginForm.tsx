@@ -12,12 +12,11 @@ import {
 import cls from './LoginForm.module.scss'
 import { FC } from 'react'
 import Link from 'next/link'
-import { useLoginByEmailMutation } from '@/SharedLayer/model/api/api'
 
 const LoginForm: FC = () => {
   const router = useRouter()
 
-  const [onLogin, result] = useLoginByEmailMutation()
+  //const [onLogin, result] = useLoginByEmailMutation()
 
   const {
     register,
@@ -26,10 +25,10 @@ const LoginForm: FC = () => {
   } = useForm()
 
   const onSubmit = handleSubmit((data) => {
-    onLogin(data)
-    if (result.isSuccess) {
-      router.push('/home')
-    }
+    // onLogin(data)
+    // if (result.isSuccess) {
+    //   router.push('/home')
+    // }
   })
 
   console.log(errors)
