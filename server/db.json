@@ -20,6 +20,24 @@
       "email": "user3@gmail.com",
       "birthday": "16-09-2008",
       "password": "password3"
+    },
+    {
+      "id": "4",
+      "email": "test@emai.te",
+      "username": "ogoKek",
+      "password": "testPass",
+      "birthday": ""
+    },
+    {
+      "id": "5",
+      "birthday": ""
+    },
+    {
+      "id": "6",
+      "email": "sda@asdas.ww",
+      "username": "asdasd",
+      "password": "asdsad",
+      "birthday": ""
     }
   ],
   "posts": [
