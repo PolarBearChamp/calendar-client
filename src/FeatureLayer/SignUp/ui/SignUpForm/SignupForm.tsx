@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import Link from 'next/link'
-import { useForm } from 'react-hook-form'
+import { SubmitHandler, useForm } from 'react-hook-form'
 
 import { clsx } from 'clsx'
 
@@ -15,44 +15,53 @@ import {
 
 import cls from './SignupForm.module.scss'
 
+import { useAppDispatch } from '@/SharedLayer/lib/hooks/useAppDispatch'
+
+import { useSignupMutation } from '@/SharedLayer/model/api/signupAPI'
+import { SignupSchema } from '../../model/types/signupSchema'
+
 const SignupForm: FC = () => {
   const {
     register,
     handleSubmit,
+    watch,
+    getValues,
+    control,
     formState: { errors },
-  } = useForm()
+  } = useForm<SignupSchema>()
 
-  const onSubmit = handleSubmit((data) => console.log(data))
-  console.log(errors)
+  const [signup, result] = useSignupMutation()
+  const onSubmit: SubmitHandler<SignupSchema> = (data) => {
+    signup(data)
+  }
+  const dispatch = useAppDispatch()
 
   return (
-    <form onSubmit={onSubmit} className={clsx(cls.form__signup)}>
+    <form onSubmit={handleSubmit(onSubmit)} className={clsx(cls.form__signup)}>
       <h1 className={cls.header}>Create your account</h1>
-      <label htmlFor="name">
-        Name
+      <label htmlFor="username">
+        Username
         <Input
-          id="name"
-          name="name"
-          type="name"
-          placeholder="your name"
-          register={register}
-          options={{ required: true }}
+          control={control}
+          id="username"
+          type="text"
+          placeholder="your username"
           textSize={InputSize.M}
+          {...register('username', { required: true })}
         />
       </label>
-      {errors.name && errors.name.type === 'required' && (
+      {errors.username && errors.username.type === 'required' && (
         <span>Поле обязательно</span>
       )}
       <label htmlFor="email">
         Email
         <Input
+          control={control}
           id="email"
-          name="email"
           type="email"
-          placeholder="username@mail.com"
-          register={register}
-          options={{ required: true }}
+          placeholder="address@mail.com"
           textSize={InputSize.M}
+          {...register('email', { required: true })}
         />
       </label>
       {errors.email && errors.email.type === 'required' && (
@@ -61,13 +70,12 @@ const SignupForm: FC = () => {
       <label htmlFor="password">
         Password
         <Input
+          control={control}
           id="password"
-          name="password"
           type="password"
-          placeholder="password"
-          register={register}
-          options={{ required: true, minLength: 6 }}
+          placeholder="your password"
           textSize={InputSize.M}
+          {...register('password', { required: true, minLength: 6 })}
         />
       </label>
       {errors.password && errors.password.type === 'required' && (
@@ -78,9 +86,9 @@ const SignupForm: FC = () => {
       )}
       <div className={cls.policy}>
         <Checkbox
+          control={control}
+          name={'isPolicy'}
           id="policy"
-          name="policy"
-          register={register}
           options={{ required: true }}
         />
         <span>
