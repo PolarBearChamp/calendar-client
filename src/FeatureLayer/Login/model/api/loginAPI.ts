@@ -1,4 +1,4 @@
-import { calendarApi } from './api'
+import { calendarApi } from '@/SharedLayer/model/api/api'
 
 const loginAPI = calendarApi.injectEndpoints({
   endpoints: (build) => ({

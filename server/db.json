@@ -20,34 +20,6 @@
       "email": "user3@gmail.com",
       "birthday": "16-09-2008",
       "password": "password3"
-    },
-    {
-      "id": "4",
-      "email": "test@emai.te",
-      "username": "ogoKek",
-      "password": "testPass",
-      "birthday": ""
-    },
-    {
-      "id": "5",
-      "email": "sda@asdas.ww",
-      "username": "asdasd",
-      "password": "asdsad",
-      "birthday": ""
-    },
-    {
-      "id": "6",
-      "email": "pinkpolarbear@yandex.ru",
-      "username": "pinkpolarbear",
-      "password": "132231312",
-      "birthday": ""
-    },
-    {
-      "id": "7",
-      "email": "admi33n@mail.ru",
-      "username": "testsuset",
-      "password": "123123123",
-      "birthday": ""
     }
   ],
   "posts": [

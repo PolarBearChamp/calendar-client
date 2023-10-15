@@ -60,7 +60,7 @@ app.post('/login', (req, res, next) => {
   if (!user || user.password !== password) {
     return res.status(401).json({ error: 'Неверные учетные данные' })
   }
-  res.cookie('caleToken', user.id, { maxAge: 120 * 1000, httpOnly: true })
+  res.cookie('caleToken', user.id, { maxAge: 60 * 60 * 1000, httpOnly: true })
   res.json({ message: 'Вход выполнен успешно', token: user.id })
 })
 

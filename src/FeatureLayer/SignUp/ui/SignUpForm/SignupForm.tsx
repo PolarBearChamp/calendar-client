@@ -17,7 +17,7 @@ import {
 
 import cls from './SignupForm.module.scss'
 
-import { useSignupMutation } from '@/SharedLayer/model/api/signupAPI'
+import { useSignupMutation } from '../../model/api/signupAPI'
 import { SignupSchema } from '../../model/types/signupSchema'
 
 const SignupForm: FC = () => {

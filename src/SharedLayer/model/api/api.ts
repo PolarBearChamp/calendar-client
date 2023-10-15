@@ -7,5 +7,3 @@ export const calendarApi = createApi({
   }),
   endpoints: (builder) => ({}),
 })
-
-export const {} = calendarApi

@@ -15,7 +15,7 @@ import cls from './LoginForm.module.scss'
 import { FC } from 'react'
 import Link from 'next/link'
 import { LoginSchema } from '../../model/types/loginSchema'
-import { useLoginByEmailMutation } from '@/SharedLayer/model/api/loginAPI'
+import { useLoginByEmailMutation } from '../../model/api/loginAPI'
 
 const LoginForm: FC = () => {
   const router = useRouter()
