@@ -1,5 +1,5 @@
 import { useRouter } from 'next/navigation'
-import { useForm } from 'react-hook-form'
+import { SubmitHandler, useForm } from 'react-hook-form'
 
 import {
   Button,
@@ -7,69 +7,78 @@ import {
   ButtonTheme,
   Input,
   InputSize,
+  Text,
+  TextStyle,
 } from '@/SharedLayer/ui'
 
 import cls from './LoginForm.module.scss'
 import { FC } from 'react'
 import Link from 'next/link'
+import { LoginSchema } from '../../model/types/loginSchema'
+import { useLoginByEmailMutation } from '@/SharedLayer/model/api/loginAPI'
 
 const LoginForm: FC = () => {
   const router = useRouter()
 
-  //const [onLogin, result] = useLoginByEmailMutation()
-
   const {
     register,
     handleSubmit,
+    control,
     formState: { errors },
-  } = useForm()
+  } = useForm<LoginSchema>()
 
-  const onSubmit = handleSubmit((data) => {
-    // onLogin(data)
-    // if (result.isSuccess) {
-    //   router.push('/home')
-    // }
-  })
+  const [login, result] = useLoginByEmailMutation()
+
+  const onSubmit: SubmitHandler<LoginSchema> = (data) => {
+    login(data)
+    if (result.isSuccess) {
+      router.push('/home/2023-09')
+    }
+  }
 
   console.log(errors)
 
   return (
-    <form onSubmit={onSubmit} className={cls.form}>
+    <form onSubmit={handleSubmit(onSubmit)} className={cls.form}>
       <h1 className={cls.header}>Login</h1>
       <div className={cls.fields}>
         <label htmlFor="email">
           Email
           <Input
+            control={control}
             id="email"
-            name="email"
             type="email"
-            placeholder="username@mail.com"
-            register={register}
-            options={{ required: true }}
+            placeholder="address@mail.com"
             textSize={InputSize.M}
-          />
+            {...register('email', { required: true })}
+          />{' '}
+          {errors.email && errors.email.type === 'required' && (
+            <Text className={cls.abs} type={TextStyle.ERROR}>
+              Поле обязательно
+            </Text>
+          )}
         </label>
-        {errors.email && errors.email.type === 'required' && (
-          <div className={cls.warning}>Поле обязательно</div>
-        )}
         <label htmlFor="password">
           Password
           <Input
+            control={control}
             id="password"
-            name="password"
             type="password"
-            placeholder="password"
-            register={register}
-            options={{ required: true, minLength: 6 }}
+            placeholder="your password"
             textSize={InputSize.M}
+            {...register('password', { required: true })}
           />
+          {errors.password && errors.password.type === 'required' && (
+            <Text className={cls.abs} type={TextStyle.ERROR}>
+              Поле обязательно
+            </Text>
+          )}
+          {errors.password && errors.password.type === 'minLength' && (
+            <Text className={cls.abs} type={TextStyle.ERROR}>
+              Поле обязательно
+            </Text>
+          )}
         </label>
-        {errors.password && errors.password.type === 'required' && (
-          <div className={cls.warning}>Поле обязательно</div>
-        )}
-        {errors.password && errors.password.type === 'minLength' && (
-          <div className={cls.warning}>Минимальная длина 6 символов</div>
-        )}
         <Link href="/forget">bro, did you really forget the password?</Link>
       </div>
       <div className={cls.submit}>

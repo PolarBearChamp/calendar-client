@@ -50,17 +50,17 @@ app.post('/signup', (req, res) => {
 })
 
 // Вход пользователя
-app.post('/login', (req, res) => {
-  const { username, password } = req.body
+app.post('/login', (req, res, next) => {
+  const { email, password } = req.body
   const database = readDatabase()
 
   // Проверяем, что пользователь существует и введенный пароль верный
-  const user = database.users.find((user) => user.username === username)
+  const user = database.users.find((user) => user.email === email)
 
   if (!user || user.password !== password) {
     return res.status(401).json({ error: 'Неверные учетные данные' })
   }
-
+  res.cookie('caleToken', user.id, { maxAge: 120 * 1000, httpOnly: true })
   res.json({ message: 'Вход выполнен успешно', token: user.id })
 })
 

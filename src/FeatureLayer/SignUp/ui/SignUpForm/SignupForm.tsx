@@ -32,7 +32,6 @@ const SignupForm: FC = () => {
   const onSubmit: SubmitHandler<SignupSchema> = (data) => {
     signup(data)
   }
-  console.log(errors)
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={clsx(cls.form__signup)}>
@@ -70,7 +69,6 @@ const SignupForm: FC = () => {
           </Text>
         )}
       </label>
-
       <label htmlFor="password">
         Password
         <Input
@@ -125,7 +123,6 @@ const SignupForm: FC = () => {
       <Button theme={ButtonTheme.PRIMARY} size={ButtonSize.M}>
         Sign up
       </Button>
-
       <div className={cls.footer}>
         bro, you really have an account?
         <Link href="/">&nbsp;Log in</Link>
