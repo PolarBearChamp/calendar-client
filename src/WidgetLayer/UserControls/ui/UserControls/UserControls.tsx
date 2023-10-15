@@ -1,8 +1,12 @@
 import { FC } from 'react'
-import { ThemeSwitcher, UserControlButton } from '@/SharedLayer/ui'
-
 import cls from './UserControls.module.scss'
-import { UserControlType } from '@/WidgetLayer/UserControls/ui/UserControlButton/UserControlButton'
+
+import {
+  UserControlButton,
+  UserControlType,
+} from './../../ui/UserControlButton/UserControlButton'
+
+import { ThemeSwitcher } from '@/SharedLayer/ui'
 import { useIcons } from '@/SharedLayer/lib/hooks/useIcons'
 
 export const UserControls: FC = () => {
