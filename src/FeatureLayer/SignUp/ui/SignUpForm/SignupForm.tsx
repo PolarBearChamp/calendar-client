@@ -1,4 +1,4 @@
-import { FC, useCallback, useState } from 'react'
+import { FC } from 'react'
 import Link from 'next/link'
 import { SubmitHandler, useForm } from 'react-hook-form'
 
@@ -28,15 +28,9 @@ const SignupForm: FC = () => {
     formState: { errors },
   } = useForm<SignupSchema>()
 
-  const [isPolicy, setIsPolicy] = useState(false)
-  const onChangePolicy = useCallback(() => {
-    setIsPolicy((prev) => !prev)
-  }, [])
   const [signup, result] = useSignupMutation()
   const onSubmit: SubmitHandler<SignupSchema> = (data) => {
-    if (isPolicy) {
-      signup(data)
-    }
+    signup(data)
   }
   console.log(errors)
 
@@ -52,11 +46,14 @@ const SignupForm: FC = () => {
           placeholder="your username"
           textSize={InputSize.M}
           {...register('username', { required: true })}
-        />
+        />{' '}
+        {errors.username && errors.username.type === 'required' && (
+          <Text className={cls.abs} type={TextStyle.ERROR}>
+            Поле обязательно
+          </Text>
+        )}
       </label>
-      {errors.username && errors.username.type === 'required' && (
-        <Text type={TextStyle.ERROR}>Поле обязательно</Text>
-      )}
+
       <label htmlFor="email">
         Email
         <Input
@@ -66,11 +63,14 @@ const SignupForm: FC = () => {
           placeholder="address@mail.com"
           textSize={InputSize.M}
           {...register('email', { required: true })}
-        />
+        />{' '}
+        {errors.email && errors.email.type === 'required' && (
+          <Text className={cls.abs} type={TextStyle.ERROR}>
+            Поле обязательно
+          </Text>
+        )}
       </label>
-      {errors.email && errors.email.type === 'required' && (
-        <Text type={TextStyle.ERROR}>Поле обязательно</Text>
-      )}
+
       <label htmlFor="password">
         Password
         <Input
@@ -81,40 +81,51 @@ const SignupForm: FC = () => {
           textSize={InputSize.M}
           {...register('password', { required: true })}
         />
+        {errors.password && errors.password.type === 'required' && (
+          <Text className={cls.abs} type={TextStyle.ERROR}>
+            Поле обязательно
+          </Text>
+        )}
+        {errors.password && errors.password.type === 'minLength' && (
+          <Text className={cls.abs} type={TextStyle.ERROR}>
+            Поле обязательно
+          </Text>
+        )}
       </label>
-      {errors.password && errors.password.type === 'required' && (
-        <Text type={TextStyle.ERROR}>Поле обязательно</Text>
-      )}
-      {errors.password && errors.password.type === 'minLength' && (
-        <Text type={TextStyle.ERROR}>Поле обязательно</Text>
-      )}
-      <div className={cls.policy}>
-        <Checkbox
-          control={control}
-          id="isPolicy"
-          {...register('isPolicy', { required: true })}
-          // checked={isPolicy}
-          // onChange={onChangePolicy}
-        />
-        <span>
-          I’m bro and i agree to all{' '}
-          <Link href={'/agreements/term'} className={cls.link}>
-            Term
-          </Link>
-          ,{' '}
-          <Link href={'/agreements/policy'} className={cls.link}>
-            Privacy Policy
-          </Link>{' '}
-          and{' '}
-          <Link href={'/agreements/fees'} className={cls.link}>
-            Fees
-          </Link>
-          .
-        </span>
-      </div>
+
+      <label>
+        <div className={cls.policy}>
+          <Checkbox
+            control={control}
+            id="isPolicy"
+            {...register('isPolicy', { required: true })}
+          />
+          <span className={cls.policyText}>
+            I’m bro and i agree to all{' '}
+            <Link href={'/agreements/term'} className={cls.link}>
+              Term
+            </Link>
+            ,{' '}
+            <Link href={'/agreements/policy'} className={cls.link}>
+              Privacy Policy
+            </Link>{' '}
+            and{' '}
+            <Link href={'/agreements/fees'} className={cls.link}>
+              Fees
+            </Link>
+            .
+          </span>
+        </div>
+        {errors.isPolicy && errors.isPolicy.type === 'required' && (
+          <Text className={cls.abs} type={TextStyle.ERROR}>
+            Для отправки формы необходимо согласиться с правилами
+          </Text>
+        )}
+      </label>
       <Button theme={ButtonTheme.PRIMARY} size={ButtonSize.M}>
         Sign up
       </Button>
+
       <div className={cls.footer}>
         bro, you really have an account?
         <Link href="/">&nbsp;Log in</Link>

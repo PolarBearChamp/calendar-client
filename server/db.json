@@ -45,6 +45,13 @@
       "username": "pinkpolarbear",
       "password": "`132231312",
       "birthday": ""
+    },
+    {
+      "id": "8",
+      "email": "admi33n@mail.ru",
+      "username": "testsuset",
+      "password": "123123123",
+      "birthday": ""
     }
   ],
   "posts": [

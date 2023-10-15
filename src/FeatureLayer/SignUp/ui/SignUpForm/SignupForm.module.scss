@@ -18,6 +18,7 @@
     display: flex;
     gap: 16px;
     margin-top: -12px;
+    font-weight: 700;
   }
 
   label {
@@ -26,6 +27,8 @@
     font-weight: 700;
     font-size: 20px;
     gap: 4px;
+
+    position: relative;
   }
 
   .link {
@@ -37,5 +40,15 @@
   .footer {
     width: fit-content;
     margin: 0 auto;
+  }
+
+  .policyText {
+    font-weight: 400;
+    font: var(--font-m)
+  }
+
+  .abs {
+    position: absolute;
+    bottom: -20px;
   }
 }
