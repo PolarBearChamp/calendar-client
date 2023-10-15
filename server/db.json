@@ -38,6 +38,13 @@
       "username": "asdasd",
       "password": "asdsad",
       "birthday": ""
+    },
+    {
+      "id": "7",
+      "email": "pinkpolarbear@yandex.ru",
+      "username": "pinkpolarbear",
+      "password": "`132231312",
+      "birthday": ""
     }
   ],
   "posts": [

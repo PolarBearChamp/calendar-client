@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC, useCallback, useState } from 'react'
 import Link from 'next/link'
 import { SubmitHandler, useForm } from 'react-hook-form'
 
@@ -11,11 +11,11 @@ import {
   Checkbox,
   Input,
   InputSize,
+  Text,
+  TextStyle,
 } from '@/SharedLayer/ui'
 
 import cls from './SignupForm.module.scss'
-
-import { useAppDispatch } from '@/SharedLayer/lib/hooks/useAppDispatch'
 
 import { useSignupMutation } from '@/SharedLayer/model/api/signupAPI'
 import { SignupSchema } from '../../model/types/signupSchema'
@@ -24,17 +24,21 @@ const SignupForm: FC = () => {
   const {
     register,
     handleSubmit,
-    watch,
-    getValues,
     control,
     formState: { errors },
   } = useForm<SignupSchema>()
 
+  const [isPolicy, setIsPolicy] = useState(false)
+  const onChangePolicy = useCallback(() => {
+    setIsPolicy((prev) => !prev)
+  }, [])
   const [signup, result] = useSignupMutation()
   const onSubmit: SubmitHandler<SignupSchema> = (data) => {
-    signup(data)
+    if (isPolicy) {
+      signup(data)
+    }
   }
-  const dispatch = useAppDispatch()
+  console.log(errors)
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={clsx(cls.form__signup)}>
@@ -51,7 +55,7 @@ const SignupForm: FC = () => {
         />
       </label>
       {errors.username && errors.username.type === 'required' && (
-        <span>Поле обязательно</span>
+        <Text type={TextStyle.ERROR}>Поле обязательно</Text>
       )}
       <label htmlFor="email">
         Email
@@ -65,7 +69,7 @@ const SignupForm: FC = () => {
         />
       </label>
       {errors.email && errors.email.type === 'required' && (
-        <span>Поле обязательно</span>
+        <Text type={TextStyle.ERROR}>Поле обязательно</Text>
       )}
       <label htmlFor="password">
         Password
@@ -75,21 +79,22 @@ const SignupForm: FC = () => {
           type="password"
           placeholder="your password"
           textSize={InputSize.M}
-          {...register('password', { required: true, minLength: 6 })}
+          {...register('password', { required: true })}
         />
       </label>
       {errors.password && errors.password.type === 'required' && (
-        <span>Поле обязательно</span>
+        <Text type={TextStyle.ERROR}>Поле обязательно</Text>
       )}
       {errors.password && errors.password.type === 'minLength' && (
-        <span>Минимальная длина 6 символов</span>
+        <Text type={TextStyle.ERROR}>Поле обязательно</Text>
       )}
       <div className={cls.policy}>
         <Checkbox
           control={control}
-          name={'isPolicy'}
-          id="policy"
-          options={{ required: true }}
+          id="isPolicy"
+          {...register('isPolicy', { required: true })}
+          // checked={isPolicy}
+          // onChange={onChangePolicy}
         />
         <span>
           I’m bro and i agree to all{' '}
