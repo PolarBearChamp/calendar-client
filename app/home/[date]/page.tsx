@@ -2,7 +2,14 @@
 
 import { useCallback, useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { format, getDay, getDaysInMonth, startOfMonth } from 'date-fns'
+import {
+  format,
+  getDay,
+  getDaysInMonth,
+  isValid,
+  parse,
+  startOfMonth,
+} from 'date-fns'
 
 import { Calendar, CalendarHeader, DateHeader } from '@/EntityLayer/Calendar'
 import { UserControls } from '@/WidgetLayer/UserControls'
@@ -11,42 +18,49 @@ import { ICalendarItem, ISongData } from '@/SharedLayer/model'
 
 import cls from './CalendarPage.module.scss'
 
-const REG = /^\d{4}-\d{2}$/gm
+function isValidDateFormat(dateString: string) {
+  const parsedDate = parse(dateString, 'yyyy-MM', new Date())
+  return isValid(parsedDate)
+}
 
 const Page = ({ params }: { params: { date: string } }) => {
   const router = useRouter()
 
-  const paramsMonth = params.date.split('-')[1]
-  const paramsYear = params.date.split('-')[0]
+  // Выбранная дата из параметров
+  const paramsDate = params.date
+  // Месяц из параметров
+  const paramsMonth = paramsDate.split('-')[1]
+  // Год из параметров
+  const paramsYear = paramsDate.split('-')[0]
+  // Перевод месяца в вид строки
   const paramsMonthString = format(
     new Date(parseInt(paramsYear), parseInt(paramsMonth) - 1),
     'MMMM',
   )
+
   const [month, setMonth] = useState<string>(paramsMonthString)
   const [year, setYear] = useState<string>(paramsYear)
 
+  // Выбранная дата в формате Date для получения сдвига
   const selectedDate = new Date(parseInt(paramsYear), parseInt(paramsMonth) - 1)
+  // Дата, для перевода на текущий месяц, если формат из параметров некорректен
   const now = new Date()
-
+  // Сдвиг от начала строки
   const offset = getDay(startOfMonth(selectedDate))
 
   useEffect(() => {
-    if (REG.test(params.date) && parseInt(paramsMonth) < 13) {
-      console.log(
-        REG.test(params.date),
-        REG.test('2023-09'),
-        params.date,
-        params.date === '2023-09',
-      )
+    // Если формат параметров корректен и месяц указан меньше 13, то устанавливается указанная дата
+    if (isValidDateFormat(paramsDate) && parseInt(paramsMonth) < 13) {
       setMonth(paramsMonthString)
       setYear(paramsYear)
     }
-    // ломает всё
-    //  else {
-    //     router.push(`/home/${format(now, "yyyy")}-${format(now, "MM")}`)
-    // }
+    // Если нет, то происходит переход на текущий месяц
+    else {
+      router.push(`/home/${format(now, 'yyyy')}-${format(now, 'MM')}`)
+    }
   }, [params.date, paramsMonth, paramsYear, now, router])
 
+  // Следующий месяц
   const nextMonthHandle = useCallback(() => {
     const newMonth = format(
       new Date(parseInt(paramsYear), parseInt(paramsMonth)),
@@ -59,6 +73,7 @@ const Page = ({ params }: { params: { date: string } }) => {
     }
   }, [paramsYear, paramsMonth, router])
 
+  // Предыдущий месяц
   const prevMonthHandle = useCallback(() => {
     const newMonth = format(
       new Date(parseInt(paramsYear), parseInt(paramsMonth) - 2),
@@ -92,7 +107,6 @@ const Page = ({ params }: { params: { date: string } }) => {
         })
       }
     }
-
     return result
   }
 
