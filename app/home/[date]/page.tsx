@@ -5,8 +5,8 @@ import { useRouter } from 'next/navigation'
 import { format, getDay, getDaysInMonth, startOfMonth } from 'date-fns'
 
 import { Calendar, CalendarHeader, DateHeader } from '@/EntityLayer/Calendar'
-import { UserControls } from '../../../src/WidgetLayer/UserControls'
-import { Navigation } from '../../../src/FeatureLayer/Navigation'
+import { UserControls } from '@/WidgetLayer/UserControls'
+import { Navigation } from '@/FeatureLayer/Navigation'
 import { ICalendarItem, ISongData } from '@/SharedLayer/model'
 
 import cls from './CalendarPage.module.scss'
@@ -32,6 +32,12 @@ const Page = ({ params }: { params: { date: string } }) => {
 
   useEffect(() => {
     if (REG.test(params.date) && parseInt(paramsMonth) < 13) {
+      console.log(
+        REG.test(params.date),
+        REG.test('2023-09'),
+        params.date,
+        params.date === '2023-09',
+      )
       setMonth(paramsMonthString)
       setYear(paramsYear)
     }
@@ -39,7 +45,7 @@ const Page = ({ params }: { params: { date: string } }) => {
     //  else {
     //     router.push(`/home/${format(now, "yyyy")}-${format(now, "MM")}`)
     // }
-  }, [])
+  }, [params.date, paramsMonth, paramsYear, now, router])
 
   const nextMonthHandle = useCallback(() => {
     const newMonth = format(
