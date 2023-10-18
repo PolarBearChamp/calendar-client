@@ -1,3 +1,5 @@
+import { FC } from 'react'
+import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { SubmitHandler, useForm } from 'react-hook-form'
 
@@ -11,11 +13,9 @@ import {
   TextStyle,
 } from '@/SharedLayer/ui'
 
-import cls from './LoginForm.module.scss'
-import { FC } from 'react'
-import Link from 'next/link'
 import { LoginSchema } from '../../model/types/loginSchema'
 import { useLoginByEmailMutation } from '../../model/api/loginAPI'
+import cls from './LoginForm.module.scss'
 
 const LoginForm: FC = () => {
   const router = useRouter()
@@ -29,14 +29,11 @@ const LoginForm: FC = () => {
 
   const [login, result] = useLoginByEmailMutation()
 
-  const onSubmit: SubmitHandler<LoginSchema> = (data) => {
-    login(data)
-    if (result.isSuccess) {
-      router.push('/home/2023-09')
-    }
+  const onSubmit: SubmitHandler<LoginSchema> = async (credentials) => {
+    await login(credentials)
+      .unwrap()
+      .then(() => router.push('/home'))
   }
-
-  console.log(errors)
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={cls.form}>

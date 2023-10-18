@@ -10,9 +10,9 @@
     {
       "id": "2",
       "username": "user2",
-      "email": "user2@gmail.com",
+      "email": "pinkpolarbear@yandex.ru",
       "birthday": "16-09-2008",
-      "password": "password2"
+      "password": "123123"
     },
     {
       "id": "3",
@@ -20,6 +20,20 @@
       "email": "user3@gmail.com",
       "birthday": "16-09-2008",
       "password": "password3"
+    },
+    {
+      "id": "4",
+      "email": "admin@admin.ru",
+      "username": "pinkpolarbear22",
+      "password": "123123",
+      "birthday": ""
+    },
+    {
+      "id": "5",
+      "email": "admin@mail.ru",
+      "username": "pinkpolarbear223",
+      "password": "123123213",
+      "birthday": ""
     }
   ],
   "posts": [
@@ -60,6 +74,19 @@
         "love"
       ],
       "link": "https://www.google.com",
+      "date": "16-09-2023"
+    },
+    {
+      "id": "4",
+      "title": "tetet",
+      "artist": "fgsgsgs",
+      "userId": "1",
+      "description": "Описание поста test",
+      "tags": [
+        "happy",
+        "energy"
+      ],
+      "link": "https://www.google.com22",
       "date": "16-09-2023"
     }
   ],

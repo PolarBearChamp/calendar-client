@@ -19,6 +19,7 @@ import cls from './SignupForm.module.scss'
 
 import { useSignupMutation } from '../../model/api/signupAPI'
 import { SignupSchema } from '../../model/types/signupSchema'
+import { useRouter } from 'next/navigation'
 
 const SignupForm: FC = () => {
   const {
@@ -27,10 +28,12 @@ const SignupForm: FC = () => {
     control,
     formState: { errors },
   } = useForm<SignupSchema>()
-
+  const router = useRouter()
   const [signup, result] = useSignupMutation()
-  const onSubmit: SubmitHandler<SignupSchema> = (data) => {
-    signup(data)
+  const onSubmit: SubmitHandler<SignupSchema> = async (credentials) => {
+    await signup(credentials)
+      .unwrap()
+      .then(() => router.push('/home'))
   }
 
   return (

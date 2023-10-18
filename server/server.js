@@ -66,28 +66,14 @@ app.post('/login', (req, res, next) => {
 
 // Добавление новой песни
 app.post('/posts/add', (req, res) => {
-  const {
-    songName,
-    artistName,
-    description,
-    songLink,
-    imageLink,
-    tags,
-    userId,
-  } = req.body
+  const postData = req.body
 
   const database = readDatabase()
 
   // Добавляем новую песню в базу данных
   const newPost = {
     id: (database.posts.length + 1).toString(),
-    songName,
-    artistName,
-    description,
-    songLink,
-    imageLink,
-    tags,
-    userId,
+    ...postData,
   }
   database.posts.push(newPost)
   writeDatabase(database)
@@ -100,17 +86,33 @@ app.post('/posts/add', (req, res) => {
   })
 })
 
-// Получение всех Posts
-app.get('/posts', (req, res) => {
+// Обновление песни
+app.patch('/posts/update/:id', (req, res) => {
+  const updatedData = req.body
+  const postId = req.params.id
+  console.log(typeof postId)
   const database = readDatabase()
-  const posts = database.posts
 
-  res.json({
-    success: true,
-    body: { posts },
-  })
+  // Находим песню в базе данных по ID
+  const postIndex = database.posts.findIndex((post) => post.id === postId)
+
+  if (postIndex === -1) {
+    res.status(404).json({ success: false, message: 'Песня не найдена' })
+  } else {
+    // Обновляем информацию о песне
+    database.posts[postIndex] = {
+      ...database.posts[postIndex],
+      ...updatedData,
+    }
+
+    writeDatabase(database)
+
+    res.json({
+      success: true,
+      message: 'Песня успешно обновлена',
+    })
+  }
 })
-
 // Получение Post по идентификатору (ID)
 app.get('/posts/:postId', (req, res) => {
   const postId = req.params.postId

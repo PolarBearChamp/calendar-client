@@ -8,9 +8,16 @@ const loginAPI = calendarApi.injectEndpoints({
         method: 'POST',
         body: credentials,
       }),
+      transformResponse(apiResponse, meta) {
+        return {
+          apiResponse,
+          cookie: String(meta?.response?.headers.get('Set-Cookie')),
+        }
+      },
     }),
   }),
-  overrideExisting: false,
+
+  overrideExisting: true,
 })
 
 export const { useLoginByEmailMutation } = loginAPI
