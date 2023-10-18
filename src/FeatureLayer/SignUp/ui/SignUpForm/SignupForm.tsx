@@ -1,5 +1,6 @@
 import { FC } from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { SubmitHandler, useForm } from 'react-hook-form'
 
 import { clsx } from 'clsx'
@@ -15,11 +16,10 @@ import {
   TextStyle,
 } from '@/SharedLayer/ui'
 
-import cls from './SignupForm.module.scss'
-
 import { useSignupMutation } from '../../model/api/signupAPI'
 import { SignupSchema } from '../../model/types/signupSchema'
-import { useRouter } from 'next/navigation'
+
+import cls from './SignupForm.module.scss'
 
 const SignupForm: FC = () => {
   const {
@@ -37,7 +37,7 @@ const SignupForm: FC = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className={clsx(cls.form__signup)}>
+    <form onSubmit={handleSubmit(onSubmit)} className={clsx(cls.form)}>
       <h1 className={cls.header}>Create your account</h1>
       <label htmlFor="username">
         Username

@@ -1,19 +1,31 @@
-import { FC, TextareaHTMLAttributes } from 'react'
-import { FieldValues, RegisterOptions, UseFormRegister } from 'react-hook-form'
+import {
+  forwardRef,
+  ForwardRefRenderFunction,
+  TextareaHTMLAttributes,
+} from 'react'
+import { UseControllerProps } from 'react-hook-form'
 import { clsx } from 'clsx'
 import cls from './Area.module.scss'
 
-interface IProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
-  register: UseFormRegister<FieldValues>
-  options?: RegisterOptions
-  height?: number
+export const enum AreaSize {
+  S = 's',
+  M = 'm',
 }
 
-export const Area: FC<IProps> = ({ register, options, height, ...rest }) => (
+interface IProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
+  height?: number
+  textSize?: AreaSize
+}
+
+const Area: ForwardRefRenderFunction<
+  HTMLTextAreaElement,
+  UseControllerProps<any> & IProps
+> = ({ textSize, height, ...rest }, ref) => (
   <textarea
-    className={clsx(cls.Area)}
-    {...register(rest.name!, options)}
-    {...rest}
+    className={clsx(cls.Area, textSize && cls[textSize])}
+    ref={ref}
     style={{ height: `${height}px` }}
+    {...rest}
   />
 )
+export default forwardRef(Area)

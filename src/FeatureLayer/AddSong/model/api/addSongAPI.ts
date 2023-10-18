@@ -16,9 +16,19 @@ const addSongAPI = calendarApi.injectEndpoints({
         body: data,
       }),
     }),
+    getSongById: build.query({
+      query: (id) => ({
+        url: `/posts/${id}`,
+        method: 'GET',
+      }),
+    }),
   }),
 
   overrideExisting: true,
 })
 
-export const {} = addSongAPI
+export const {
+  useAddSongMutation,
+  useUpdateSongMutation,
+  useGetSongByIdQuery,
+} = addSongAPI

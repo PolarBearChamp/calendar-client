@@ -8,12 +8,16 @@ interface AddSongModalProps {
   className?: string
   isOpen: boolean
   onClose: () => void
+  userId: string
+  date: string
 }
 
 const AddSongModal: FC<AddSongModalProps> = ({
   className,
   isOpen,
   onClose,
+  date,
+  userId,
 }) => {
   return (
     <Modal
@@ -23,7 +27,7 @@ const AddSongModal: FC<AddSongModalProps> = ({
       lazy
     >
       <Suspense fallback={<div>Loading</div>}>
-        <AddSongFormAsync onSuccess={onClose} />
+        <AddSongFormAsync userId={userId} date={date} />
       </Suspense>
     </Modal>
   )

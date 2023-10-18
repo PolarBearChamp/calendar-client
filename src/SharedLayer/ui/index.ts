@@ -5,11 +5,12 @@ import { Logo } from './Logo/Logo'
 import { Slides } from './Slides/Slides'
 import { ThemeSwitcher } from './ThemeSwitcher/ThemeSwitcher'
 import { NavigationButton } from './NavigationButton/NavigationButton'
-import { Area } from './Area/Area'
+import Area, { AreaSize } from './Area/Area'
 import { Text, TextStyle } from './Text/Text'
 
 export {
   Area,
+  AreaSize,
   Input,
   InputSize,
   Button,

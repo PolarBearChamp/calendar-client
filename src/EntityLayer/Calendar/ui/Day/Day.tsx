@@ -62,7 +62,12 @@ const Day: FC<IProps> = (props) => {
       )}
 
       {isModalOpen && (
-        <AddSongModal isOpen={isModalOpen} onClose={onCloseModal} />
+        <AddSongModal
+          isOpen={isModalOpen}
+          onClose={onCloseModal}
+          date={''}
+          userId={'1'}
+        />
       )}
     </div>
   )
