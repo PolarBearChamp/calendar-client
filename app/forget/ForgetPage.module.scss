@@ -1,0 +1,33 @@
+.form{
+  display: flex;
+  flex-direction: column;
+  max-width: 520px;
+
+  margin: 0 auto;
+
+  .logo{
+    margin-bottom: 32px;
+    margin-right: auto;
+  }
+  .text{
+    margin-bottom: 20px;
+  }
+  .labelBlock{
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  .buttons{
+    display: flex;
+    flex-shrink: 0.5;
+    gap: 16px;
+    margin-left: auto;
+
+    .button{
+      min-width: 180px;
+    }
+  }
+}
