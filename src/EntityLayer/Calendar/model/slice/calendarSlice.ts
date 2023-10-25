@@ -20,7 +20,6 @@ export const calendarSlice = createSlice({
   name: 'calendarSlice',
   initialState,
   reducers: {},
-  extraReducers: {},
 })
 
 export const { actions: calendarActions } = calendarSlice

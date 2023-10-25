@@ -34,6 +34,13 @@
       "username": "pinkpolarbear223",
       "password": "123123213",
       "birthday": ""
+    },
+    {
+      "id": "6",
+      "email": "user11@kek.ru",
+      "username": "user11",
+      "password": "user11",
+      "birthday": ""
     }
   ],
   "posts": [
