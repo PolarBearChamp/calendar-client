@@ -42,11 +42,9 @@ export const ProfileForm: FC<ProfileFormProps> = ({ className }) => {
           Username
           <Input
             id="username"
-            name="username"
             type="text"
             placeholder="username"
-            register={register}
-            options={{ required: true }}
+            {...register('username', { required: true })}
             textSize={InputSize.S}
           />
           {errors.username && errors.username.type === 'required' && (
@@ -57,11 +55,9 @@ export const ProfileForm: FC<ProfileFormProps> = ({ className }) => {
           Email
           <Input
             id="email"
-            name="email"
             type="email"
             placeholder="username@mail.com"
-            register={register}
-            options={{ required: true }}
+            {...register('email', { required: true })}
             textSize={InputSize.S}
           />
           {errors.email && errors.email.type === 'required' && (
@@ -72,11 +68,9 @@ export const ProfileForm: FC<ProfileFormProps> = ({ className }) => {
           Password
           <Input
             id="password"
-            name="password"
             type="password"
             placeholder="password"
-            register={register}
-            options={{ required: true }}
+            {...register('password', { required: true })}
             textSize={InputSize.S}
           />
           {errors.password && errors.password.type === 'required' && (
@@ -85,14 +79,12 @@ export const ProfileForm: FC<ProfileFormProps> = ({ className }) => {
         </label>
         {/* Пока так, потом сделаю красивый date picker */}
         <label htmlFor="birthday">
-          Password
+          Birthday
           <Input
             id="birthday"
-            name="birthday"
             type="date"
             placeholder="birthday"
-            register={register}
-            options={{ required: true }}
+            {...register('birthday')}
             textSize={InputSize.S}
           />
           {errors.birthday && errors.birthday.type === 'required' && (

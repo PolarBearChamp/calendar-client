@@ -42,11 +42,9 @@ export const CoverForm: FC<CoverFormProps> = ({ className }) => {
         >
           <Input
             id="request"
-            name="request"
             type="text"
             placeholder="request"
-            register={register}
-            options={{ required: true }}
+            {...register('request', { required: true })}
             textSize={InputSize.S}
           />
           <Button theme={ButtonTheme.PRIMARY} size={ButtonSize.S}>
